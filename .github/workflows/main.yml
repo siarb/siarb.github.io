@@ -1,15 +1,26 @@
-on: [push]
+name: Build docs
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+env:
+  PRODUCT: module/instance-id
+  ARTIFACT: webHelpT2-all.zip
 
 jobs:
-  hello_world_job:
+  build-job:
     runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
-      - name: Hello world action step
-        id: hello
-        uses: actions/hello-world-docker-action@v1
-        with:
-          who-to-greet: 'Siarhei'
-      # Use the output from the `hello` step
-      - name: Build Writerside docs using Docker
-        uses: JetBrains/writerside-github-action@v1
+  steps:
+  - name: Checkout repository
+    uses: actions/checkout@v3
+  - name: Build Writerside docs with docker
+    uses: JetBrains/writerside-github-action@v1
+  - name: Upload artifact
+    uses: actions/upload-artifact@v3
+    with:
+      name: artifact
+      path: artifacts/${{ env.ARTIFACT }}
+      retention-days: 7
