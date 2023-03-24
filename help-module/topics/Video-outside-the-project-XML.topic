@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       id="Video-outside-the-project-XML" title="Video outside the project XML">
+
+    <chapter title="Video with src from other module" id="video-with-src-outside-the-image-dir">
+        <video src="test-data-nebula/stardust-sandbox/input/sandbox/images/sample_video (360p).mp4"/>
+    </chapter>
+    <chapter title="The Rolling Stones preview and video outside the image dir" id="video-with-preview-src-outside-the-image-dir">
+        <video src="goLand.mp4" preview-src="test-data-nebula/stock/topics/The-Rolling-Stones.jpeg"/>
+    </chapter>
+
+</topic>
