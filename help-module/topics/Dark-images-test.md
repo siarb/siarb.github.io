@@ -6,4 +6,4 @@ The light theme shows the light is on, the dark theme shows the light is off.
 
 ![](./Boy.jpeg){id="image"}
 
-![](/kartinki/book.jpg)
+![](/pictures_1/book.jpg)

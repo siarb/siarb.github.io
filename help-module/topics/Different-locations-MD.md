@@ -14,7 +14,7 @@ Book from other module without attributes:
 ![](kartinki/book.jpg)
 
 Book from other module with attributes:
-![](/kartinki/book.jpg){border-effect="rounded" style="inline" thumbnail="true" width="300" preview-src="book.jpeg"}
+![](/pictures_1/book.jpg){border-effect="rounded" style="inline" thumbnail="true" width="300" preview-src="book.jpeg"}
 
 ## Image in the original module in 'images' folder with relative path
 
