@@ -3,6 +3,6 @@
 
 <ihp version="2.0">
     <topics dir="topics"/>
-    <images dir="pictures" web-path="images"/>
-    <instance src="t.tree" web-path="/t/" version="1.0"/>
+    <images dir="images"/>
+    <instance src="hi.tree" web-path="/hi/" version="1.0"/>
 </ihp>
