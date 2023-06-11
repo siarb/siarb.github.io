@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       id="warning"
+       title="Warnings"
+       is-library="true">
+
+    <web-file-name>is-library-should-not-be-rendered.html</web-file-name>
+
+    <snippet id="warning_generic">
+        <warning><p>This is <emphasis>warning</emphasis>. It is stronger than a Caution; it means "Don't do this.". </p>
+        </warning>
+    </snippet>
+    <snippet id="warning_level">
+        <warning><p>This is <emphasis>warning</emphasis>. It is stronger than a %level%; it means "Don't do this.". </p>
+        </warning>
+    </snippet>
+    <snippet id="warning_deprecation">
+        <warning>
+            <p>
+                <var name="version" value="1.2"/>
+                This feature will be deprecated in %version% version of the %instance%.
+            </p>
+        </warning>
+    </snippet>
+</topic>

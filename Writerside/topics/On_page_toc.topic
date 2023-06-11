@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="On page TOC"
+       id="On_page_toc">
+
+    <show-structure depth="2"/>
+
+    <chapter id="1" title="Level 1 chapter">
+        <chapter id="2.1" title="Level 2 chapter">
+            <chapter id="3.1" title="Level 3 chapter">
+                <chapter id="4.1" title=" Level 4 chapter">
+                    <p>Some text here</p>
+                </chapter>
+            </chapter>
+            <chapter id="3.2" title="Level 3 chapter">
+                <chapter id="4.2" title=" Level 4 chapter">
+                    <p>Some text here</p>
+                </chapter>
+            </chapter>
+        </chapter>
+        <chapter id="2.2" title="Level 2 chapter">
+            <chapter id="3.3" title="Level 3 chapter">
+                <chapter id="4.3" title=" Level 4 chapter">
+                    <p>Some text here</p>
+                </chapter>
+            </chapter>
+        </chapter>
+    </chapter>
+
+</topic>

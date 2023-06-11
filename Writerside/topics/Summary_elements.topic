@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Summary elements"
+       id="Summary_elements">
+
+    <link-summary>This is a topic that tests summary elements.</link-summary>
+    <card-summary>Read mre about summary elements, ex-excerpts.</card-summary>
+    <web-summary>%instance% also supports actions you can use to extend a rule.</web-summary>
+    <p>Start writing here.</p>
+
+</topic>

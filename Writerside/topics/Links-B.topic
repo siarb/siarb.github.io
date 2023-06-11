@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Links B"
+       id="Links-B">
+
+    <card-summary>Card Summary</card-summary>
+    <web-summary>Web Summary</web-summary>
+    <link-summary>Link Summary</link-summary>
+
+    <chapter title="Anchor" id="chapter-anchor-b">
+        <anchor name="my-anchor"/>
+        <p>There's an <code>anchor</code> element before this paragraph</p>
+    </chapter>
+
+</topic>

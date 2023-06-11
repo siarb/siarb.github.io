@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Includes"
+       id="Includes">
+    <available-only-for>Supertag</available-only-for>
+    <help-id>some.help.id</help-id>
+    <title instance="n">Some custom title</title>
+    <web-file-name>cool-page.html</web-file-name>
+    <show-structure for="chapter,procedure" depth="2"/>
+    <no-index instance="n"/>
+
+    <p>In Writerside you can reuse elements and customize them depending on the context.</p>
+    <chapter id="include-element" title="Include element">
+        <chapter title="Usage" id="include-usage">
+            <p>In topics you can insert the <code>include</code> elements with the <code>from</code> attribute that points to the topic where the included content resides,
+                and the <code>id</code> attribute that matches the id attribute of the snippet.</p>
+        </chapter>
+        <chapter title="States" id="include-states">
+            <p>Below is a simple included block.</p>
+            <include from="warning.topic" element-id="warning_generic"/>
+
+            <p>Below is an included block with a variable.</p>
+            <!--Here a global variable should be overridden by local.-->
+            <include from="warning.topic" element-id="warning_deprecation">
+                <var name="version" value="1.7"/>
+            </include>
+
+            <p>Below is an included block with an instance filter.</p>
+            <include from="warning.topic" element-id="warning_deprecation" instance="s"/>
+
+        </chapter>
+    </chapter>
+    <chapter title="If element" id="if-element">
+        <chapter title="Usage" id="if-usage">
+            <p>Use <code>if</code> element to select certain portions of content that match
+                or does not match the filter value.</p>
+        </chapter>
+        <chapter title="States" id="if-states">
+            <p id="use-filter-a">Below A filter elements should be included.</p>
+                <include from="note.topic" element-id="note-with-filters" use-filter="empty,a"/>
+            <p id="use-filter-b">Below B filter elements should be included.</p>
+                <include from="note.topic" element-id="note-with-filters" use-filter="b,empty"/>
+            <p id="use-filters-ac">Below is a block with both A and C used, so elements with filters A and C should be included.</p>
+            <include from="note.topic" element-id="note-with-filters" use-filter="empty,a,c"/>
+            <p id="use-not-a-filter">
+                Below is a block with !a filter, so all not A elements should be included.
+            </p>
+            <include from="note.topic" element-id="note-with-filters" use-filter="!a"/>
+            <p id="empty-use-filter">
+            Below is a block with empty filter, so all elements without filters and "not something" should be included.
+        </p>
+            <include from="note.topic" element-id="note-with-filters" use-filter="empty"/>
+            <p id="not-empty-use-filter">Below is a block with not empty filer.</p>
+            <include from="note.topic" element-id="note-with-filters" use-filter="!empty"/>
+            <p>Below is a block with empty use-filter and filter.</p>
+            <include from="warning.topic" element-id="warning_generic"
+                     use-filter="empty" filter="kotlin" id="my-include"/>
+            <p>Below is a block with two used filters separated by a comma.</p>
+            <include from="note.topic"
+                     element-id="list"
+                     use-filter="2,4"/>
+            <p>Below is if statement with instance filter.</p>
+            <if instance="s">
+                Foo
+            </if>
+            <if instance="n">Bar</if>
+            <if filter="java">BarBar.</if>
+        </chapter>
+        <chapter title="Include a snippet with includes in it" id="include-nested">
+            <include from="feedback.topic" element-id="how_to_feedback"/>
+        </chapter>
+    </chapter>
+</topic>
+
+
+

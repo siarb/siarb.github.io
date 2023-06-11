@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="List nesting"
+       id="List_nesting">
+
+    <list>
+        <li>
+            Level 1
+        </li>
+        <li>
+            <list>
+                <li>
+                    Level 2
+                </li>
+                <li>
+                    <list>
+                        <li>
+                            Level 3
+                        </li>
+                        <li>
+                            <list>
+                                <li>
+                                    Level 4
+                                </li>
+                            </list>
+                        </li>
+                    </list>
+                </li>
+            </list>
+        </li>
+    </list>
+
+</topic>

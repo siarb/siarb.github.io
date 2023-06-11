@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="List"
+       id="List">
+
+    <chapter id="chapter-with-list" title="List with an empty item">
+        <list id="list-empty-item">
+            <li>List item</li>
+            <li>Next list item has no content</li>
+            <li></li>
+            <li>I must not interfere with my previous sibling</li>
+        </list>
+    </chapter>
+
+    <chapter id="bullet-list" title="Bullet list">
+        <list id="default-list" style="bullet">
+            <li>
+                First item
+            </li>
+            <li>
+                Second item
+            </li>
+        </list>
+    </chapter>
+
+    <chapter id="decimal-list" title="Decimal list">
+        <list id="list-with-p" style="decimal">
+            <li>
+                <p>
+                    First item
+                </p>
+            </li>
+            <li>
+                <p>
+                    Second item
+                </p>
+            </li>
+        </list>
+    </chapter>
+
+    <chapter id="nested-horizontal-list" title="Nested horizontal list">
+        <list id="nested-lists" columns="2">
+            <li>List item</li>
+            <li>List item</li>
+            <li>
+                <p>List item with sub-items</p>
+                <list>
+                    <li>Sub-item</li>
+                    <li>Sub-item</li>
+                </list>
+            </li>
+        </list>
+    </chapter>
+
+    <chapter id="alpha-list" title="List with letters">
+        <list id="alpha-lower-list" style="alpha-lower">
+            <li>
+                <code-block id="code-in-list" lang="typescript">
+                    let isDone: boolean = false;
+                </code-block>
+            </li>
+            <li>
+                <i>Amazing <b>text</b>!</i>
+            </li>
+            <li>
+                This is <emphasis>great!</emphasis>
+            </li>
+        </list>
+    </chapter>
+
+    <chapter id="no-type-list" title="List without type">
+        <list id="type-none-list" style="none">
+            <li>
+                <code-block id="ts-code" lang="typescript">
+                    let isDone: boolean = false;
+                </code-block>
+            </li>
+            <li>
+                <i>Amazing text!</i>
+            </li>
+            <li>
+                <emphasis>This is great!</emphasis>
+            </li>
+        </list>
+    </chapter>
+
+    <chapter id="columns-list" title="List with columns">
+        <list id="columns-list-horizontal" columns="3">
+            <li>
+                <code style="inline" id="ts-code-in-list" lang="typescript">
+                    let isDone: boolean = false;
+                </code>
+            </li>
+            <li>
+                <b>Amazing text!</b>
+            </li>
+            <li>
+                <s>This is great!</s>
+            </li>
+        </list>
+    </chapter>
+
+    <chapter id="started-list" title="List starts with 9">
+        <list id="list-with-started" style="decimal" start="9">
+            <li>
+                <p>
+                    First item
+                </p>
+            </li>
+            <li>
+                <p>
+                    Second item
+                </p>
+            </li>
+        </list>
+    </chapter>
+
+</topic>

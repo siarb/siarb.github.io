@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       id="Red-code"
+       title="Red-code">
+    <link-summary rel="spock"/>
+    <!-- expected error `tldr` -->
+    <tldr id="tldr-0.2">
+        <p>
+            There can only be one microformat block per topic, so ideally, the IDE wouldn't let you even add a
+            second one.
+        </p>
+    </tldr>
+
+    <tldr id="tldr-0.zz">
+        <p>
+            The same applies to topic-wide microformat
+        </p>
+        <p>
+            No matter where you put it, it should go to the top (and no more than 1 block, remember?)
+        </p>
+    </tldr>
+
+    <include from="lib.topic" element-id="add_ktor_artifact"/>
+    <p>This topic contains all red code made "on purpose".</p>
+    <!-- expected error `chapter` -->
+    <chapter id="chapter-no-title">
+        <p>Chapters without titles are not allowed</p>
+    </chapter>
+    <chapter title="Code blocks with no fallback">
+        <code-block src="snippets/ssl-engine-main/src/main/resources/application.conf"/>
+        <code-block src="snippets/auth-jwt-hs256/src/main/resources/application.conf" include-lines="1,6-16"/>
+    </chapter>
+    <chapter title="Bad deflist">
+        <deflist>
+            <!-- expected error `def` -->
+            <def id="def-no-title">This def has no title, which is not allowed</def>
+        </deflist>
+    </chapter>
+    <chapter id="in-link-chapter" caps="aswritten" title="tITle as WrItTen">
+        <a caps="lower" href="ABBA_page.topic">
+            <i>
+                <b>TEST LOWER LINK WITH NESTED and %caps-var-in-link%</b>
+            </i>
+        </a>
+    </chapter>
+    <chapter title="Procedure collapsible">
+        <!-- expected error 'procedure' -->
+        <procedure id="procedure-collapsible-without-title-collapsed" style="choices" default-state="collapsed" collapsible="true">
+            <step>
+                Option 1.
+            </step>
+            <step>
+                Option 2.
+            </step>
+        </procedure>
+        <!-- expected error 'procedure' -->
+        <procedure id="procedure-collapsible-without-title" style="choices" default-state="expanded" collapsible="true">
+            <step>
+                Option 1.
+            </step>
+            <step>
+                Option 2.
+            </step>
+        </procedure>
+    </chapter>
+    <chapter title="Title case">
+        <p>
+            <a id="caps-upper-control" caps="upper" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html">
+                <control><property bundle="messages.MicroservicesBundle" key="microservices.url.path.variable.typeName"/></control>
+            </a>
+        </p>
+    </chapter>
+    <chapter id="instance-filtering-error" title="Instance with wrong filters">
+        <!-- expected error `zz` -->
+        <p id="instance-filter-wrong" instance="zz"> I will never be shown, we do not have instance for me </p>
+        <!-- expected error `zz` -->
+        <p id="instance-filter-many-2" instance="s,n,s,zz,s,n,n,s">
+            Me too, even though `s` and `n` instances are referenced way too many times in my filter
+        </p>
+    </chapter>
+    <chapter title="Inline elements in a link">
+        <p>And path: <a href="Inline_elements.topic"><path>/directory/file.ext</path></a></p>
+        <p>And ui-path: <a href="Inline_elements.topic"><ui-path>Settings | Editor</ui-path></a></p>
+        <p>And controls: <a href="Inline_elements.topic">Click <control>Delete</control></a></p>
+        <p>An image combined with the text <a href="List.topic">This is a book:<img src="icons.actions.intentionBulb.svg" alt="a lighbulb"/></a>.</p>
+        This is a link with image inside
+        <a href="http://google.com">
+            <img src="icons.actions.intentionBulb.svg" alt="aaa"/> and text
+        </a>
+        <p>
+            Markup for WRS-674:
+            <a href="ABBA_page.topic"><emphasis>Emphasis</emphasis> something</a>
+        </p>
+        <p>
+            And similar markups:
+        </p>
+        <list>
+            <li>
+                <a href="ABBA_page.topic">Something with <control>control</control></a>
+            </li>
+            <li>
+                <a href="ABBA_page.topic"><b>Bold</b> normal <i>italic</i></a>, and
+            </li>
+            <li>
+                <a href="ABBA_page.topic">
+                    <u>Underscored</u> <format color="Red">red</format> <s>strikethrough</s>
+                </a>
+            </li>
+        </list>
+
+    </chapter>
+    <chapter id="instance-wrong-shortcut" title="A shortcut from wrong instance">
+        <p id="shortcuts-different-product">
+            We also need shortcuts from our brand new product:
+            <shortcut from-keymap-of="n" key="$Paste" id="different-product-copy-shortcut"/>
+            <shortcut from-keymap-of="n" key="ChangesView.ShelveSilently" id="different-product-shortcut"/>
+            <!-- expected error `zz` -->
+            <shortcut from-keymap-of="zz"/>
+        </p>
+    </chapter>
+    <chapter title="Format without a style or color" id="wrong-format">
+        <!-- expected error `<format>` -->
+        <p id="no-format-attributes">This is <format>not formatted</format> at all.</p>
+    </chapter>
+    <chapter title="Include with a non-existing variable" id="include-with-wrong-var">
+        <include from="lib.topic" element-id="test">
+            <var name="test-var" value="TEST VAR"/>
+            <var name="inner-var" value="INNER VAR"/>
+        </include>
+    </chapter>
+    <chapter title="Invalid start attribute" id="invalid-start">
+        <p>The value of the 'start' attribute on a list must be a valid number</p>
+
+        <list style="decimal" start="a">
+            <li>
+                <p>
+                    First item
+                </p>
+            </li>
+            <li>
+                <p>
+                    Second item
+                </p>
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Unknown sorted attribute" id="wrong-sorted">
+        <p>Unknown 'sorted' attribute value.</p>
+
+        <list style="decimal" sorted="alphabetic">
+            <li>
+                <p>
+                    First item
+                </p>
+            </li>
+            <li>
+                <p>
+                    Second item
+                </p>
+            </li>
+        </list>
+    </chapter>
+
+    <chapter title="Level invalid" level="-2">
+        <p>The value of the 'level' attribute on a chapter must be a valid number</p>
+    </chapter>
+
+    <chapter title="Level invalid two" level="a">
+        <p>The value of the 'level' attribute on a chapter must be a valid number</p>
+    </chapter>
+    <chapter title="Unknown procedure style">
+    <p>Unknown 'style' attribute value on a procedure.</p>
+
+    <procedure style="scissors">
+        <step>Step 1.
+        </step>
+        <step>Step 2.
+        </step>
+    </procedure>
+    </chapter>
+    <chapter title="Wrong colspan">
+        <table>
+            <tr>
+                <td>1-A</td>
+                <td colspan="a">1-BCD</td>
+                <td>1-E</td>
+            </tr>
+            <tr>
+                <td>2-A</td>
+                <td>2-B</td>
+                <td>2-C</td>
+                <td>2-D</td>
+                <td>2-E</td>
+            </tr>
+        </table>
+    </chapter>
+    <a href="Definition_list.topic"
+    <!--    Unknown 'type' attribute value on a link under the 'spotlight' element-->
+    summary="Sed condimentum feugiat sagittis" type="cat"/>
+    <!--A category without ref-->
+    <chapter title="Deflist with icons">
+        <deflist>
+            <def title="Let's see if you can make a list of icons with explanations">
+                <img src="icons.actions.intentionBulb.svg"/>
+                <p>Apparently, you can't</p>
+            </def>
+        </deflist>
+    </chapter>
+    <chapter title="Build errors">
+        <p>The 'compare' element must contain exactly two code blocks.</p>
+        <compare>
+            <code-block lang="Python">
+                import math
+
+
+                class SolverEquation:
+                def demo(self):
+                a = 3
+                b = 25
+                c = 46
+                self.math_sqrt = math.sqrt(b ** 2 - 4 * a * c)
+                root1 = (-b + self.math_sqrt) / (2 * a)
+                root2 = (-b - self.math_sqrt) / (2 * a)
+                print(root1, root2)
+
+            </code-block>
+        </compare>
+
+        <p>The 'collapsed-title-line-number' attribute value on a 'code' element is not a valid number</p>
+        <!--Cannot reproduce-->
+        <code-block lang="Python" collapsible="true" collapsed-title-line-number="a">
+            import math
+
+
+            class SolverEquation:
+            def demo(self):
+            a = 3
+            b = 25
+            c = 46
+            self.math_sqrt = math.sqrt(b ** 2 - 4 * a * c)
+            root1 = (-b + self.math_sqrt) / (2 * a)
+            root2 = (-b - self.math_sqrt) / (2 * a)
+            print(root1, root2)
+
+        </code-block>
+
+        <p>The code snippet doesn't contain the line with the number specified in the 'collapsed-title-line-number' attribute.</p>
+        <code-block lang="Python" collapsible="true" collapsed-title-line-number="-1">
+            import math
+
+
+            class SolverEquation:
+            def demo(self):
+            a = 3
+            b = 25
+            c = 46
+            self.math_sqrt = math.sqrt(b ** 2 - 4 * a * c)
+            root1 = (-b + self.math_sqrt) / (2 * a)
+            root2 = (-b - self.math_sqrt) / (2 * a)
+            print(root1, root2)
+
+        </code-block>
+
+        <p>Cannot read the source code snippet from the specified location, falling back to the 'code' element content.</p>
+        <code-block src="testFile.java" lang="javascript" include-lines="3">
+            fallback
+        </code-block>
+        <p>Cannot read the source code snippet from the specified location, and there is no fallback content in the 'code' element.</p>
+        <code-block src="testFile.java" lang="javascript" include-lines="3"/>
+        <p>code' element cannot be empty.</p>
+        <code-block lang="Python" collapsible="true" collapsed-title-line-number="-1"/>
+
+        <p>The 'lines' attribute on a 'code' element must represent a line number range like 1-3,
+            or multiple comma-separated ranges like 1-3,5-7.</p>
+        <code-block src="testFile.java" lang="javascript" include-lines="TestHost"/>
+        <p>The code snippet doesn't contain the lines specified in the 'lines' attribute of the corresponding 'code'
+            element.</p>
+        <code-block src="testFile.java" lang="javascript" include-lines="4"/>
+        <p>Cannot use both the 'include-symbol' and the 'include-lines' attributes to reference a code snippet.</p>
+        <code-block src="newTest.kt" lang="kotlin" include-symbol="expected" include-lines="2-4"/>
+        <p>The specified code construct is not found in the source file or the file language is not recognized.</p>
+        <code-block src="newTest.kt" lang="kotlin" include-symbol="extected"/>
+
+        <p>Code sample contains errors, "Specified language \"{0}\", errors: {1}</p>
+        <code-block lang="java" validate="true">
+            public static void switchCasePrimer() {
+            int caseIndex = 0;
+            switch (caseIndex) {
+            case 0:
+            System.out.println("Zero");
+            case 1:
+            System.out.println("One");
+            break;
+            case 2:
+            System.out.println("Two");
+            break;
+            default:
+            System.out.println("Default");
+            }
+            }
+        </code-block>
+
+        <p>Cannot validate code sample because its language is not supported.</p>
+
+        <code-block lang="react" validate="true">
+            public static void switchCasePrimer() {
+            int caseIndex = 0;
+            switch (caseIndex) {
+            case 0:
+            System.out.println("Zero");
+            case 1:
+            System.out.println("One");
+            break;
+            case 2:
+            System.out.println("Two");
+            break;
+            default:
+            System.out.println("Default");
+            }
+            }
+        </code-block>
+
+        <p>Cannot validate code sample because its language is not specified</p>
+
+        <code-block validate="true">
+            public static void switchCasePrimer() {
+            int caseIndex = 0;
+            switch (caseIndex) {
+            case 0:
+            System.out.println("Zero");
+            case 1:
+            System.out.println("One");
+            break;
+            case 2:
+            System.out.println("Two");
+            break;
+            default:
+            System.out.println("Default");
+            }
+            }
+        </code-block>
+        <p>Content other than text or CDATA in a code block, for example, HTML/XML-like tags.</p>
+        <!--Cannot reproduce-->
+        <code-block>
+            <note>
+                <to>Tove</to>
+                <from>Jani</from>
+                <heading>Reminder</heading>
+                <body>Don't forget me this weekend!</body>
+            </note>
+        </code-block>
+
+        <p>Unsupported 'style' value on the 'compare' element</p>
+
+        <compare style="bottom-top">
+            <code-block lang="Ruby">
+                puts "Hello from JetBrains"
+                puts "Goodbye from JetBrains"
+            </code-block>
+            <code-block lang="Ruby">
+                NAME = "JetBrains"
+                puts "Hello from #{NAME}"
+                puts "Goodbye from #{NAME}"
+            </code-block>
+        </compare>
+
+        <p>Unknown language is specified for a code block.</p>
+
+        <code-block lang="lua">
+            -- defines a factorial function
+            function fact (n)
+            if n == 0 then
+            return 1
+            else
+            return n * fact(n-1)
+            end
+            end
+
+            print("enter a number:")
+            a = io.read("*number")        -- read a number
+            print(fact(a))
+        </code-block>
+    </chapter>
+    <chapter title="Build error markup">
+        <!--    Element referred from 'rel' attribute does not exist or is inaccessible in the current context.-->
+        <p id="non-unique-id">The element doesn't comply with validation rules </p>
+        <!--Cannot reproduce-->
+        <p>Source file syntax is corrupted  </p>
+        <p id="non-unique-id">Element ID is not unique.</p>
+
+        <p>Topic ID doesn't match the containing file name.</p>
+        <!--Remove from MVP-->
+        <p>The 'help-id' attribute is redundant as it matches the primary topic ID</p>
+        <p>The 'tooltip' attribute is missing for the 'tooltip' element.</p>
+        <p>The example of normal <tooltip term="OS">OS</tooltip> tooltip.
+            The example of broken <tooltip>OS</tooltip> tooltip.</p>
+
+        <p>The 'resource-id' attribute is missing for the 'res' element</p>
+        <p>This is <res id="python-library">Downloadable</res>.</p>
+
+        <p>The 'ref' attribute is missing for the 'category' element</p>
+        <!--See the seealso section below.-->
+
+        <p>Element is not allowed in the current context.</p>
+
+        <p>Only 'code', 'property' or text is allowed inside an 'a' element to define link text</p>
+        <p>Element is unknown. <ghghg></ghghg> </p>
+        <p>Element cannot be processed in the current context</p>
+
+        <p>The source file for the 'include' is corrupted</p>
+
+        <p>Unknown 'style' attribute value on a 'deflist' element</p>
+        <deflist id="default" style="rock">
+            <def title="Title 1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+            <def title="Title 2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+
+        <p id="bad id"> Element ID contains whitespace characters</p>
+
+        <p>Unknown 'style' attribute value on a list.</p>
+        <list style="paper">
+            <li>List item</li>
+            <li>Next list item has no content</li>
+            <li>I must not interfere with my previous sibling</li>
+        </list>
+
+        <p>The value of the 'columns' attribute on a list must be a number between 1 and 5</p>
+
+        <list columns="7">
+            <li>
+                <code style="inline" lang="typescript">
+                    let isDone: boolean = false;
+                </code>
+            </li>
+            <li>
+                <b>Amazing text!</b>
+            </li>
+            <li>
+                <s>This is great!</s>
+            </li>
+        </list>
+
+        <list style="decimal" start="-100">
+            <li>
+                <p>
+                    First item
+                </p>
+            </li>
+            <li>
+                <p>
+                    Second item
+                </p>
+            </li>
+        </list>
+
+        <p>The 'start' attribute on a list is only valid for 'alphabet' and 'decimal' list types</p>
+
+        <list style="bullet" start="2">
+            <li>
+                <p>
+                    First item
+                </p>
+            </li>
+            <li>
+                <p>
+                    Second item
+                </p>
+            </li>
+        </list>
+
+        <p>Tab with an empty title.</p>
+        <tabs>
+            <tab title="">
+                <code-block lang="bash">
+                    ls ~/Documents
+                </code-block>
+            </tab>
+            <tab title="code-B">
+                <code-block lang="bash">
+                    dir C:\Users\MyName\Documents\
+                </code-block>
+            </tab>
+        </tabs>
+        <tabs>
+            <tab>
+                <title></title>
+                <code-block lang="bash">
+                    ls ~/Documents
+                </code-block>
+            </tab>
+            <tab title="code-B">
+                <code-block lang="bash">
+                    dir C:\Users\MyName\Documents\
+                </code-block>
+            </tab>
+        </tabs>
+
+
+        <p>Unknown 'style' attribute value on a table</p>
+
+        <table style="lizard">
+            <tr>
+                <td>Tooltip and Shortcut</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>Close</td>
+                <td>Close the current tab of the tool window.</td>
+            </tr>
+        </table>
+
+        <p>colspan' and 'rowspan' attributes of a table cell must be valid numbers.</p>
+
+        <table>
+            <tr>
+                <td>1-A</td>
+                <td colspan="-1">1-BCD</td>
+                <td>1-E</td>
+            </tr>
+            <tr>
+                <td>2-A</td>
+                <td>2-B</td>
+                <td>2-C</td>
+                <td>2-D</td>
+                <td>2-E</td>
+            </tr>
+        </table>
+
+        <p>Cannot sort table with 'colspan' or 'rowspan'</p>
+
+        <table>
+            <tr>
+                <td sorted="desc">1-A</td>
+                <td colspan="3">1-BCD</td>
+                <td>1-E</td>
+            </tr>
+            <tr>
+                <td>2-A</td>
+                <td>2-B</td>
+                <td>2-C</td>
+                <td>2-D</td>
+                <td>2-E</td>
+            </tr>
+        </table>
+
+        <p>Cannot sort table with rows of different length</p>
+
+        <table>
+            <tr>
+                <td sorted="desc">1-A</td>
+                <td>1-BCD</td>
+                <td>1-E</td>
+            </tr>
+            <tr>
+                <td>2-A</td>
+                <td>2-B</td>
+                <td>2-C</td>
+                <td>2-D</td>
+                <td>2-E</td>
+            </tr>
+        </table>
+
+        <p>'sorted' attribute must appear on the first row cells</p>
+
+        <table>
+            <tr>
+                <td>1-A</td>
+                <td>1-B</td>
+            </tr>
+            <tr>
+                <td sorted="desc">2-A</td>
+                <td>2-B</td>
+            </tr>
+        </table>
+    </chapter>
+    <chapter title="Inner include test">
+        <snippet id="test">
+            <var name="test-var" value="TEST VAR DEFAULT"/>
+            <p>Hello, this is a %test-var%</p>
+
+            <include from="Library.topic" element-id="inner-test"/>
+        </snippet>
+
+        <snippet id="inner-test">
+            <var name="inner-var" value="INNER VAR DEFAULT"/>
+            <p>Hello, this is a %inner-var% from inner include</p>
+        </snippet>
+
+        <snippet id="titles-text-to-include-into-chapter">
+            Text for title
+        </snippet>
+        <snippet id="test">
+            <var name="test-var" value="TEST VAR DEFAULT"/>
+            <p>Hello, this is a %test-var%</p>
+            <include from="Library.topic" element-id="inner-test"/>
+        </snippet>
+
+        <snippet id="inner-test">
+            <var name="inner-var" value="INNER VAR DEFAULT"/>
+            <p>Hello, this is a %inner-var% from inner include</p>
+        </snippet>
+    </chapter>
+    <chapter title="Image with border style shadow">
+        <p>An image with the style defined</p>
+        <!-- expected error `shadow` According to https://youtrack.jetbrains.com/issue/WH-4019 this attribute value must be dropped  -->
+        <img src="layers2.png" alt="book" border-effect="shadow"/>
+    </chapter>
+    <chapter title="Title not allowed in snippet">
+        <snippet id="title-to-include-into-chapter">
+            <title>Chapter's title to include</title>
+            <p>Chapter contents</p>
+        </snippet>
+        <snippet id="title-to-include-into-chapter-with-instance">
+            <title instance="s">Chapter's title to include in Instance S</title>
+            <p>Chapter contents</p>
+        </snippet>
+    </chapter>
+    <chapter title="Invalid link to topic">
+        <p>Invalid link.</p>
+        <p>
+            ... or a specified <a href="Modules.md">module</a>.
+        </p>
+    </chapter>
+    <chapter title="Nullable links" id="chapter-nullable-link-error">
+        <!-- expected error `my-attribute` -->
+        <p id="excluded-paragraph" my-attribute="my-value" instance="!s">This is not available in the current product</p>
+    </chapter>
+    <chapter id="list-in-p" title="List is not allowed in `p`">
+        <p>
+            <!-- expected error `list` -->
+            <list id="list-not-allowed-here"/>
+        </p>
+    </chapter>
+    <chapter title="Video in a note">
+        <note id="note-in-chapter-video-no-p" title="Important information">
+            <!-- expected error `video` -->
+            <video src="U5SOD-eeK50&amp;t=514s" preview-src="db_video_overview_of_inspections.png"
+                   id="overview_of_inspections_note"/>
+        </note>
+    </chapter>
+    <chapter title="Video in a tip">
+        <tip id="tip-in-chapter-video-no-p" title="Optional information">
+            <!-- expected error `video` -->
+            <video src="U5SOD-eeK50&amp;t=514s" preview-src="db_video_overview_of_inspections.png"
+                   id="overview_of_inspections_tip"/>
+        </tip>
+    </chapter>
+    <chapter title="Video in a warning">
+        <warning id="warning-in-chapter-video-no-p" title="Critical information">
+            <!-- expected error `video` -->
+            <video src="U5SOD-eeK50&amp;t=514s" preview-src="db_video_overview_of_inspections.png"
+                   id="overview_of_inspections_warning"/>
+        </warning>
+    </chapter>
+    <chapter title="Video in a p">
+        <p id="video-inside-p">
+            <!-- expected error `video` -->
+            <video/>
+        </p>
+    </chapter>
+    <chapter title="List red">
+        <list id="test-list-red" style="alpha-lower">
+            <li>
+                <code-block id="code-block-not-allowed" lang="typescript">
+                    let isDone: boolean = false;
+                </code-block>
+                And then a toolbox image <img src="icon.png" alt="Image"/>
+            </li>
+            <li>
+                <var name="var-in-li" value="vars should work everywhere!"/>
+                <i>Amazing text!</i>
+                <b>Really fabulous!</b>
+                <snippet>Test</snippet>
+                <p>
+                    Remember, %var-in-li%, should not they?
+                </p>
+            </li>
+        </list>
+    </chapter>
+    <chapter title="Video with a timecode doesn't exist">
+        <video src="U5SOD-eeK50&amp;t=514s" preview-src="db_video_overview_of_inspections.png"
+               id="test-video-red"/>
+    </chapter>
+    <chapter id="no-title" switcher-key="Show almost nothing">
+        Just a few more issues below:
+        <var name="elementId" value="about-sandbox"/>
+        <include from="About_sandbox.topic" element-id="%elementId%"/>
+        <tooltip tooltip="javac">javac</tooltip>
+    </chapter>
+    <chapter id="Titled-table" title="Titled table">
+    <!-- expected error `title` -->
+    <table id="default-table" title="This is a table" style="header-row">
+        <tr id="table-heading">
+            <td id="first-column">Tooltip and Shortcut</td>
+            <td id="second-column">Description</td>
+        </tr>
+        <tr id="table-first-raw">
+            <td>Close</td>
+            <td>Close the current tab of the tool window.</td>
+        </tr>
+        <tr id="table-second-raw">
+            <td>Rerun</td>
+            <td>Rerun the dependency analysis in the same tab.</td>
+        </tr>
+    </table>
+    </chapter>
+    <chapter id="with-tabs" title="Here we got tabs!">
+        <tabs id="default-tabs">
+            <tab title="steps" id="steps">
+                <!-- expected error `hide-from-structure` -->
+                <procedure title="Procedure with steps" style="steps" hide-from-structure="true">
+                    <step>Step 1.</step>
+                    <step>Step 2.</step>
+                    <step>Step 3.</step>
+                </procedure>
+            </tab>
+            <tab title="choices" id="choices">
+                <!-- expected error `hide-from-structure` -->
+                <procedure title="Procedure with choices" style="choices" hide-from-structure="true">
+                    <step>Step 1.</step>
+                    <step>Step 2.</step>
+                    <step>Step 3.</step>
+                </procedure>
+            </tab>
+        </tabs>
+    </chapter>
+    <chapter title="Deflist with title, title with an image">
+        <deflist id="deflist_titles_with_inline_formatting">
+            <def id="def_with_inline_formatting_title">
+                <title>
+                    <img src="icons.actions.intentionBulb.svg" alt="some button"/>
+                    <shortcut key="Run"/>
+                    <control>Some UI control</control>
+                </title>
+
+                <p>Def titles allow more inline formatting: img, shortcut, control in addition to code and path</p>
+            </def>
+        </deflist>
+    </chapter>
+    <chapter title="Included titles">
+        <chapter id="chapter-with-title-in-include">
+            <!--The whole title element is included-->
+            <include from="lib.topic" element-id="title-to-include-into-chapter"/>
+        </chapter>
+        <chapter instance="s" id="chapter-with-title-in-include-with-instance">
+            <!--The whole title element is included for Instance S only-->
+            <include from="lib.topic" element-id="title-to-include-into-chapter"/>
+        </chapter>
+        <chapter id="chapter-with-title-in-include">
+            <!--Only title's text is included-->
+            <title>
+                <include from="lib.topic" element-id="titles-text-to-include-into-chapter"/>
+            </title>
+            <p>Some chapter contents.</p>
+        </chapter>
+    </chapter>
+    <chapter id="play-with-tldr-1" title="Play with microformat">
+        <tldr id="tldr-1.1">
+            <p>
+                Shortcut:
+                <shortcut>Enter</shortcut>
+            </p>
+            <p>
+                Configure:
+                <ui-path>Settings/ Preferences | Editor | Code Completion</ui-path>
+            </p>
+        </tldr>
+        <p>
+            And why is menupath not allowed here? Clearly a bug
+        </p>
+    </chapter>
+
+    <chapter id="interpolate-vars" title="Interpolate variables">
+        <code-block id="interpolate-variables-false" lang="c#" interpolate-variables="true">
+            val s = "%myVar%"
+        </code-block>
+    </chapter>
+
+    <chapter id="play-with-tldr-2" title="Play with microformat position">
+        <p>
+            Microformat is supposed to be placed right after the title
+        </p>
+        <tldr id="tldr-2.1">
+            <p>
+                Let's try adding it elsewhere and see what happens.
+            </p>
+            <p>
+                Ideally, on build, it should be placed where it belongs irrespectively of its position in the source
+                code.
+            </p>
+            <p>
+                But it makes sense to suggest placing under the title so that this behavior doesn't look like a bug.
+            </p>
+        </tldr>
+    </chapter>
+    <chapter title="Bad variables">
+        <p id="variables-intro">%instance% is a variable</p>
+        <p>Some text</p>
+        <!-- expected error 'i-do-not-exist' -->
+        <p id="nonexisting-variable">This will not be resolved: %i-do-not-exist%</p>
+
+        <chapter id="Chapter-1" title="My chapter 1">
+            <var name="my-var" value=""/>
+            <p id="just-p">Element with simple id (without vars)</p>
+            <p id="with-good-var-%my-var%">Element id contains a good var</p>
+            <!-- expected error 'bad-var' -->
+            <p id="with-bad-var-%bad-var%">Element id contains unknown var</p>
+        </chapter>
+
+        <include from="lib.topic" element-id="test">
+            <var name="test-var" value="TEST VAR"/>
+        </include>
+
+        <chapter id="Chapter-5" title="Images that use variables as part of their src">
+
+            <var name="imagePart" value="ThemedIcon."/>
+            <var name="imagePartBad" value="ThemedIcon.SomePart"/>
+
+            <!-- expected error `%imagePartNoExist%AddedParameter.Screen.[Color].png` variable is not defined -->
+            <img src="%imagePartNoExist%AddedParameter.Screen.[Color].png" alt="Image Part Added Parameter Screen Color"/>
+
+            <!-- expected error `%imagePartBad%AddedParameter.Screen.[Color].png` variable is defined, but evaluates to something wrong -->
+            <img src="%imagePartBad%AddedParameter.Screen.[Color].png" alt="Image Part Added Parameter Screen Color"/>
+
+            <img src="%imagePart%AddedParameter.Screen.[Color].png" alt="Image Part Added Parameter Screen Color"/>
+            <!-- expected error `%elementId%-other` variable is defined, but the entire expression evaluates to something that does not exist -->
+            <include from="ABBA_page.topic" element-id="%elementId%-other"/>
+        </chapter>
+
+    </chapter>
+        <chapter id="external-by-youtube-id" title="External video without a preview image">
+            <!-- expected error `HUW42Tfy4XM` WH-4028: only full urls are allowed for youtube -->
+            <video src = "HUW42Tfy4XM" preview-src="db_video_overview_of_inspections.png"
+                   id="overview_of_inspections-3"/>
+        </chapter>
+<chapter title="A very bad deflist">
+    <deflist>
+        <!--Inline elements dangling inside def-->
+        <def title="Let's see what you can put in a deflist">
+            <tooltip term="Changelist">Changelist</tooltip>
+            <emphasis>text with emphasis,</emphasis>
+            <shortcut>shortcut,</shortcut>
+            <control>control,</control>
+            <ui-path>ui-path, </ui-path>
+            <path>path, </path>
+            <p>
+                Term explanation: A subset of changes staged for commit.
+            </p>
+            <p>
+                Note that the same set of inline elements is ok inside `p`
+                <emphasis>text with emphasis,</emphasis>
+                <shortcut>shortcut,</shortcut>
+                <control>control,</control>
+                <ui-path>ui-path, </ui-path>
+                <path>path, </path>
+            </p>
+        </def>
+    </deflist>
+</chapter>
+    <!-- expected error `<chapter id="no_title_chapter">` Title is required -->
+    <chapter id="no_title_chapter">
+        <p>This is not allowed!</p>
+
+        <!-- expected error `<procedure id="no_title_procedure">` Title is required -->
+        <procedure id="no_title_procedure">
+            <p>This is also not allowed!</p>
+
+            <step>An element must contain either the 'title' attribute or the 'title' sub-element.</step>
+        </procedure>
+
+        <deflist id="no_title_deflist">
+            <!-- expected error `<def id="no_title_def">` Title is required -->
+            <def id="no_title_def">
+                <p>And this is not allowed!</p>
+            </def>
+        </deflist>
+    </chapter>
+    <chapter collapsible="true" default-state="collapsed">
+        <p>
+            This is a chapter without a title. It must not produce an entry in the right-hand TOC and it works alright.
+        </p>
+    </chapter>
+    <chapter title="Inline elements">
+        <!-- expected error `italyc` -->
+        <p id="format-style-typo-1">This is <format style="italyc">not italic</format> text.</p>
+
+        <!-- expected error `bloo` -->
+        <p id="format-color-typo-2">This is <format color="bloo">not blue</format> text.</p>
+
+        <!-- expected error `talic` -->
+        <p id="format-color-typo-3">This is <format style="bold,talic">bold</format> text.</p>
+
+        <!-- expected error `derline` -->
+        <p id="format-color-typo-4">This is text which is <format style="bold,derline,italic">bold, italic, and, what?</format></p>
+
+    </chapter>
+    <chapter title="Terms">
+        <!-- expected error `undefined-term` -->
+        <p id="nonexisting-term">On this stage, <tooltip term="undefined-term">javac</tooltip> compiles your source code into JVM bytecode.</p>
+
+        <!-- expected error `<tooltip>` -->
+        <p id="no-term-attribute">On this stage, <tooltip>javac</tooltip> compiles your source code into JVM bytecode.</p>
+    </chapter>
+    <chapter id="video-in-p" title="External video with preview image">
+        <p>
+            <!-- expected error `video` -->
+            <video id="overview_of_inspections-5"/>
+        </p>
+    </chapter>
+
+    <note id="note-in-chapter-video-no-p" title="Videos in notes/warns/tips are not expected">
+        <!-- expected error `video` -->
+        <video id="video-is-not-allowed-in-note-like-elements"/>
+    </note>
+    <chapter id="external-without-preview-image-and--with-mini-player" title="External video without a preview image and miniplayer">
+        <!-- expected error `video` -->
+        <video src = "https://www.youtube.com/watch?v=HUW42Tfy4XM"
+               mini-player="true"
+               preview-src="perforce-integration-preview.png"
+               id="overview_of_inspections-4"/>
+    </chapter>
+    <seealso>
+        <category ref="2">
+            <a href="Build_errors_markup.topic"/>
+            <a href="Build-errors-code.topic"/>
+        </category>
+        <category>
+            <a href="Build_errors_markup.topic"/>
+            <a href="Build-errors-code.topic"/>
+        </category>
+    </seealso>
+</topic>

@@ -2,7 +2,16 @@
 <!DOCTYPE ihp SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/ihp.dtd">
 
 <ihp version="2.0">
+    <settings>
+    </settings>
     <topics dir="topics"/>
-    <images dir="images"/>
-    <instance src="hi.tree" web-path="/hi/" version="1.0"/>
+    <images dir="images" web-path="img"/>
+    <instance src="auto.tree"/>
+
+    <!--    <assets>
+            <asset type="code" download-from="https://buildserver.labs.intellij.net/repository/download/Documentation_Plugins_NebulaApi/.lastFinished/nebula.jar"
+                   save-to="nebula-sources">
+                <auth type="header" credentials="TC"/>
+            </asset>
+        </assets>-->
 </ihp>

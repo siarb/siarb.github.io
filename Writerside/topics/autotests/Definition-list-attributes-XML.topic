@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       id="Definition-list-attributes-XML"
+       title="Definition list attributes XML">
+
+    <chapter title="Deflist with 'style=compact'" id="chapter-compact">
+        <deflist style="compact" id="compact">
+            <def title="Dynamic testing">
+                <p>Is a term used in software engineering to describe the testing of the dynamic behavior of code.
+
+                    That is, dynamic analysis refers to the examination of the physical response from the system
+                    to variables that are not constant and change with time. In dynamic testing the software
+                    must actually be compiled and run. It involves working with the software,
+                    giving input values and checking if the output is as expected by executing specific test cases
+                    which can be done manually or with the use of an automated process.
+                    This is in contrast to static testing. Unit tests, integration tests, system tests
+                    and acceptance tests utilize dynamic testing. Usability tests involving a mock version
+                    made in paper or cardboard can be classified as static tests when taking into account
+                    that no program has been executed; or, as dynamic ones when considering the interaction
+                    between users and such mock version is effectively the most basic form of a prototype.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=narrow'" id="chapter-narrow">
+        <deflist style="narrow" id="narrow">
+            <def title="Autotesting">
+                <p>Involves a series of tests, generally around traffic cones, to measure precision driving skill.
+                    The tests often include stopping with the front and rear wheels straddling a line,
+                    and always end stopping in a garage (usually marked out with cones).
+                    Sections of each test are usually completed in reverse.
+                    Cars involved can be standard road cars or ones specially built for autotest.
+                    In either case, the sport is cheap, with entries to events usually costing between £8 and £25.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=medium'" id="chapter-medium">
+        <deflist style="medium" id="medium">
+            <def title="Static program analysis">
+                <p>In computer science, static program analysis (or static analysis) is the analysis
+                    of computer programs performed without executing them, in contrast with dynamic program analysis,
+                    which is performed on programs during their execution.
+
+                    The term is usually applied to analysis performed by an automated tool,
+                    with human analysis typically being called "program understanding", program comprehension,
+                    or code review. In the last of these, software inspection and software walkthroughs are also used.
+                    In most cases the analysis is performed on some version of a program's source code, and,
+                    in other cases, on some form of its object code.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=wide'" id="chapter-wide">
+        <deflist style="wide" id="wide">
+            <def title="Manual testing">
+                <p>Is the process of manually testing software for defects.
+                    It requires a tester to play the role of an end user where by they use most
+                    of the application's features to ensure correct behaviour.
+                    To guarantee completeness of testing, the tester often follows a written test plan
+                    that leads them through a set of important test cases.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+</topic>

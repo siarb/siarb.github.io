@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Tooltips"
+       id="Tooltips">
+
+    <p>We have a tooltip element to specify terms and definitions.</p>
+    <p>
+        The documentation branch for the
+        next product version is built and
+        published with the
+        <emphasis term="EAP">
+            EAP
+        </emphasis>
+        status.
+    </p>
+    <p>
+        The documentation branch for the
+        next product version is built and
+        published with the
+        <path term="EAP">
+            EAP
+        </path>
+        status.
+    </p>
+    <p>
+        The documentation branch for the
+        next product version is built and
+        published with the
+        <control term="EAP">
+            EAP
+        </control>
+        status.
+    </p>
+    <p>
+        The documentation branch for the
+        next product version is built and
+        published with the
+        <tooltip term="EAP">
+            EAP
+        </tooltip>
+        status.
+    </p>
+</topic>

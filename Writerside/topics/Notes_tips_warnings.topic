@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Notes, tips, warnings"
+       id="Notes_tips_warnings">
+
+    <chapter title="Notes" id="notes">
+
+        <note id="note-in-chapter-p" title="Important information" instance="s">
+            <p>
+                This is a note!
+                <i>Amazing note!</i>
+                <b>Really fabulous!</b>
+                <u>Oh, what a note!</u>
+                <s>Read it!</s>
+                <emphasis>This is great!</emphasis>
+                On this stage, <tooltip term="javac">javac</tooltip> compiles your source code into JVM bytecode.
+                Create a <path>CMakeLists.txt</path> file inside the <control>Boost_tests</control> folder: right-click
+                it in the project tree and select <ui-path>New | CMakeLists.txt</ui-path>.
+                A <sub>K</sub> is a type of K-th function argument and <sup>r</sup> is a type of a result of a function
+            </p>
+        </note>
+
+        <note id="note-in-chapter-no-p" title="Important information">
+            This is a new note!
+            <i>Amazing note!</i>
+            <b>Really fabulous!</b>
+            <u>Oh, what a note!</u>
+            <s>Read it!</s>
+            <emphasis>This is great!</emphasis>
+            On this stage, <tooltip term="javac">javac</tooltip> compiles your source code into JVM bytecode.
+            Create a <path>CMakeLists.txt</path> file inside the <control>Boost_tests</control> folder: right-click it
+            in the project tree and select <ui-path>New | CMakeLists.txt</ui-path>.
+            A <sub>K</sub> is a type of K-th function argument and <sup>r</sup> is a type of a result of a function
+        </note>
+
+        <note id="note-in-chapter-video-no-p" title="Important information">
+            <video src="https://www.youtube.com/watch?v=U5SOD-eeK50&amp;t=514s" preview-src="db_video_overview_of_inspections.png"
+                   id="overview_of_inspections_note"/>
+        </note>
+
+        <note id="note-in-chapter-img-p" title="Important information">
+            <p>
+                <img src="check.svg" alt="Check" width="16"/>
+            </p>
+        </note>
+
+        <note id="note-in-chapter-img" title="Important information">
+            <img src="book.jpg" alt="Book" width="500"/>
+        </note>
+
+        <note id="note-with-list" title="Important list">
+            <list>
+                <li><format color="Black">Black</format>: variables are in their default state.
+                </li>
+                <li><format color="Blue">Blue</format>: variables are changed, but the changes are not yet applied.
+                </li>
+            </list>
+        </note>
+
+        <note id="note-with-for" title="Important note" instance="s">
+            <if instance="s">
+                Text for Sandbox!
+            </if>
+        </note>
+
+        <note id="note-with-for-p" title="Important note" instance="s">
+            <if instance="s">
+                <p>Text for Sandbox!</p>
+            </if>
+        </note>
+
+    </chapter>
+
+    <chapter title="Tips" id="tips">
+
+        <tip id="tip-in-chapter" title="Optional information">
+            <p>
+                This is a tip!
+                <i>Amazing tip!</i>
+                <b>Really fabulous!</b>
+                <u>Oh, what a tip!</u>
+                <s>Read it!</s>
+                <emphasis>This is great!</emphasis>
+                On this stage, <tooltip term="javac">javac</tooltip> compiles your source code into JVM bytecode.
+                Create a <path>CMakeLists.txt</path> file inside the <control>Boost_tests</control> folder: right-click
+                it in the project tree and select <ui-path>New | CMakeLists.txt</ui-path>.
+                A <sub>K</sub> is a type of K-th function argument and <sup>r</sup> is a type of a result of a function
+            </p>
+        </tip>
+
+        <tip id="tip-in-chapter-no-p" title="Optional information">
+            This is a new tip!
+            <i>Amazing tip!</i>
+            <b>Really fabulous!</b>
+            <u>Oh, what a tip!</u>
+            <s>Read it!</s>
+            <emphasis>This is great!</emphasis>
+            On this stage, <tooltip term="javac">javac</tooltip> compiles your source code into JVM bytecode.
+            Create a <path>CMakeLists.txt</path> file inside the <control>Boost_tests</control> folder: right-click it
+            in the project tree and select <ui-path>New | CMakeLists.txt</ui-path>.
+            A <sub>K</sub> is a type of K-th function argument and <sup>r</sup> is a type of a result of a function
+        </tip>
+
+        <tip id="tip-in-chapter-video-no-p" title="Optional information">
+            <video src="https://www.youtube.com/watch?v=U5SOD-eeK50&amp;t=514s" preview-src="db_video_overview_of_inspections.png"
+                   id="overview_of_inspections_tip"/>
+        </tip>
+
+        <tip id="tip-in-chapter-img-p" title="Optional information">
+            <p>
+                <img src="check.svg" alt="Check" width="16"/>
+            </p>
+        </tip>
+
+        <tip id="tip-in-chapter-img" title="Optional information">
+            <img src="book.jpg" alt="Book" width="500"/>
+        </tip>
+
+        <tip id="tip-with-list" title="Optional list">
+            <list>
+                <li><format color="Yellow">Yellow</format>: variables are in their default state.
+                </li>
+                <li><format color="Orange">Blue</format>: variables are changed, but the changes are not yet applied.
+                </li>
+            </list>
+        </tip>
+
+        <tip id="tip-with-for" title="Optional tip" instance="s">
+            <if instance="s">
+                Text for Sandbox!
+            </if>
+        </tip>
+
+        <tip id="tip-with-for-p" title="Optional tip" instance="s">
+            <if instance="s">
+                <p>Text for Sandbox!</p>
+            </if>
+        </tip>
+
+    </chapter>
+
+    <chapter title="Warnings" id="warnings">
+
+        <warning id="warning-in-chapter" title="Critical information">
+            <p>
+                This is a warning!
+                <i>Dangerous warning!</i>
+                <b>Really!</b>
+                <u>Oh, what a warning!</u>
+                <s>Read it!</s>
+                <emphasis>This is great!</emphasis>
+                On this stage, <tooltip term="javac">javac</tooltip> compiles your source code into JVM bytecode.
+                Create a <path>CMakeLists.txt</path> file inside the <control>Boost_tests</control> folder: right-click
+                it in the project tree and select <ui-path>New | CMakeLists.txt</ui-path>.
+                A <sub>K</sub> is a type of K-th function argument and <sup>r</sup> is a type of a result of a function
+            </p>
+        </warning>
+
+        <warning id="warning-in-chapter-no-p" title="Critical information">
+            This is a new warning!
+            <i>Amazing note!</i>
+            <b>Really fabulous!</b>
+            <u>Oh, what a warning!</u>
+            <s>Read it!</s>
+            <emphasis>This is great!</emphasis>
+            On this stage, <tooltip term="javac">javac</tooltip> compiles your source code into JVM bytecode.
+            Create a <path>CMakeLists.txt</path> file inside the <control>Boost_tests</control> folder: right-click it
+            in the project tree and select <ui-path>New | CMakeLists.txt</ui-path>.
+            A <sub>K</sub> is a type of K-th function argument and <sup>r</sup> is a type of a result of a function
+        </warning>
+
+        <warning id="warning-in-chapter-video-no-p" title="Critical information">
+            <video src="https://www.youtube.com/watch?v=U5SOD-eeK50&amp;t=514s" preview-src="db_video_overview_of_inspections.png"
+                   id="overview_of_inspections_warning"/>
+        </warning>
+
+        <warning id="warning-in-chapter-img-p" title="Critical information">
+            <p>
+                <img src="check.svg" alt="Check" width="16"/>
+            </p>
+        </warning>
+
+        <warning id="warning-in-chapter-img" title="Critical information">
+            <img src="book.jpg" alt="Book" width="500"/>
+        </warning>
+
+        <warning id="warning-with-list" title="Critical list">
+            <list>
+                <li><format color="Aqua">Aqua</format>: variables are in their default state.
+                </li>
+                <li><format color="Aquamarine">Aquamarine</format>: variables are changed, but the changes are not yet applied.
+                </li>
+            </list>
+        </warning>
+
+        <warning id="warning-with-list-p" title="Critical list">
+            <list>
+                <li><format color="BurlyWood">BurlyWood</format>: variables are in their default state.
+                </li>
+                <li><format color="Olive">Olive</format>: variables are changed, but the changes are not yet applied.
+                </li>
+            </list>
+        </warning>
+
+        <warning id="warning-with-for" title="Critical warning" instance="s">
+            <if instance="s">
+                Text for Sandbox!
+            </if>
+        </warning>
+
+        <warning id="warning-with-for-p" title="Critical warning" instance="s">
+            <if instance="s">
+                <p>Text for Sandbox!</p>
+            </if>
+        </warning>
+    </chapter>
+
+</topic>

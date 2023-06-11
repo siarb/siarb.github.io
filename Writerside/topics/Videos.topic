@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Videos"
+       id="Videos">
+
+    <chapter id="external-with-preview-image" title="External video with preview image and a time code">
+        <video src = "https://www.youtube.com/watch?v=HUW42Tfy4XM?t=67"
+               preview-src="db_video_overview_of_inspections.png"
+               id="overview_of_inspections-1"/>
+    </chapter>
+
+    <chapter id="external-without-preview-image" title="External video without a preview image">
+        <video src = "https://www.youtube.com/watch?v=HUW42Tfy4XM" id="overview_of_inspections-2"/>
+    </chapter>
+
+    <chapter title="Internal video" id="internal-video-file">
+        <video src="qf_demo.mp4" border-effect="line"/>
+    </chapter>
+</topic>

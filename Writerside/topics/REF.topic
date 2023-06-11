@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Snippets"
+       id="REF">
+
+    <snippet id="lang_row">
+        <td>
+            <img filter="cs" src="check.svg" alt="Feature is available"/>
+            <img filter="no_cs" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="vb" src="check.svg" alt="Feature is available"/>
+            <img filter="no_vb" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="cpp" src="check.svg" alt="Feature is available"/>
+            <img filter="no_cpp" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="html" src="check.svg" alt="Feature is available"/>
+            <img filter="no_html" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="asp" src="check.svg" alt="Feature is available"/>
+            <img filter="no_asp" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="razor" src="check.svg" alt="Feature is available"/>
+            <img filter="no_razor" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="js" src="check.svg" alt="Feature is available"/>
+            <img filter="no_js" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="ts" src="check.svg" alt="Feature is available"/>
+            <img filter="no_ts" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="css" src="check.svg" alt="Feature is available"/>
+            <img filter="no_css" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="xml" src="check.svg" alt="Feature is available"/>
+            <img filter="no_xml" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="xaml" src="check.svg" alt="Feature is available"/>
+            <img filter="no_xaml" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="resx" src="check.svg" alt="Feature is available"/>
+            <img filter="no_resx" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="build" src="check.svg" alt="Feature is available"/>
+            <img filter="no_build" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="pb" src="check.svg" alt="Feature is available"/>
+            <img filter="no_pb" src="cross.svg" alt="Feature is not available"/>
+        </td>
+        <td>
+            <img filter="json" src="check.svg" alt="Feature is available"/>
+            <img filter="no_json" src="cross.svg" alt="Feature is not available"/>
+        </td>
+    </snippet>
+</topic>

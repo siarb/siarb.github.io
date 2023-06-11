@@ -11,8 +11,8 @@ permissions:
   pages: write
 
 env:
-  PRODUCT: help-module/t
-  ARTIFACT: webHelpT2-all.zip
+  PRODUCT: Writerside/auto
+  ARTIFACT: webHelpAUTO2-all.zip
 
 jobs:
   build-job:

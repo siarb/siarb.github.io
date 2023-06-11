@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       id="lib"
+       title="lib"
+       is-library="true">
+
+    <snippet id="path_to_settings">
+        <var name="in" value="In"/>
+        %in% the <control>Settings/Preferences</control> dialog
+    </snippet>
+
+<snippet id="procedure-to-include">
+    <procedure id="procedure-with-num-included" style="steps" title="Included procedure">
+        <step>Step 1.
+        </step>
+        <step>Step 2.
+        </step>
+    </procedure>
+</snippet>
+
+<snippet id="install_feature">
+    <p>
+        To install the <code>%feature_name%</code> feature, pass it to the <code>install</code> function in the application initialization code. This can be the <code>main</code> function ...
+    </p>
+    <code-block lang="kotlin" ignore-vars="true">
+        import io.ktor.features.*
+        // ...
+        fun Application.main() {
+        install(%feature_name%)
+        // ...
+        }
+    </code-block>
+    <code-block lang="kotlin" ignore-vars="true">
+        import io.ktor.features.*
+        // ...
+        fun Application.module() {
+        install(%feature_name%)
+        // ...
+        }
+    </code-block>
+</snippet>
+
+
+<snippet id="add_ktor_artifact_intro">
+<p>
+    To enable <code>%feature_name%</code> support, you need to include the <code>%artifact_name%</code> artifact in the build script:
+</p>
+</snippet>
+
+
+<snippet id="add_ktor_artifact">
+<tabs>
+    <tab title="Gradle (Groovy)">
+        <code-block lang="Groovy" ignore-vars="true">
+            implementation "io.ktor:%artifact_name%:$ktor_version"
+        </code-block>
+    </tab>
+    <tab title="Gradle (Kotlin)">
+        <code style="block" lang="Kotlin" interpolate-variables="true">
+            implementation("io.ktor:%artifact_name%:$ktor_version")
+        </code>
+    </tab>
+    <tab title="Maven">
+        <code-block lang="XML" ignore-vars="true">
+            <![CDATA[
+                    <dependency>
+                        <groupId>io.ktor</groupId>
+                        <artifactId>%artifact_name%</artifactId>
+                        <version>${ktor_version}</version>
+                    </dependency>
+                    ]]>
+        </code-block>
+    </tab>
+</tabs>
+</snippet>
+
+
+<snippet id="add_artifact">
+<tabs>
+    <tab title="Gradle (Groovy)">
+        <code-block lang="Groovy" ignore-vars="true">
+            implementation "%group_id%:%artifact_name%:$%version%"
+        </code-block>
+    </tab>
+    <tab title="Gradle (Kotlin)">
+        <code-block lang="Kotlin" ignore-vars="true">
+            implementation("%group_id%:%artifact_name%:$%version%")
+        </code-block>
+    </tab>
+    <tab title="Maven">
+        <code-block lang="XML" ignore-vars="true">
+            <![CDATA[
+                    <dependency>
+                        <groupId>%group_id%</groupId>
+                        <artifactId>%artifact_name%</artifactId>
+                        <version>${%version%}</version>
+                    </dependency>
+                    ]]>
+        </code-block>
+    </tab>
+</tabs>
+</snippet>
+
+<snippet id="add_ktor_artifact_multiplatform">
+<tabs>
+    <tab title="Gradle (Groovy)">
+        <code-block lang="Groovy" ignore-vars="true">
+            %platform_name%Main {
+            dependencies {
+            implementation "io.ktor:%artifact_name%:$ktor_version"
+            }
+            }
+        </code-block>
+    </tab>
+    <tab title="Gradle (Kotlin)">
+        <code-block lang="Kotlin" ignore-vars="true">
+            val %platform_name%Main by getting {
+            dependencies {
+            implementation("io.ktor:%artifact_name%:$ktor_version")
+            }
+            }
+        </code-block>
+    </tab>
+</tabs>
+</snippet>
+
+
+<snippet id="outdated_warning">
+<note>
+    This help topic is in development and will be updated in the future.
+</note>
+</snippet>
+
+<snippet id="experimental">
+<p>
+    The API is production ready, but may be slightly modified in a minor release. This is why it's marked with the
+    <code>@%annotation_name%</code> annotation. If you want to use this API, you need to <code>OptIn</code>:
+</p>
+<code-block lang="kotlin" ignore-vars="true">
+    @OptIn(%annotation_name%::class)
+</code-block>
+<p>
+    If you want to leave your feedback or subscribe on updates, check out the <a href="https://youtrack.jetbrains.com/issue/KTOR-%issue_number%">KTOR-%issue_number%</a> design issue.
+</p>
+</snippet>
+
+
+<snippet id="new_project_idea">
+<p>
+    On the Welcome screen, click <control>New Project</control>.
+</p>
+<p>
+    Otherwise, from the main menu, select <ui-path>File | New | Project</ui-path>.
+</p>
+</snippet>
+
+
+<snippet id="download_example">
+    <p>
+        Code example:
+        <a href="https://github.com/ktorio/ktor-documentation/tree/main/codeSnippets/snippets/%example_name%">
+            %example_name%
+        </a>
+    </p>
+</snippet>
+</topic>

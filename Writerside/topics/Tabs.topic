@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Tabs"
+       id="Tabs">
+
+    <chapter id="with-tabs" title="Here we got tabs!">
+        <tabs id="default-tabs">
+            <tab title="steps" id="steps">
+                <procedure title="Procedure with steps" style="steps">
+                    <step>Step 1.</step>
+                    <step>Step 2.</step>
+                    <step>Step 3.</step>
+                </procedure>
+            </tab>
+            <tab title="choices" id="choices">
+                <procedure title="Procedure with choices" style="choices">
+                    <step>Step 1.</step>
+                    <step>Step 2.</step>
+                    <step>Step 3.</step>
+                </procedure>
+            </tab>
+        </tabs>
+    </chapter>
+
+    <chapter id="code-in-tabs" title="Tabs are good to show code">
+        <tabs id="code-tabs">
+            <tab title="code-A" id="code-mac">
+                <code-block lang="bash">
+                    ls ~/Documents
+                </code-block>
+            </tab>
+            <tab title="code-B" id="code-windows">
+                <code-block lang="bash">
+                    dir C:\Users\MyName\Documents\
+                </code-block>
+            </tab>
+        </tabs>
+    </chapter>
+
+    <chapter id="synced_tabs" title="Synchronized tabs">
+        <tabs group="Languages">
+            <tab title="Java" group-key="Java">
+                <p>
+                    This is Java
+                </p>
+            </tab>
+            <tab title="Kotlin" group-key="Kotlin">
+                <p>
+                    This is Kotlin
+                </p>
+            </tab>
+        </tabs>
+    </chapter>
+
+    <chapter id="synced_tabs_two" title="Another example of Synchronized tabs">
+        <tabs group="Languages">
+            <tab title="Java theory" group-key="Java">
+                <p>
+                    This is Java theory
+                </p>
+            </tab>
+            <tab title="Kotlin theory" group-key="Kotlin">
+                <p>
+                    This is Kotlin theory
+                </p>
+            </tab>
+        </tabs>
+    </chapter>
+
+    <tabs>
+        <tab title="123">
+            <p>Tab 1</p>
+        </tab>
+        <tab title="234">
+            <p>Tab 2</p>
+        </tab>
+    </tabs>
+
+</topic>

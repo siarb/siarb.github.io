@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Shortcut"
+       id="Shortcut">
+
+    <chapter title="Using shortcuts" id="using-shortcuts" instance="s">
+        <p id="shortcuts-from-keymap">
+            Here we are using shortcuts from keymap:
+            <shortcut key="$Copy" id="copy-shortcut"/>
+            <shortcut key="ActivateNuGetToolWindow" id="long-name-shortcut"/>
+        </p>
+
+        <p id="instance-filter-many-1" instance="s,n"> I should be shown for either `s` and `n` instances</p>
+
+        <p id="text-shortcuts">
+            And here we use simple text shortcuts:
+            <shortcut id="copy-shortcut-text">Ctrl+C</shortcut>
+            <shortcut id="complex-shortcut-text">Alt+Shift+7</shortcut>
+        </p>
+
+        <p id="shortcuts-different-product">
+            We also need shortcuts from our brand new product:
+            <shortcut from-keymap-of="n" key="$Paste" id="different-product-copy-shortcut"/>
+            <shortcut from-keymap-of="n" key="ChangesView.ShelveSilently" id="different-product-shortcut"/>
+        </p>
+    </chapter>
+
+</topic>

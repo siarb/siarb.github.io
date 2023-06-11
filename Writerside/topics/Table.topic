@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Table"
+       id="Table">
+
+    <chapter id="with-table" title="Here we got table!">
+        <table id="default-table" style="header-row">
+            <tr id="table-heading">
+                <td id="first-column">Tooltip and Shortcut</td>
+                <td id="second-column">Description</td>
+            </tr>
+            <tr id="table-first-raw">
+                <td>Close</td>
+                <td>Close the current tab of the tool window.</td>
+            </tr>
+            <tr id="table-second-raw">
+                <td>Rerun</td>
+                <td>Rerun the dependency analysis in the same tab.</td>
+            </tr>
+        </table>
+
+        <p>A table with header-style left, below:</p>
+
+        <table id="header-style-left" style="header-column">
+            <tr>
+                <td>Tooltip and Shortcut</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>Close</td>
+                <td>Close the current tab of the tool window.</td>
+            </tr>
+        </table>
+
+        <p><emphasis>And below is a table with header-style none:</emphasis></p>
+
+        <table id="header-style-none" style="none">
+            <tr>
+                <td>Tooltip and Shortcut</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Close</td>
+                <td>Close the current tab of the tool window.</td>
+            </tr>
+        </table>
+
+        <p><control>And finally, here is a table with header-style none:</control></p>
+        <table id="header-style-both" style="both">
+            <tr>
+                <td>Tooltip and Shortcut</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td colspan="2">Close</td>
+                <td>Close the current tab of the tool window.</td>
+            </tr>
+        </table>
+    </chapter>
+
+    <chapter title="Colspan and Rowspan" id="colspan-rowspan">
+        Let's check that colspan works:
+        <table>
+            <tr>
+                <td>1-A</td>
+                <td colspan="3">1-BCD</td>
+                <td>1-E</td>
+            </tr>
+            <tr>
+                <td>2-A</td>
+                <td>2-B</td>
+                <td>2-C</td>
+                <td>2-D</td>
+                <td>2-E</td>
+            </tr>
+        </table>
+        And now the same for <control>rowspan:</control>
+        <table>
+            <tr>
+                <td>AA</td>
+                <td>BB</td>
+                <td>CC</td>
+            </tr>
+            <tr>
+                <td>1-A</td>
+                <td rowspan="3">1-B</td>
+                <td>1-C</td>
+            </tr>
+            <tr>
+                <td>2-A</td>
+                <td>2-C</td>
+            </tr>
+            <tr>
+                <td>3-A</td>
+                <td>3-C</td>
+            </tr>
+            <tr>
+                <td>4-A</td>
+                <td>4-B</td>
+                <td>4-C</td>
+            </tr>
+        </table>
+    </chapter>
+
+    <chapter title="Sorted tables" id="chapter-sorted">
+
+        <table id="sorted-one-row-asc">
+            <tr>
+                <td>Position</td>
+                <td sorted="asc">Criterion</td>
+            </tr>
+            <tr>
+                <td>Last</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>First</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Middle</td>
+                <td>B</td>
+            </tr>
+        </table>
+
+        <table id="sorted-one-row-desc">
+            <tr>
+                <td>Position</td>
+                <td sorted="desc">Criterion</td>
+            </tr>
+            <tr>
+                <td>First</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>Last</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Middle</td>
+                <td>B</td>
+            </tr>
+        </table>
+
+        <table id="sorted-two-rows-asc-desc">
+            <tr>
+                <td>Position</td>
+                <td sorted="asc">Criterion A</td>
+                <td sorted="desc">Criterion B</td>
+            </tr>
+            <tr>
+                <td>sixth</td>
+                <td>C</td>
+                <td>Z</td>
+            </tr>
+            <tr>
+                <td>fifth</td>
+                <td>B</td>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>fourth</td>
+                <td>B</td>
+                <td>Q</td>
+            </tr>
+            <tr>
+                <td>third</td>
+                <td>A</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td>second</td>
+                <td>A</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>first</td>
+                <td>A</td>
+                <td>Z</td>
+            </tr>
+        </table>
+
+    </chapter>
+</topic>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="TLDR few instances"
+       id="TLDR_few_instances">
+    <web-file-name instance="n">custom-path.html</web-file-name>
+
+    <tldr instance="s" id="tldr-s"><p>This is a TLDR for instance S.</p></tldr>
+    <tldr instance="n" id="tldr-n"><p>This is a TLDR for instance N.</p></tldr>
+
+    <p>Start writing here.</p>
+
+</topic>

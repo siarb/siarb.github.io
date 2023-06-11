@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Code"
+       id="Code">
+
+    <card-summary>Read more about code snippets. This is a card summary.</card-summary>
+    <var name="myVar" value="variable value"/>
+    <chapter title="Code snippet properties" id="code-properties">
+
+        <p>Code block with multiple line breaks</p>
+
+        <code-block lang="python" id="debug">
+            import math
+
+
+            print "hi"
+        </code-block>
+
+        <p>List files in the current directory:</p>
+        <code-block lang="Shell" prompt="$" id="prompt-code">
+            ls
+        </code-block>
+
+        <p>Collapsible snippet</p>
+        <code-block lang="Kotlin" collapsible="true" default-state="collapsed" id="collapsed-code">
+         <![CDATA[
+            @JvmStatic fun main(args: Array<String>) {
+                println("Hi!")
+            }
+            ]]>
+        </code-block>
+
+        <p>Expanded snippet</p>
+        <code-block lang="Kotlin" collapsible="true" default-state="expanded" id="expanded-code">
+         <![CDATA[
+            @JvmStatic fun main(args: Array<String>) {
+                println("Hi!")
+            }
+            ]]>
+        </code-block>
+
+        <p>Show white spaces</p>
+        <code-block id="show-whitespace" lang="javascript" show-white-spaces="true">
+            console.log("Hello    World!")     ;
+
+        </code-block>
+
+        <p>Not validate code</p>
+        <code-block lang="Kotlin" validate="false" id="validate-false">
+         <![CDATA[
+            fun main() {
+                println(helloWorld)
+            }
+            ]]>
+        </code-block>
+
+        <p>Validate code</p>
+        <code-block lang="Kotlin" validate="true" id="validate-true">
+         <![CDATA[
+            fun main() {
+                println(helloWorld)
+            }
+            ]]>
+        </code-block>
+
+        <p> Use the
+            <code id="inline-code"> style
+            </code> attribute to define the appearance of the code.</p>
+        <p>Code with link</p>
+        <code-block lang="Java" id="code-with-link">
+            [[[int|https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html]]] aInteger;
+        </code-block>
+
+        <code-block lang="Java" id="code-with-link-disabled" disable-links="true">
+            [[[int|https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html]]] aInteger;
+        </code-block>
+
+        <code-block lang="Kotlin" collapsed-title="Custom code title" id="collapsed-title-code" collapsible="true" default-state="collapsed">
+         <![CDATA[
+            @JvmStatic fun main(args: Array<String>) {
+                println("Hi!")
+            }
+            ]]>
+        </code-block>
+
+        <p>Collapsed block with a line number as a title</p>
+
+        <code-block lang="Kotlin" collapsed-title-line-number="2" id="collapsed-line-code" collapsible="true" default-state="collapsed">
+         <![CDATA[
+            @JvmStatic fun main(args: Array<String>) {
+                println("Hi!")
+            }
+            ]]>
+        </code-block>
+
+        <code-block id="interpolate-variables" lang="c#" ignore-vars="false">
+            val s = "%myVar%"
+        </code-block>
+
+        <code-block id="interpolate-variables-false" lang="c#" ignore-vars="true">
+            val s = "%myVar%"
+        </code-block>
+
+
+        <code-block src="testFile.js" lang="javascript" include-lines="3" id="include-file-lines"/>
+
+        <code-block src="newTest.kt" lang="kotlin" include-symbol="expected" id="include-file-symbol"/>
+
+        <code-block src="indentationExample.java" lang="Java" include-symbol="IndentationExample" id="include-file-symbol-class-or-constructor"/>
+    </chapter>
+    <chapter title="Code block languages" id="languages">
+        <p>Fabulous code snippets</p>
+
+        <code-block id="java-code" lang="java">
+        <![CDATA[
+            class HelloWorldApp {
+                public static void main(String[] args) {
+                    System.out.println("Hello World!"); // Prints the string to the console.
+                }
+            }
+            ]]>
+        </code-block>
+
+        <code-block id="actionscript-code" lang="actionscript">
+        <![CDATA[
+            var x: int = 5;
+            trace(x); // 5
+            ]]>
+        </code-block>
+
+        <code-block id="basic-code" lang="vb">
+            10 PRINT "Hello, World!"
+            20 END
+        </code-block>
+
+        <code-block id="css-code" lang="CSS">
+        <![CDATA[
+            p {
+                text-align: center;
+                color: red;
+            }
+            ]]>
+        </code-block>
+
+        <code-block id="bash-code" lang="bash">
+            #!/bin/bash
+            STR="Hello World!"
+            echo $STR
+        </code-block>
+
+        <code-block id="console-code" lang="console">
+            #!/bin/bash
+            STR="Hello World!"
+            echo $STR
+        </code-block>
+
+        <code-block id="cpp-code" lang="C++">
+            <![CDATA[
+            #include <iostream>
+
+            int main()
+            {
+            std::cout << "Hello, world!\n";
+            return 0;
+            }]]>
+        </code-block>
+
+        <code-block id="vbnet-code" lang="VB.NET">
+            <![CDATA[
+            @for i=10 to 21
+            @<p>Line @i</p>
+            next i
+            ]]>
+        </code-block>
+
+        <code-block id="aspnet-code" lang="asp.net (vb)">
+            <![CDATA[
+            @for i=10 to 21
+            @<p>Line @i</p>
+            next i
+            ]]>
+        </code-block>
+
+        <code-block id="aspnetc-code" lang="asp.net (c#)">
+            <![CDATA[
+            @for(var i = 10; i < 21; i++)
+            {
+            <p>Line @i</p>
+            }
+            ]]>
+        </code-block>
+
+        <code-block id="csharp-code" lang="c#">
+            using System;
+            class Program
+            {
+            static void Main(string[] args)
+            {
+            Console.WriteLine("Hello, world!");
+            }
+            }
+        </code-block>
+
+        <code-block id="haskell-code" lang="haskell">
+            module Main where
+
+            main :: IO ()
+            main = putStrLn "Hello, World!"
+        </code-block>
+
+        <code-block id="razor-code" lang="razor">
+            <![CDATA[
+            <p>@await DoSomething("hello", "world")</p>
+            ]]>
+        </code-block>
+
+        <code-block id="html-code" lang="html">
+        <![CDATA[
+            <h1>My First Heading</h1>
+            <p>My first paragraph.</p>
+            ]]>
+        </code-block>
+
+        <code-block id="javascript-code" lang="javascript">
+            console.log("Hello World!");
+        </code-block>
+
+        <code-block id="ts-code" lang="typescript">
+            let isDone: boolean = false;
+        </code-block>
+
+        <code-block id="jsp-code" lang="JSP">
+        <![CDATA[
+            <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+            <%@ page import="java.util.*, java.text.*" %>
+            ]]>
+        </code-block>
+
+        <code-block id="json-code" lang="json">
+            "glossary": {
+            "title": "example glossary",
+            "GlossDiv": {
+            "title": "S",
+        </code-block>
+
+        <code-block id="coffeescript-code" lang="coffeescript">
+            race = function (winner, ...runners) {
+                return print(winner, runners);
+            };
+        </code-block>
+
+        <code-block id="makefile-code" lang="make">
+            hellomake: hellomake.c hellofunc.c
+            gcc -o hellomake hellomake.c hellofunc.c -I.
+
+        </code-block>
+
+        <code-block id="cmake-code" lang="CMAKE">
+            target_include_directories (Hello PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+        </code-block>
+
+        <code-block id="markup-code" lang="markup">
+        <![CDATA[
+            <h1>Anatidae</h1>
+            <p>
+                The family <i>Anatidae</i> includes ducks, geese, and swans,
+                but <em>not</em> the closely related screamers.
+            </p>
+            ]]>
+        </code-block>
+
+        <code-block id="objectivec-code" lang="objc">
+            static void *classMethod1();
+            static return_type classMethod2();
+            static return_type classMethod3(param1_type param1_varName);
+        </code-block>
+
+
+        <code-block id="generic-code" lang="generic">
+            <![CDATA[
+            void main()
+            {
+            // Make MyContainer take just ints.
+            MyContainer<int> intContainer;
+            }
+            ]]>
+        </code-block>
+
+        <code-block id="php-code" lang="php">
+            <![CDATA[
+            <?php
+            echo "Hello World!";
+            ?>
+            ]]>
+        </code-block>
+
+        <code-block id="python-code" lang="python">
+            print('Hello, world!')
+        </code-block>
+
+        <code-block id="shell-code" lang="shell">
+            #!/bin/sh
+            echo "Hello world"
+        </code-block>
+
+        <code-block id="sql-code" lang="sql">
+            SELECT column1, column2
+            FROM table1,
+                 table2
+            WHERE column2 = 'value';
+        </code-block>
+
+        <code-block id="velocity-code" lang="velocity">
+            <![CDATA[
+            <html>
+            <body>
+            #set( $foo = "Velocity" )
+            Hello $foo World!
+            </body>
+            </html>
+            ]]>
+        </code-block>
+
+        <code-block id="freemarker-code" lang="freemarker">
+            <![CDATA[
+            <#if status??>
+            <p>${status.reason}</p>
+            <#else>
+            <p>Missing status!</p>
+            </#if>
+            ]]>
+        </code-block>
+
+        <code-block id="xml-code" lang="xml">
+        <![CDATA[
+            <note>
+                <to>Tove</to>
+                <from>Jani</from>
+                <heading>Reminder</heading>
+                <body>Don't forget me this weekend!</body>
+            </note>
+            ]]>
+        </code-block>
+
+        <code-block id="dtd-code" lang="dtd">
+        <![CDATA[
+            <!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>
+                    <!ATTLIST CHANNEL CHAN CDATA #REQUIRED>
+                    <!ATTLIST PROGRAMSLOT VTR CDATA #IMPLIED>
+            ]]>
+        </code-block>
+
+        <code-block id="xsl-code" lang="xsl">
+         <![CDATA[
+            <xsl:template match="/">
+                Article -
+                <xsl:value-of select="/Article/Title"/>
+                Authors:
+                <xsl:apply-templates select="/Article/Authors/Author"/>
+            </xsl:template>
+            ]]>
+        </code-block>
+
+        <code-block id="xsd-code" lang="xsd">
+        <![CDATA[
+            <xsd:sequence>
+                <xsd:element name="ShipTo" type="tns:USAddress" maxOccurs="2"/>
+                <xsd:element name="BillTo" type="tns:USAddress"/>
+            </xsd:sequence>
+            ]]>
+        </code-block>
+
+        <code-block id="brainfuck-code" lang="brainfuck">
+            <![CDATA[
+        ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
+        ]]>
+        </code-block>
+
+        <code-block id="plaintext-code" lang="plain text">
+            You signal the end of the pre-formatted text with the /PRE tag.
+        </code-block>
+
+        <code-block id="kotlin-code" lang="kotlin">
+        <![CDATA[
+            fun main(args: Array<String>) {
+                println("Hello, World!")
+            }
+            ]]>
+        </code-block>
+
+        <code-block id="go-code" lang="go">
+            import "fmt"
+            func main() {
+            fmt.Println("hello world")
+            }
+        </code-block>
+
+        <code-block id="yaml-code" lang="yaml">
+            # An employee record
+            martin:
+            name: Martin D'vloper
+            job: Developer
+            skill: Elite
+        </code-block>
+
+        <code-block id="twig-code" lang="twig">
+            <![CDATA[
+                {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+        ]]>
+        </code-block>
+
+        <code-block id="groovy-code" lang="groovy">
+            static void main(String[] args) {
+                assert format('String') == 'String'
+                assert new SomeClass().format(Integer.valueOf(1)) == '1'
+            }
+        </code-block>
+
+        <code-block id="scala-code" lang="scala">
+            object HelloWorld {
+            def main(args: Array[String]) {
+            println("Hello, world!")
+            }
+            }
+        </code-block>
+
+        <code-block id="gradle-code" lang="gradle">
+            public class HelloWorld {
+            public static void main(String[] args) {
+            LocalTime currentTime = new LocalTime();
+            System.out.println("The current local time is: " + currentTime);
+
+            Greeter greeter = new Greeter();
+            System.out.println(greeter.sayHello());
+            }
+            }
+        </code-block>
+
+        <code-block id="c-code" lang="c">
+            <![CDATA[#include <stdio.h>
+        int main() {
+        // printf() displays the string inside quotation
+        printf("Hello, World!");
+        return 0;
+        }
+        ]]>
+        </code-block>
+
+        <code-block id="haml-code" lang="haml">
+            %strong{:class => "code", :id => "message"} Hello, World!
+        </code-block>
+
+        <code-block id="erb-code" lang="erb">
+            <![CDATA[
+        <% for  @item in @shopping_list %>
+        <%= @item %>
+        <% end  %>
+        ]]>
+        </code-block>
+
+        <code-block id="dockerfile-code" lang="docker">
+            <![CDATA[# syntax=docker/dockerfile:1
+        FROM node:12-alpine
+        RUN apk add --no-cache python g++ make
+        WORKDIR /app
+        COPY . .
+        RUN yarn install --production
+        CMD ["node", "src/index.js"]
+        ]]>
+        </code-block>
+
+        <code-block id="ini-code" lang="ini">
+            # Set detailed log for additional debugging info
+            DetailedLog=1
+            RunStatus=1
+            StatusPort=6090
+            StatusRefresh=10
+            Archive=1
+        </code-block>
+
+        <code-block id="http-code" lang="http">
+        <![CDATA[
+            GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1
+        ]]>
+    </code-block>
+
+        <code-block id="smarty-code" lang="smarty">
+            <![CDATA[
+            {foreach $foo as $bar}
+            <a href="{$bar.zig}">{$bar.zag}</a>
+            <a href="{$bar.zig2}">{$bar.zag2}</a>
+            <a href="{$bar.zig3}">{$bar.zag3}</a>
+            {foreachelse}
+            There were no rows found.
+            {/foreach}
+            ]]>
+        </code-block>
+
+        <code-block id="phpdoc-code" lang="phpdoc">
+            * This class does things
+            * @package mypackage
+            * @subpackage example
+            */
+            class oneofmany extends mainclass
+
+        </code-block>
+
+        <code-block id="swift-code" lang="swift">
+            func greetAgain(person: String) -> String {
+            return "Hello again, " + person + "!"
+            }
+            print(greetAgain(person: "Anna"))
+            // Prints "Hello again, Anna!"
+        </code-block>
+
+        <code-block id="mps-code" lang="mps">
+            <![CDATA[
+            public interface A {
+                public default void foo() {
+                    System.out.println("A");
+                }
+            }
+            ]]>
+        </code-block>
+
+        <code-block id="apache-code" lang="apache">
+            text_file = sc.textFile("hdfs://...")
+            counts = text_file.flatMap(lambda line: line.split(" ")) \
+            .map(lambda word: (word, 1)) \
+            .reduceByKey(lambda a, b: a + b)
+            counts.saveAsTextFile("hdfs://...")
+        </code-block>
+
+        <code-block id="nginx-code" lang="nginx">
+            #if (NGX_HTTP_CACHE)
+            ngx_http_complex_value_t cache_key;
+            #endif
+        </code-block>
+
+        <code-block id="curl-code" lang="curl">
+            curl -o myfile.css https://cdn.keycdn.com/css/animate.min.css
+        </code-block>
+
+        <code-block id="bnf-code" lang="bnf">
+            EXPR = TERM $('+' TERM .OUT('ADD') | '-' TERM .OUT('SUB'));
+        </code-block>
+
+        <code-block id="regex-code" lang="regex">
+            let re = /ab+c/;
+        </code-block>
+
+        <code-block id="none-code">
+            something weird really going on here
+        </code-block>
+
+    </chapter>
+
+    <chapter title="Compare code blocks" id="compare-code">
+
+        <p>Comparing code:</p>
+
+        <compare id="default-compare-code">
+            <code-block lang="Java">
+                <![CDATA[
+                public static void main(String[] args) {System.out.println("Hi!")}
+                ]]>
+            </code-block>
+            <code-block lang="Kotlin">
+                <![CDATA[
+                @JvmStatic fun main(args: Array<String>) { println("Hi!") }
+            ]]>
+            </code-block>
+        </compare>
+
+        <p>Custom title usage:</p>
+
+        <compare first-title="Before custom title" second-title="After custom title" id="custom-title-compare-code">
+            <code-block lang="Java">
+                <![CDATA[
+                public static void main(String[] args) {System.out.println("Hi!")}
+                ]]>
+            </code-block>
+            <code-block lang="Kotlin">
+                <![CDATA[
+                @JvmStatic fun main(args: Array<String>) { println("Hi!") }
+                ]]>
+            </code-block>
+        </compare>
+
+        <p>Style top-bottom</p>
+
+        <compare style="top-bottom" id="top-bottom-compare-code">
+            <code-block lang="Java">
+                    <![CDATA[
+                public static void main(String[] args) {System.out.println("Hi!")}
+                ]]>
+            </code-block>
+            <code-block lang="Kotlin">
+                    <![CDATA[
+                @JvmStatic fun main(args: Array<String>) { println("Hi!") }
+                ]]>
+            </code-block>
+        </compare>
+
+        <p>Style left-right</p>
+
+        <compare style="left-right" id="left-right-compare-code">
+            <code-block lang="Java">
+                <![CDATA[
+                public static void main(String[] args) {System.out.println("Hi!")}
+                ]]>
+            </code-block>
+            <code-block lang="Kotlin">
+                <![CDATA[
+                @JvmStatic fun main(args: Array<String>) { println("Hi!") }
+                ]]>
+            </code-block>
+        </compare>
+
+    </chapter>
+
+</topic>

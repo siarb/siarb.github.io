@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Product starting page"
+       id="Product_starting_page">
+    <section-starting-page>
+        <title>Starting page</title>
+        <description>This page tells about the product and acts like a landing page for it.</description>
+        <spotlight>
+            <a href="Table.topic"
+               description="The product has cool tables" type="start"/>
+            <a href="Capitalization.topic"
+            description="The product has capitalization." type="academy"/>
+        </spotlight>
+
+        <primary>
+            <title>Main group</title>
+            <a href="Shortcut.topic"
+               description="Sed condimentum feugiat sagittis"/>
+            <a href="Definition_list.topic"
+               description="Sed condimentum feugiat sagittis"/>
+        </primary>
+
+        <secondary>
+            <title>Highlighted group</title>
+            <a href="Switcher.topic"
+               description="Sed condimentum feugiat sagittis"/>
+            <a href="Whitespaces.topic"
+               description="Sed condimentum feugiat sagittis"/>
+        </secondary>
+
+        <misc>
+            <cards>
+                <title>Custom cards</title>
+                <a href="Procedure.topic"
+                   description="Sed condimentum feugiat sagittis"/>
+            </cards>
+
+            <links narrow="true">
+            <group>
+                <title>Custom links</title>
+                <a href="Tldr.topic"
+                   description="Sed condimentum feugiat sagittis"/>
+            </group>
+        </links>
+    </misc>
+    </section-starting-page>
+</topic>

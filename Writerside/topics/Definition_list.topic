@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Definition list"
+       id="Definition_list">
+    <web-summary>This is a summary for search bots.</web-summary>
+    <chapter title="Default deflist" id="chapter-defaults">
+        <deflist id="default">
+            <def title="Title 1" id="def-default">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+            <def title="Title 2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=full collapsible=true default-state=expanded'" id="chapter-with-style">
+        <deflist style="full" collapsible="true" default-state="expanded" id="full-collapsible">
+            <def title="Plain element" id="def-expanded-by-default">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+            <def title="Collapsed" default-state="collapsed" id="def-collapsed">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+            <def title="Expanded" default-state="expanded" id="def-expanded">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+            <def title="Inherited" default-state="inherited" id="def-inherited">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=compact'" id="chapter-compact">
+        <deflist style="compact" id="compact">
+            <def title="Title 1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=narrow'" id="chapter-narrow">
+        <deflist style="narrow" id="narrow">
+            <def title="Title 1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=medium'" id="chapter-medium">
+        <deflist style="medium" id="medium">
+            <def title="Title 1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with 'style=wide'" id="chapter-wide">
+        <deflist style="wide" id="wide">
+            <def title="Title 1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist with images and lists in it" id="chapter-images-and-lists">
+        <deflist style="full" collapsible="true" default-state="expanded">
+            <def title="Sampled" default-state="collapsed">
+                <p>
+                    (Default, Windows only) dotMemory collects limited allocation data:
+                    For each function that allocates objects you can view
+                    only approximate object sizes. The information
+                    about objects count is not available.
+                </p>
+                <p>
+                    The pros of the <control>Sampled</control> mode:
+                </p>
+                <list>
+                    <li>
+                        It doesn't slow down the profiled application.
+                    </li>
+                    <li>
+                        You can use it when the profiler is attached to an already running application.
+                    </li>
+                </list>
+                <p>
+                    The data is not detailed because it is based on ETW events: the
+                    allocation event is triggered each time the size of the allocated memory
+                    exceeds 100KB in total. For example, a thread allocates five 50 KB memory
+                    blocks during profiling. In such a case, dotMemory will detect only two allocations of 100 KB.
+                </p>
+                <img src="db_video_overview_of_inspections.png" alt="Memory allocation" type="separated" width="268"/>
+            </def>
+            <def title="Full">
+                <p>
+                    dotMemory collects detailed allocation data:
+                    It includes the exact size of allocated objects and objects count.
+                </p>
+                <p>
+                    The cons of the <control>Full</control> mode:
+                </p>
+                <list>
+                    <li>
+                        It significantly slows down the profiled application.
+                    </li>
+                    <li>
+                        You cannot use it when the profiler is attached to an already running application.
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </chapter>
+
+    <chapter title="Deflist sorted" id="chapter-sorted">
+        <deflist style="wide" id="sorted" sorted="desc">
+            <def title="Alice">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+            <def>
+                <title instance="s">Bob</title>
+                <title instance="n">Charlie</title>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </def>
+        </deflist>
+    </chapter>
+
+</topic>

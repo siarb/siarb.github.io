@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       id="Tabs-XML"
+       title="Tabs XML">
+
+    <chapter id="with-tabs-p" title="Tabs <p> testing">
+        <tabs id="p-tabs">
+            <tab title="With <p>" id="with-p">
+                <p>
+                    Text of the paragraph specified explicitly
+                </p>
+            </tab>
+            <tab title="Without <p>" id="without-p">
+                Text without paragraph specified explicitly
+            </tab>
+        </tabs>
+    </chapter>
+
+</topic>

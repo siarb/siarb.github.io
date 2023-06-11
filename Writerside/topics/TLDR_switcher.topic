@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="TLDR switcher"
+       id="TLDR_switcher"
+       switcher-label="OS">
+
+    <!--Here is tldr  and thay shpuld be displayed while switching the sections.-->
+    <tldr><p switcher-key="OSX" id="tldr-1">This is a TLDR for instance S-OSX</p>
+    <p switcher-key="Win" id="tldr-2">This is a TLDR for instance S-Win</p></tldr>
+    <p>Start writing here.</p>
+
+</topic>
