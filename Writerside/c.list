@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE categories
-        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/categories.dtd">
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/categories.dtd">
 <categories>
-    <category id="categoryA" name="Category A" order="1"/>
-    <category id="categoryB" name="Category B" order="2"/>
+    <category id="wrs" name="Writerside documentation" order="1"/>
 </categories>

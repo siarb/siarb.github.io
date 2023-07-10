@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ihp SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/ihp.dtd">
+<!DOCTYPE ihp SYSTEM "https://resources.jetbrains.com/writerside/1.0/ihp.dtd">
 
 <ihp version="2.0">
-    <settings>
-    </settings>
     <topics dir="topics"/>
-    <images dir="images" web-path="img"/>
-    <instance src="auto.tree"/>
-
-    <!--    <assets>
-            <asset type="code" download-from="https://buildserver.labs.intellij.net/repository/download/Documentation_Plugins_NebulaApi/.lastFinished/nebula.jar"
-                   save-to="nebula-sources">
-                <auth type="header" credentials="TC"/>
-            </asset>
-        </assets>-->
+    <images dir="images" web-path="images"/>
+    <instance src="m.tree" web-path="/m/" version="1.0"/>
 </ihp>
