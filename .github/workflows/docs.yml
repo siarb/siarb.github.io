@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 env:
-  PRODUCT: name_of_module/instance_id
-  ARTIFACT: webHelpXX2-all.zip
-  DOCKER_VERSION: '2.1.1430-p3709'
+  INSTANCE: Writerside/m
+  ARTIFACT: webHelpM2-all.zip
+  TAG: '2.1.1471-p3848'
 
 
 jobs:
@@ -18,15 +18,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Set Docker version
-        id: docker
-        run: echo "DOCKER_VERSION=${{ env.DOCKER_VERSION }}" >> $GITHUB_ENV
       - name: Build Writerside docs using Docker
-        uses: siarb/writerside-docker-action@v1.104
-        with:
-          DOCKER_VERSION: ${{ env.DOCKER_VERSION }}
-      - name: Get DOCKER_VERSION
-        run: echo "DOCKER_VERSION was ${{ steps.docker.outputs.DOCKER_VERSION }}"
+        uses: siarb/writerside-docker-action@v1.153
+        env:
+          TAG: ${{ env.TAG }}
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
