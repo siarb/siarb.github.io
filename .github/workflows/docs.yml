@@ -6,14 +6,11 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  id-token: write
-  pages: write
-
 env:
-  PRODUCT: Writerside/m
-  DOC_ARTIFACT: webHelpM2-all.zip
-  DOCKER_IMAGE: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1463-p3799
+  PRODUCT: name_of_module/instance_id
+  ARTIFACT: webHelpXX2-all.zip
+  DOCKER_VERSION: '2.1.1430-p3709'
+
 
 jobs:
   build-job:
@@ -21,20 +18,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      - name: Set Docker build args
-        run: echo "DOCKER_IMAGE=${{ env.DOCKER_IMAGE }}" >> $GITHUB_ENV
-
-      - name: Build docs with Docker
-        uses: siarb/writerside-docker-action@v1.92
+      - name: Set Docker version
+        id: docker
+        run: echo "DOCKER_VERSION=${{ env.DOCKER_VERSION }}" >> $GITHUB_ENV
+      - name: Build Writerside docs using Docker
+        uses: siarb/writerside-docker-action@v1.104
         with:
-          DOCKER: ${{ env.DOCKER_IMAGE }}
-          DOCKERFILE: <Dockerfile-path>
-          ENTRYPOINT: entrypoint.sh
-
-      - name: Upload documentation
+          DOCKER_VERSION: ${{ env.DOCKER_VERSION }}
+      - name: Get DOCKER_VERSION
+        run: echo "DOCKER_VERSION was ${{ steps.docker.outputs.DOCKER_VERSION }}"
+      - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: help
-          path: ${env.DOC_ARTIFACT}
+          name: artifact
+          path: artifacts/${{ env.ARTIFACT }}
           retention-days: 7
+
