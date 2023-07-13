@@ -3,29 +3,62 @@ name: Build docs
 on:
   push:
     branches: ["main"]
-
+  # Specify to run a workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-env:
-  INSTANCE: Writerside/m
-  ARTIFACT: webHelpM2-all.zip
-  TAG: '2.1.1471-p3848'
+# Gives the workflow permissions to clone the repo and create a page deployment
+permissions:
+  id-token: write
+  pages: write
 
+env:
+  PRODUCT: Writerside/m
+  DOC_ARTIFACT: webHelpM2-all.zip
 
 jobs:
   build-job:
     runs-on: ubuntu-latest
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1471-p3848
+    outputs:
+      artifact: ${{ steps.generate-artifact.outputs.artifact }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Build Writerside docs using Docker
-        uses: siarb/writerside-docker-action@v1.153
-        env:
-          TAG: ${{ env.TAG }}
-      - name: Upload artifact
+      - name: Build docs
+        run: |
+          export DISPLAY=:99
+          Xvfb :99 & 
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product $PRODUCT --runner github -output-dir artifacts/ || true
+          test -e artifacts/$ARTIFACT && echo $ARTIFACT exists
+      - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
-          name: artifact
-          path: artifacts/${{ env.ARTIFACT }}
+          name: help
+          path: artifacts/${{ env.DOC_ARTIFACT }}
           retention-days: 7
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Requires the build-job results
+    needs: build-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: help
+      - name: Unzip artifact
+        uses: montudor/action-zip@v1
+        with:
+          args: unzip -qq ${{ env.DOC_ARTIFACT }} -d dir
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dir
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
