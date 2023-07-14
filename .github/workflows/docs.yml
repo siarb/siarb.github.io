@@ -25,11 +25,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Build docs
-        run: |
-          export DISPLAY=:99
-          Xvfb :99 & 
-          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product $PRODUCT --runner github -output-dir artifacts/ || true
-          test -e artifacts/$ARTIFACT && echo $ARTIFACT exists
+        uses: siarb/writerside-docker-action@v1.154
+#        run: |
+#          export DISPLAY=:99
+#          Xvfb :99 &
+#          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product $PRODUCT --runner github -output-dir artifacts/ || true
+#          test -e artifacts/$ARTIFACT && echo $ARTIFACT exists
       - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
