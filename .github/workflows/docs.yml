@@ -23,9 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Build docs
-        uses: siarb/writerside-docker-action@v1.217
-        with:
-          build-args: WORKSPACE_DIR="${{ github.workspace }}"
+        uses: siarb/writerside-docker-action@v1.218
       - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
