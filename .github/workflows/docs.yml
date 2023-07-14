@@ -17,26 +17,36 @@ env:
   DOCKER: 2.1.1471-p3848
 
 jobs:
-  build-job:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Build docs
-        uses: siarb/writerside-docker-action@v1.218
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: List files in the current directory
+        run: ls -al
+
+      - name: Build and push Docker image
+        uses: siarb/writerside-docker-action@v1.246
+        with:
+          instance: ${{ env.INSTANCE }}
+          artifact: ${{ env.ARTIFACT }}
+          image-version: ${{ env.DOCKER }}
+
       - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
           name: help
           path: artifacts/${{ env.ARTIFACT }}
-          retention-days: 7
+
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     # Requires the build-job results
-    needs: build-job
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
