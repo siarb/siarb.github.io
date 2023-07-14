@@ -12,25 +12,20 @@ permissions:
   pages: write
 
 env:
-  PRODUCT: Writerside/m
+  INSTANCE: Writerside/m
   ARTIFACT: webHelpM2-all.zip
+  DOCKER: 2.1.1471-p3848
 
 jobs:
   build-job:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1471-p3848
-    outputs:
-      artifact: ${{ steps.generate-artifact.outputs.artifact }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Build docs
-        uses: siarb/writerside-docker-action@v1.154
-#        run: |
-#          export DISPLAY=:99
-#          Xvfb :99 &
-#          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product $PRODUCT --runner github -output-dir artifacts/ || true
-#          test -e artifacts/$ARTIFACT && echo $ARTIFACT exists
+        uses: siarb/writerside-docker-action@v1.217
+        with:
+          build-args: WORKSPACE_DIR="${{ github.workspace }}"
       - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
