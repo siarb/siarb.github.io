@@ -7,4 +7,6 @@
                  start-page="starter-topic.md">
 
     <toc-element topic="starter-topic.md"/>
+    <toc-element topic="pivot.md"/>
+    <toc-element topic="Empty-XML-Topic.topic"/>
 </instance-profile>

@@ -35,31 +35,52 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: help
-          path: artifacts/${{ env.ARTIFACT }}
+          path: artifacts
 
+  test:
+    # Requires the build-job results
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: help
+          path: artifacts
+
+      - name: Test documentation
+        uses: siarb/wrs-test-docs-github@v1.14
+        with:
+          instance: ${{ env.INSTANCE }}
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     # Requires the build-job results
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
+
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: help
+
       - name: Unzip artifact
         uses: montudor/action-zip@v1
         with:
           args: unzip -qq ${{ env.ARTIFACT }} -d dir
+
       - name: Setup Pages
         uses: actions/configure-pages@v2
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: dir
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
