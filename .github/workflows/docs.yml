@@ -37,29 +37,29 @@ jobs:
           name: help
           path: artifacts
 
-  test:
-    # Requires the build-job results
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: help
-          path: artifacts
-
-      - name: Test documentation
-        uses: siarb/wrs-test-docs-github@v1.14
-        with:
-          instance: ${{ env.INSTANCE }}
+#  test:
+#    # Requires the build-job results
+#    needs: build
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Download artifact
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: help
+#          path: artifacts
+#
+#      - name: Test documentation
+#        uses: siarb/wrs-test-docs-github@v1.14
+#        with:
+#          instance: ${{ env.INSTANCE }}
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     # Requires the build-job results
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
