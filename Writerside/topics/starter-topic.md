@@ -2,26 +2,6 @@
 
 siarb/wrs-test-github-action@v1.0
 
-![](completion_procedure.pngq)
+![](!!!)
 
-```kotlin
-fun main() {
-    println("Hello, world!")
-}
-```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3"}
-
-## Kotlin runnable snippets
-
-We would like to transform it to a proper WRS plugin, but for now the
-syntax is supported directly, in the Markdown files.
-
-The similar syntax copy-pasted to topic file will show a couple of
-*unsupported* attributes, highlighted as errors.
-
-```kotlin
-fun main() {
-    println("Hello, world!")
-}
-```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3"}
+<shortcut>Ctrl + C</shortcut>

@@ -1,4 +1,4 @@
-name: Build docs
+name: Build documentation
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v1
         with:
           name: docs
           path: artifacts
@@ -59,7 +59,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     # Requires the test job to complete successfully
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
