@@ -24,7 +24,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and push Docker image
+      - name: Build docs with Docker image
         uses: siarb/wrs-test-github-action@v1.0
         with:
           instance: ${{ env.INSTANCE }}
@@ -34,31 +34,11 @@ jobs:
       - name: Upload documentation
         uses: actions/upload-artifact@v3
         with:
-          name: help
+          name: docs
           path: artifacts
 
-#  test:
-#    # Requires the build-job results
-#    needs: build
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Download artifact
-#        uses: actions/download-artifact@v3
-#        with:
-#          name: help
-#          path: artifacts
-#
-#      - name: Test documentation
-#        uses: siarb/wrs-test-docs-github@v1.14
-#        with:
-#          instance: ${{ env.INSTANCE }}
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # Requires the build-job results
+  test:
+    # Requires the build job to complete successfully
     needs: build
     runs-on: ubuntu-latest
 
@@ -66,7 +46,27 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: help
+          name: docs
+          path: artifacts
+
+      - name: Test documentation
+        uses: siarb/wrs-test-docs-github@v1.15
+        with:
+          instance: ${{ env.INSTANCE }}
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Requires the test job to complete successfully
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifact
 
       - name: Unzip artifact
         uses: montudor/action-zip@v1
@@ -83,4 +83,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v1.2.8
