@@ -6,7 +6,6 @@ You can use it as a sandbox to play with Writerside features, and remove it from
 ## Add new topics
 You can create empty topics, or choose a template for different types of content that contains some boilerplate structure to help you get started:
 
-![Create new topic options](new_topic_options.png){ width=290 }{border-effect=line}
 
 ## Write content
 %product% supports two types of markup: Markdown and XML.
@@ -35,10 +34,7 @@ To add switchable content, you can make use of tabs (inject them by starting to 
     <tab title="Markdown">
         <code-block lang="plain text">![Alt Text](new_topic_options.png){ width=450 }</code-block>
     </tab>
-    <tab title="Semantic markup">
-        <code-block lang="xml">
-            <![CDATA[<img src="new_topic_options.png" alt="Alt text" width="450px"/>]]></code-block>
-    </tab>
+
 </tabs>
 
 ### Collapsible blocks
