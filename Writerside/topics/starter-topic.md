@@ -2,7 +2,7 @@
 
 siarb/wrs-test-github-action@v1.0
 
-[link](hi.topic)
+[link]()
 
-%team%
+[](starter-topic.md1)
 
