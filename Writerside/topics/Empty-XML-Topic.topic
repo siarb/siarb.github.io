@@ -5,5 +5,6 @@
        xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
        title="Empty XML Topic" id="Empty-XML-Topic">
 
+    <img src="" alt=""/>
 
 </topic>
