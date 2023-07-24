@@ -3,7 +3,7 @@ name: Build documentation
 on:
   push:
     branches: ["main"]
-  # Specify to run a workflow manually from the Actions tab on GitHub.
+  # Specify to run a workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
 # Gives the workflow permissions to clone the repo and create a page deployment
@@ -21,8 +21,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Build docs with Docker image
         uses: siarb/wrs-test-github-action@v1.0
@@ -35,15 +35,17 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: docs
-          path: artifacts
+          path: |
+            artifacts/${{ env.ARTIFACT }}
+            artifacts/report.json
 
   test:
-    # Requires the build job to complete successfully
+    # Requires build job results
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download artifact
+      - name: Download artifacts
         uses: actions/download-artifact@v1
         with:
           name: docs
@@ -83,4 +85,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1.2.8
+        uses: actions/deploy-pages@v1
