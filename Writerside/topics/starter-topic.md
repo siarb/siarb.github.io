@@ -1,6 +1,6 @@
 # About
 
-Checked
-siarb/wrs-test-github-action@v1.0
+Checked release
+siarb/wrs-test-github-action@v1.5
 
 

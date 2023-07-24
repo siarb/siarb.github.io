@@ -14,7 +14,6 @@ permissions:
 env:
   INSTANCE: Writerside/m
   ARTIFACT: webHelpM2-all.zip
-  DOCKER: 2.1.1479-p3869
 
 jobs:
   build:
@@ -25,7 +24,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build docs with Docker image
-        uses: siarb/wrs-test-github-action@v1.0
+        uses: siarb/wrs-test-github-action@v1.6
         with:
           instance: ${{ env.INSTANCE }}
           artifact: ${{ env.ARTIFACT }}
