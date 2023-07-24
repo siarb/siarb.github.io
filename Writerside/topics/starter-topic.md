@@ -1,6 +1,5 @@
 # About
 
-Checked release
-siarb/wrs-test-github-action@v1.5
-
+Release
+`JetBrains/writerside-github-action@v4`
 

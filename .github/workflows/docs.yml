@@ -24,11 +24,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build docs with Docker image
-        uses: siarb/wrs-test-github-action@v1.6
+        uses: JetBrains/writerside-github-action@v4
         with:
           instance: ${{ env.INSTANCE }}
           artifact: ${{ env.ARTIFACT }}
-          image-version: ${{ env.DOCKER }}
 
       - name: Upload documentation
         uses: actions/upload-artifact@v3
