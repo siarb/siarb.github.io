@@ -14,7 +14,7 @@ permissions:
 env:
   INSTANCE: Writerside/m
   ARTIFACT: webHelpM2-all.zip
-  DOCKER: 2.1.1479-p3869
+  DOCKER_VERSION: 2.1.1479-p3869
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
         with:
           instance: ${{ env.INSTANCE }}
           artifact: ${{ env.ARTIFACT }}
-          image-version: ${{ env.DOCKER }}
+          docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Upload documentation
         uses: actions/upload-artifact@v3
