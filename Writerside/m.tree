@@ -4,9 +4,7 @@
 
 <instance-profile id="m"
                  name="MyDocs"
-                 start-page="starter-topic.md">
+                 start-page="Starter.md">
 
-    <toc-element topic="starter-topic.md"/>
     <toc-element topic="Starter.md"/>
-    <toc-element topic="Empty-XML-Topic.topic"/>
 </instance-profile>

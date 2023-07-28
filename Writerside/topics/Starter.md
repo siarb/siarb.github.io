@@ -1,5 +1,5 @@
 # Starter
 
-New V4 docker
+New V1 docker checker
 
 %product% supports two types of markup: Markdown and XML.
