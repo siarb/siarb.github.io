@@ -14,7 +14,7 @@ permissions:
 env:
   INSTANCE: Writerside/m
   ARTIFACT: webHelpM2-all.zip
-  DOCKER_VERSION: 2.1.1495-p3923
+  DOCKER_VERSION: 2.1.1501-p3929
 
 jobs:
   build:
