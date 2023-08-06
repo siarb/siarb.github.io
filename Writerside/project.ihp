@@ -3,6 +3,7 @@
 
 <ihp version="2.0">
     <topics dir="topics"/>
+    <images dir="pictures" web-path="writerside-github"/>
     <images dir="images" web-path="writerside-github"/>
     <instance src="m.tree" web-path="/m/" version="1.0"/>
 </ihp>

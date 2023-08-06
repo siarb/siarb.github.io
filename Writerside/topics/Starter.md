@@ -1,6 +1,9 @@
 # Mermaid other types MD
 
-## Class diagram with namespace
+## Add new topics
+
+![Create new topic options](dog.png)
+{ width=290 }{border-effect=line}
 
 ## Diagram with own title
 
