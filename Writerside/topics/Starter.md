@@ -1,5 +1,7 @@
 # Mermaid other types MD
 
+<api-doc openapi-path="./../api-with-examples.yaml"></api-doc>
+
 ## Add new topics
 
 ![Create new topic options](dog.png)
