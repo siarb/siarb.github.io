@@ -1,5 +1,13 @@
 # Mermaid other types MD
 
+## LaTeX
+
+```tex
+\begin{equation*}
+\sqrt{x^2+1}
+\end{equation*}
+```
+
 <api-doc openapi-path="./../api-with-examples.yaml"></api-doc>
 
 ## Add new topics
