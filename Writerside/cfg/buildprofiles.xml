@@ -3,27 +3,22 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <variables>
-        <primary-color>ruby</primary-color>
-        <header-logo>FlyteLogo.svg</header-logo>
     </variables>
-    <build-profile instance="adoc">
-        <variables>
-            <noindex-content>true</noindex-content>
-        </variables>
-    </build-profile>
+
     <build-profile instance="m">
         <variables>
-            <noindex-content>true</noindex-content>
+            <algolia-id>ERUSDW4898</algolia-id>
+            <algolia-index>index</algolia-index>
+            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
+            <web-root>https://siarb.github.io</web-root>
         </variables>
     </build-profile>
-    <footer>
-        <social type="twitter" href="https://x.com/flytelabs"/>
-        <social type="email" href="mailto:hello@flyte.gg"/>
-
-        <link href="https://flyte.gg">Flyte Home</link>
-        <link href="https://github.com/flytegg/flyte-docs">Contribute To The Docs</link>
-
-        <copyright>Flyte Labs Ltd. 2023</copyright>
-    </footer>
-
+    <build-profile instance="t">
+        <variables>
+            <algolia-id>ERUSDW4898</algolia-id>
+            <algolia-index>index</algolia-index>
+            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
+            <web-root>https://siarb.github.io</web-root>
+        </variables>
+    </build-profile>
 </buildprofiles>
