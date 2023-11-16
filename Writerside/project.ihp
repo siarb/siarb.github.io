@@ -9,5 +9,5 @@
     <images dir="pictures" web-path="writerside-github"/>
     <images dir="images" web-path="writerside-github"/>
     <instance src="m.tree" web-path="/m/"/>
-    <instance src="t.tree" web-path="t"/>
+    <instance src="t.tree" web-path="/t/"/>
 </ihp>

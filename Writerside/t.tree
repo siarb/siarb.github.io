@@ -4,8 +4,11 @@
 
 <instance-profile id="t"
                  name="test"
-                 start-page="Default-topic.md">
+                 start-page="標題.md">
 
+    <toc-element topic="欢迎.md"/>
+    <toc-element topic="第一章.md"/>
+    <toc-element topic="標題.md"/>
     <toc-element topic="Default-topic.md"/>
     <toc-element topic="Test1.topic"/>
 </instance-profile>
