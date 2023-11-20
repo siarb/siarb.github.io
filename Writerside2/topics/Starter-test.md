@@ -8,7 +8,7 @@
 title
  <u>Simple</u> communication example
  on <i>several</i> lines and using <font color=red>html</font>
- This is hosted by <img:writerside-github/JB_Writerside_logo.png>
+ This is hosted by <img:JB_Writerside_logo.png>
 end title
 
 Alice -> Bob: Authentication Request

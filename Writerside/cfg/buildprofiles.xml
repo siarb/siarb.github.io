@@ -3,22 +3,25 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <variables>
+        <primary-color>aqua</primary-color>
+        <header-logo>pioneer-logo.svg</header-logo>
+        <webmaster>developers@schierproducts.com</webmaster>
+<!--        <custom-favicons>apple-touch-icon.png</custom-favicons>-->
+        <web-root>https://api-docs.schierproducts.com/</web-root>
     </variables>
-
-    <build-profile instance="m">
+    <build-profile instance="product-api">
         <variables>
-            <algolia-id>ERUSDW4898</algolia-id>
-            <algolia-index>index</algolia-index>
-            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
-            <web-root>https://siarb.github.io</web-root>
+            <algolia-id>SDZNM9UIJH</algolia-id>
+            <algolia-index>pages</algolia-index>
+            <algolia-api-key>69a3134b14b17dc614b560778e5479d0</algolia-api-key>
+            <noindex-content>false</noindex-content>
         </variables>
     </build-profile>
-    <build-profile instance="t">
-        <variables>
-            <algolia-id>ERUSDW4898</algolia-id>
-            <algolia-index>index</algolia-index>
-            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
-            <web-root>https://siarb.github.io</web-root>
-        </variables>
-    </build-profile>
+    <footer>
+        <social type="linkedin" href="https://www.linkedin.com/company/schier-products" />
+        <social type="youtube" href="https://www.youtube.com/@schierproducts" />
+        <copyright>Schier 2023</copyright>
+        <link href="https://schierproducts.com">Schier Website</link>
+        <link href="https://api.schierproducts.com">Schier API</link>
+    </footer>
 </buildprofiles>

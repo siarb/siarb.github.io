@@ -2,5 +2,7 @@
 <!DOCTYPE categories
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/categories.dtd">
 <categories>
-    <category id="home" name="Flyte Information" order="1"/>
+    <category id="config" name="Configuration" order="1"/>
+    <category id="product-types" name="Product Type Request Documentation" order="2"/>
+    <category id="products" name="Products Request Documentation" order="3"/>
 </categories>
