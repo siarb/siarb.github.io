@@ -5,7 +5,7 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="PHP (with Laravel support)" id="php-sdk">
 
-    <section-starting-page instance="product-api">
+    <section-starting-page instance="РуИ">
         <title>PHP (with Laravel support)</title>
         <description>
             This article provides software development kit documentation for the Schier Product API written in the PHP language with optional Laravel support.
