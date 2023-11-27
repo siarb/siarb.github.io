@@ -5,31 +5,10 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Empty XML Topic" id="Empty-XML-Topic">
 
-    <api-endpoint openapi-path="../../Writerside/api-spec/openapi-time.yaml"
-                  endpoint="/projects/{projectId}/timeDilation"
-                  method="post" generate-samples="false">
 
-        <response type="201">
-            <sample>
-                {
-                "creationDate": "2023-07-24T18:00:00Z",
-                "dilationFactor": 2.0,
-                "id": "td123",
-                "projectId": "p456",
-                "state": "ACTIVE"
-                }
-            </sample>
-        </response>
-        <response type="400">
-            <sample>
-                {
-                "creationDate": "2023-07-24T18:00:00Z",
-                "dilationFactor": 2.0,
-                "id": "td123",
-                "projectId": "p456",
-                "state": "ACTIVE"
-                }
-            </sample>
-        </response>
-    </api-endpoint>
+    <code-block lang="plantuml">
+        @startuml
+        Bob->Alice : Hello!
+        @enduml
+    </code-block>
 </topic>

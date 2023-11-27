@@ -3,7 +3,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <variables>
-        <primary-color>aqua</primary-color>
+        <primary-color>forest</primary-color>
         <header-logo>pioneer-logo.svg</header-logo>
         <webmaster>developers@schierproducts.com</webmaster>
 <!--        <custom-favicons>apple-touch-icon.png</custom-favicons>-->

@@ -7,6 +7,8 @@
 
     <build-profile instance="m">
         <variables>
+            <primary-color>forest</primary-color>
+            <color-preset>contrast</color-preset>
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>

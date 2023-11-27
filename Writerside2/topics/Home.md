@@ -1,5 +1,11 @@
 # Documentation Home
 
+```plantuml
+@startuml
+Bob->Alice : Hello!
+@enduml
+```
+
 ## Flowchart single block
 
 ```mermaid
@@ -1615,6 +1621,7 @@ Widget -> Widgets : To database
 ```
 
 ## Comments
+
 
 ```plantuml
 @startuml
