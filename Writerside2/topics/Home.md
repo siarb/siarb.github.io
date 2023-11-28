@@ -1,7 +1,9 @@
 # Documentation Home
 
+![](dog.png)
+
 ```plantuml
-@startuml
+@startumlq
 Bob->Alice : Hello!
 @enduml
 ```
