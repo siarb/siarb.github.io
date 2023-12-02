@@ -7,7 +7,10 @@
                   start-page="Home.md">
 
     <toc-element topic="Home.md"/>
+    <toc-element topic="ééé-Águila-calva-Civiltà.md"/>
 
     <toc-element topic="Starter.md"/>
+    <toc-element topic="ééé.md"/>
+    <toc-element topic="éééea-Águila-calva-png.md"/>
     <toc-element topic="Empty-XML-Topic.topic"/>
 </instance-profile>
