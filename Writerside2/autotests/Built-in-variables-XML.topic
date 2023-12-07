@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Built-in variables from linked topic XML" id="Built-in-variables-XML">
+
+    <chapter title="%thisTopic% is the ID of the current topic" id="thistopic-is-the-id-of-the-current-topic"/>
+
+    <chapter title="%instance% is the name of the current instance" id="instance-is-the-name-of-the-current-instance"/>
+
+    <chapter title="%instance-lowercase% is the lowercase name of the instance"
+             id="instance-lowercase-is-the-lowercase-name-of-the-instance"/>
+
+    <chapter title="%currentId% is the ID of the current instance" id="currentid-is-the-id-of-the-current-instance"/>
+
+    <chapter title="%instance-version% is the version of the current instance"
+             id="instance-version-is-the-version-of-the-current-instance"/>
+
+    <chapter title="%instance-state% is the release status of the current instance"
+             id="instance-state-is-the-release-status-of-the-current-instance"/>
+
+</topic>

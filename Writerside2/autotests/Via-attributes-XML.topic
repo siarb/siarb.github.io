@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Title to replace v6 XML" id="Via-attributes-XML"
+       label="First" annotations="β,EAP">
+
+    <title>
+        Via attributes XML
+    </title>
+
+    <chapter title="Expanded chapter with tag" id="expanded-chapter-with-tag" collapsible="true" default-state="expanded" label="DS">
+        <p>This is the chapter in expanded state.</p>
+    </chapter>
+
+    <chapter title="Collapsed chapter with tag" id="collapsed-chapter-with-tag" collapsible="true" default-state="collapsed" label="Collapsed">
+        <p>This is the chapter in collapsed state.</p>
+    </chapter>
+
+    <chapter title="Expanded chapter with annotations" id="expanded-chapter-with-annotations" collapsible="true"
+             default-state="expanded" annotations="EAP,INT">
+        <tldr>Some tldr facts</tldr>
+        <p>This is the chapter in expanded state.</p>
+    </chapter>
+
+    <chapter title="Collapsed chapter with annotations" id="collapsed-chapter-with-annotations" collapsible="true"
+             default-state="collapsed" annotations="EAP,INT">
+        <tldr>Some tldr facts</tldr>
+        <p>This is the chapter in collapsed state.</p>
+    </chapter>
+
+
+    <chapter title="Parent chapter" id="parent-chapter" label="WWW" annotations="EAP">
+        <p>This is the parent chapter.</p>
+
+        <chapter title="Child chapter level 2" id="child-chapter-level-2" annotations="EAP,INT" label="DS">
+            <tldr>Tldr facts for child chapter level 2</tldr>
+            <p>This is the level-2 chapter.</p>
+
+            <chapter title="Chapter level 3" id="chapter-level-3" annotations="EAP,INT" label="WWW">
+                <p>This is the level-3 chapter.</p>
+
+                <chapter title="Chapter level 4" id="chapter-level-4" label="DS" annotations="INT">
+                    <p>This is the level-4 chapter.</p>
+
+                    <chapter title="Chapter level 5" id="chapter-level-5" label="WWW" annotations="β">
+                        <p>This is the level-5 chapter.</p>
+                    </chapter>
+
+                </chapter>
+            </chapter>
+        </chapter>
+    </chapter>
+
+    <chapter title="Chapter with excluded filter" id="chapter-with-excluded-filter" label="Excluded tag" annotations="Excluded annotation" instance="s">
+        <p>This is the chapter with excluded filter.</p>
+    </chapter>
+
+    <chapter title="Chapter with included filter" id="chapter-with-included-filter" label="WWW" annotations="β,INT,EAP" instance="auto">
+        <p>This is the chapter with included filter.</p>
+    </chapter>
+
+    <chapter title="Chapter with two tags" id="chapter-with-two-tags" label="DS,WWW">
+        <p>This is the chapter with two tags.</p>
+    </chapter>
+
+</topic>

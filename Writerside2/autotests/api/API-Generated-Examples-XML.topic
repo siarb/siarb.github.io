@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="API Generated Examples XML" id="API-Generated-Examples-XML">
+
+    <p>
+        For each operation, you can define possible status codes, such as 200 OK or 404 Not Found, and the response body
+        schema. Schemas can be defined inline or referenced via <code>$ref</code>. You can also provide example
+        responses for different content types.
+    </p>
+
+    <chapter title="Integer and String" id="integer-and-string">
+        <api-endpoint openapi-path="./api-sources/API_examples.yaml"
+                      endpoint="/users"
+                      method="post"/>
+    </chapter>
+
+    <chapter title="Object cat" id="object-cat">
+        <api-endpoint openapi-path="./api-sources/petstore_oas3_requestBody_example.json"
+                      endpoint="/pet"
+                      method="post"/>
+    </chapter>
+
+    <chapter title="Bad sample" id="bad-sample">
+        <api-endpoint openapi-path="./api-sources/bad-openapi.json"
+                      endpoint="/customer/changeLicensesTeam"
+                      method="post"/>
+    </chapter>
+
+    <chapter title="Attribute: never generate" id="attribute-never-generate">
+        <api-endpoint openapi-path="./api-sources/API_examples.yaml"
+                      endpoint="/users"
+                      method="post"
+                      generate-samples="false"/>
+    </chapter>
+
+    <chapter title="Attribute: default will generate" id="attribute-default-will-generate">
+        <api-endpoint openapi-path="./api-sources/API_examples.yaml"
+                      endpoint="/users"
+                      method="post"/>
+    </chapter>
+
+    <chapter title="Attribute: true will generate" id="attribute-true-will-generate">
+        <p>This swagger file has examples, but they should be overwritten by artificial ones:</p>
+        <api-endpoint openapi-path="./api-sources/API_examples.yaml"
+                      endpoint="/users"
+                      method="post"
+                      generate-samples="true"/>
+    </chapter>
+
+</topic>

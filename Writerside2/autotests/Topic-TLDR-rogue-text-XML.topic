@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Topic TLDR rogue text XML" id="Topic-TLDR-rogue-text-XML">
+
+    <tldr id="tldr-0.1">
+        <p>
+            paragraph text
+        </p>
+        rogue text
+    </tldr>
+
+
+</topic>

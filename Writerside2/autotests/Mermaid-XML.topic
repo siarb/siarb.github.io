@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="Mermaid-XML" title="Mermaid XML">
+
+    <chapter title="Gantt charts" id="gantt-charts">
+        <code-block lang="mermaid" id="gantt-sequence">
+            gantt
+            dateFormat YYYY-MM-DD
+            title GANTT diagram sequence
+            excludes weekdays 2014-01-10
+            section A section
+            Completed task :done, des1, 2014-01-06,2014-01-08
+            Active task :active, des2, 2014-01-09, 3d
+            Future task : des3, after des2, 5d
+            Future task2 : des4, after des3, 5d
+        </code-block>
+    </chapter>
+
+    <chapter title="Gantt chart parallel" id="gantt-chart-parallel">
+        <code-block lang="mermaid" id="gantt-parallel">
+            gantt
+            section Section
+            Completed :done, des1, 2014-01-06,2014-01-08
+            Active :active, des2, 2014-01-07, 3d
+            Parallel 1 : des3, after des1, 1d
+            Parallel 2 : des4, after des1, 1d
+            Parallel 3 : des5, after des3, 1d
+            Parallel 4 : des6, after des4, 1d
+        </code-block>
+    </chapter>
+
+    <chapter title="Gantt chart rows" id="gantt-chart-rows">
+        <code-block lang="mermaid" id="git-rows">
+            gantt
+            title Git Issues - days since last update
+            dateFormat X
+            axisFormat %s
+
+            section Issue19062
+            71 : 0, 71
+            section Issue19401
+            36 : 0, 36
+            section Issue193
+            34 : 0, 34
+            section Issue7441
+            9 : 0, 9
+            section Issue1300
+            5 : 0, 5
+        </code-block>
+    </chapter>
+
+    <chapter title="Flow chart" id="flow-chart">
+
+        <code-block lang="mermaid">
+
+            flowchart LR
+
+            A[Hard] --&gt;|Text| B(Round)
+            B --&gt; C{Decision}
+            C --&gt;|One| D[Result 1]
+            C --&gt;|Two| E[Result 2]
+
+        </code-block>
+    </chapter>
+
+    <chapter title="Sequence diagram" id="sequence-diagram">
+
+        <code-block lang="mermaid">
+            sequenceDiagram
+            Alice-&gt;&gt;John: Hello John, how are you?
+            loop Healthcheck
+            John-&gt;&gt;John: Fight against hypochondria
+            end
+            Note right of John: Rational thoughts!
+            John--&gt;&gt;Alice: Great!
+            John-&gt;&gt;Bob: How about you?
+            Bob--&gt;&gt;John: Jolly good!
+        </code-block>
+    </chapter>
+
+    <chapter title="Class diagram" id="class-diagram">
+
+        <code-block lang="mermaid">
+            classDiagram
+            Class01 &lt;|-- AveryLongClass : Cool
+            &lt;&lt;Interface&gt;&gt; Class01
+            Class09 --&gt; C2 : Where am I?
+            Class09 --* C3
+            Class09 --|&gt; Class07
+            Class07 : equals()
+            Class07 : Object[] elementData
+            Class01 : size()
+            Class01 : int chimp
+            Class01 : int gorilla
+            class Class10 {
+            &lt;&lt;service&gt;&gt;
+            int id
+            size()
+            }
+        </code-block>
+    </chapter>
+
+    <chapter title="State diagram" id="state-diagram">
+
+        <code-block lang="mermaid">
+            stateDiagram-v2
+            [*] --&gt; Still
+            Still --&gt; [*]
+            Still --&gt; Moving
+            Moving --&gt; Still
+            Moving --&gt; Crash
+            Crash --&gt; [*]
+        </code-block>
+    </chapter>
+
+    <chapter title="Pie" id="pie">
+
+        <code-block lang="mermaid">
+            pie
+            "Dogs" : 386
+            "Cats" : 85.9
+            "Rats" : 15
+        </code-block>
+    </chapter>
+
+    <chapter title="Journey" id="journey">
+
+        <code-block lang="mermaid">
+            journey
+            title My working day
+            section Go to work
+            Make tea: 5: Me
+            Go upstairs: 3: Me
+            Do work: 1: Me, Cat
+            section Go home
+            Go downstairs: 5: Me
+            Sit down: 3: Me
+        </code-block>
+    </chapter>
+
+    <chapter title="C4context" id="c4context">
+
+        <code-block lang="mermaid">
+            C4Context
+            title System Context diagram for Internet Banking System
+
+            Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
+            Person(customerB, "Banking Customer B")
+            Person_Ext(customerC, "Banking Customer C")
+            System(SystemAA, "Internet Banking System", "Allows customers to view information about their
+            bank accounts, and make payments.")
+
+            Person(customerD, "Banking Customer D", "A customer of the bank, &lt;br/&gt; with personal
+            bank accounts.")
+
+            Enterprise_Boundary(b1, "BankBoundary") {
+
+            SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information
+            about customers, accounts, transactions, etc.")
+
+            System_Boundary(b2, "BankBoundary2") {
+            System(SystemA, "Banking System A")
+            System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts.")
+            }
+
+            System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+            SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank
+            accounts.")
+
+            Boundary(b3, "BankBoundary3", "boundary") {
+            SystemQueue(SystemF, "Banking System F Queue", "A system of the bank, with personal bank
+            accounts.")
+            SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank
+            accounts.")
+            }
+            }
+
+            BiRel(customerA, SystemAA, "Uses")
+            BiRel(SystemAA, SystemE, "Uses")
+            Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
+            Rel(SystemC, customerA, "Sends e-mails to")
+        </code-block>
+    </chapter>
+
+    <chapter title="Comments are not visible" id="comments-are-not-visible">
+        <code-block lang="mermaid">
+            classDiagram
+            %% This whole line is a comment classDiagram class Shape &lt;&lt;interface&gt;&gt;
+            class Shape{
+            &lt;&lt;interface&gt;&gt;
+            noOfVertices
+            draw()
+            }
+        </code-block>
+    </chapter>
+
+
+</topic>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="Capitalization-XML"
+       title="Capitalization XML">
+
+    <var name="caps-var" value="upper"/>
+    <var name="test-var" value="some title's var"/>
+    <var name="caps-var-in-link" value="LINK'S VAR"/>
+
+    <chapter id="title-chapter" caps="title" title="the title case example with the text inside">
+        <p id="simple-text">Paragraph text inside a chapter</p>
+        <a id="link-with-title" caps="title" href="about-INXS.topic"/>
+
+        <chapter id="in-link-chapter" caps="aswritten" title="cHAPTEr tITLe as WrItTen">
+            <a id="link-with-var" caps="lower" href="about-INXS.topic">
+                <i>
+                    <b>TEST LOWER LINK WITH NESTED and %caps-var-in-link%</b>
+                </i>
+            </a>
+        </chapter>
+
+        <chapter id="include-chapter" caps="sentence" title="sentence case chapter title">
+            <a id="link-chapter" caps="title" href="about-INXS.topic">
+                string in link with code block: <code>toString()</code>.
+            </a>
+        </chapter>
+
+        <p>
+            <a id="caps-upper" caps="upper" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html">
+                More about <code>hasCode()</code> method.
+            </a>
+        </p>
+
+        <p>
+            <a id="caps-upper-control" caps="upper" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html">
+                <control><property bundle="messages.MicroservicesBundle" key="microservices.url.path.variable.typeName"/></control>
+            </a>
+        </p>
+    </chapter>
+
+    <chapter id="lower-case-chapter" caps="lower" title="LOWER CaSE Title">
+        <procedure caps="sentence" title="procedure with steps" style="steps">
+            <step>Step 1.</step>
+            <step>Step 2.</step>
+            <step>Step 3.</step>
+        </procedure>
+    </chapter>
+
+    <chapter id="var-attr-chapter" caps="%caps-var%" title="upper CaSE Title and %test-var%">
+        <p id="text-p">Some text 2</p>
+    </chapter>
+
+    <chapter id="cases-with-link" title="Chapter with different links">
+        <a id="link-caps-title" caps="title" href="about-INXS.topic"/>
+        <a id="link-caps-lower" caps="lower" href="about-INXS.topic"/>
+        <a id="link-caps-upper" caps="upper" href="about-INXS.topic"/>
+        <a id="link-caps-sentence" caps="sentence" href="about-INXS.topic"/>
+        <a id="link-caps-aswritten" caps="aswritten" href="about-INXS.topic"/>
+    </chapter>
+
+    <chapter id="cases-with-link-text" title="Chapter with different links and text">
+        <a id="link-caps-title-text" caps="title" href="about-INXS.topic">This is default text </a>
+        <a id="link-caps-lower-text" caps="lower" href="about-INXS.topic">This is default text </a>
+        <a id="link-caps-upper-text" caps="upper" href="about-INXS.topic">This is default text </a>
+        <a id="link-caps-sentence-text" caps="sentence" href="about-INXS.topic">This is default text </a>
+        <a id="link-caps-aswritten-text" caps="aswritten" href="about-INXS.topic">This is default text </a>
+    </chapter>
+
+    <chapter id="chapter-complex-title" caps="upper" title="Chapter with tags in title">
+        <title>Read about <code>Cloneable</code> interface</title>
+        <p>Just some text so that the chapter won't look empty on the page</p>
+    </chapter>
+
+    <a id="link-to-chapter-with-complex-title-lower" caps="lower" anchor="chapter-complex-title"/>
+
+    <a id="link-to-chapter-with-complex-title-aswritten" anchor="chapter-complex-title"/>
+
+</topic>

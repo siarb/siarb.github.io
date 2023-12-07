@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="PlantUML-GraphViz-XML" id="PlantUML-GraphViz-XML">
+
+    <chapter title="GraphViz" id="graphviz">
+        <chapter title="Hello world" id="hello-world">
+
+            <code-block lang="plantuml">
+                @startuml
+
+                digraph G {
+                Hello -&gt; World
+                }
+                @enduml
+            </code-block>
+        </chapter>
+        <chapter title="World Dynamics" id="world-dynamics">
+
+            <code-block lang="plantuml">
+                @startuml
+
+                digraph world {
+                size=&quot;7,7&quot;;
+                {rank=same; S8 S24 S1 S35 S30;}
+                {rank=same; T8 T24 T1 T35 T30;}
+                {rank=same; 43 37 36 10 2;}
+                {rank=same; 25 9 38 40 13 17 12 18;}
+                {rank=same; 26 42 11 3 33 19 39 14 16;}
+                {rank=same; 4 31 34 21 41 28 20;}
+                {rank=same; 27 5 22 32 29 15;}
+                {rank=same; 6 23;}
+                {rank=same; 7;}
+
+                S8 -&gt; 9;
+                S24 -&gt; 25;
+                S24 -&gt; 27;
+                S1 -&gt; 2;
+                S1 -&gt; 10;
+                S35 -&gt; 43;
+                S35 -&gt; 36;
+                S30 -&gt; 31;
+                S30 -&gt; 33;
+                9 -&gt; 42;
+                9 -&gt; T1;
+                25 -&gt; T1;
+                25 -&gt; 26;
+                27 -&gt; T24;
+                2 -&gt; {3 ; 16 ; 17 ; T1 ; 18}
+                10 -&gt; { 11 ; 14 ; T1 ; 13; 12;}
+                31 -&gt; T1;
+                31 -&gt; 32;
+                33 -&gt; T30;
+                33 -&gt; 34;
+                42 -&gt; 4;
+                26 -&gt; 4;
+                3 -&gt; 4;
+                16 -&gt; 15;
+                17 -&gt; 19;
+                18 -&gt; 29;
+                11 -&gt; 4;
+                14 -&gt; 15;
+                37 -&gt; {39 ; 41 ; 38 ; 40;}
+                13 -&gt; 19;
+                12 -&gt; 29;
+                43 -&gt; 38;
+                43 -&gt; 40;
+                36 -&gt; 19;
+                32 -&gt; 23;
+                34 -&gt; 29;
+                39 -&gt; 15;
+                41 -&gt; 29;
+                38 -&gt; 4;
+                40 -&gt; 19;
+                4 -&gt; 5;
+                19 -&gt; {21 ; 20 ; 28;}
+                5 -&gt; {6 ; T35 ; 23;}
+                21 -&gt; 22;
+                20 -&gt; 15;
+                28 -&gt; 29;
+                6 -&gt; 7;
+                15 -&gt; T1;
+                22 -&gt; T35;
+                22 -&gt; 23;
+                29 -&gt; T30;
+                7 -&gt; T8;
+                23 -&gt; T24;
+                23 -&gt; T1;
+                }
+                @enduml
+            </code-block>
+        </chapter>
+        <chapter title="Data Structures" id="data-structures">
+
+            <code-block lang="plantuml">
+                @startuml
+                digraph g {
+                graph [
+                rankdir = &quot;LR&quot;
+                ];
+                node [
+                fontsize = &quot;16&quot;
+                shape = &quot;ellipse&quot;
+                ];
+                edge [
+                ];
+                &quot;node0&quot; [
+                label = &quot;&lt;f0&gt; 0x10ba8| &lt;f1&gt;&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node1&quot; [
+                label = &quot;&lt;f0&gt; 0xf7fc4380| &lt;f1&gt; | &lt;f2&gt; |-1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node2&quot; [
+                label = &quot;&lt;f0&gt; 0xf7fc44b8| | |2&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node3&quot; [
+                label = &quot;&lt;f0&gt; 3.43322790286038071e-06|44.79998779296875|0&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node4&quot; [
+                label = &quot;&lt;f0&gt; 0xf7fc4380| &lt;f1&gt; | &lt;f2&gt; |2&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node5&quot; [
+                label = &quot;&lt;f0&gt; (nil)| | |-1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node6&quot; [
+                label = &quot;&lt;f0&gt; 0xf7fc4380| &lt;f1&gt; | &lt;f2&gt; |1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node7&quot; [
+                label = &quot;&lt;f0&gt; 0xf7fc4380| &lt;f1&gt; | &lt;f2&gt; |2&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node8&quot; [
+                label = &quot;&lt;f0&gt; (nil)| | |-1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node9&quot; [
+                label = &quot;&lt;f0&gt; (nil)| | |-1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node10&quot; [
+                label = &quot;&lt;f0&gt; (nil)| &lt;f1&gt; | &lt;f2&gt; |-1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node11&quot; [
+                label = &quot;&lt;f0&gt; (nil)| &lt;f1&gt; | &lt;f2&gt; |-1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node12&quot; [
+                label = &quot;&lt;f0&gt; 0xf7fc43e0| | |1&quot;
+                shape = &quot;record&quot;
+                ];
+                &quot;node0&quot;:f0 -&gt; &quot;node1&quot;:f0 [
+                id = 0
+                ];
+                &quot;node0&quot;:f1 -&gt; &quot;node2&quot;:f0 [
+                id = 1
+                ];
+                &quot;node1&quot;:f0 -&gt; &quot;node3&quot;:f0 [
+                id = 2
+                ];
+                &quot;node1&quot;:f1 -&gt; &quot;node4&quot;:f0 [
+                id = 3
+                ];
+                &quot;node1&quot;:f2 -&gt; &quot;node5&quot;:f0 [
+                id = 4
+                ];
+                &quot;node4&quot;:f0 -&gt; &quot;node3&quot;:f0 [
+                id = 5
+                ];
+                &quot;node4&quot;:f1 -&gt; &quot;node6&quot;:f0 [
+                id = 6
+                ];
+                &quot;node4&quot;:f2 -&gt; &quot;node10&quot;:f0 [
+                id = 7
+                ];
+                &quot;node6&quot;:f0 -&gt; &quot;node3&quot;:f0 [
+                id = 8
+                ];
+                &quot;node6&quot;:f1 -&gt; &quot;node7&quot;:f0 [
+                id = 9
+                ];
+                &quot;node6&quot;:f2 -&gt; &quot;node9&quot;:f0 [
+                id = 10
+                ];
+                &quot;node7&quot;:f0 -&gt; &quot;node3&quot;:f0 [
+                id = 11
+                ];
+                &quot;node7&quot;:f1 -&gt; &quot;node1&quot;:f0 [
+                id = 12
+                ];
+                &quot;node7&quot;:f2 -&gt; &quot;node8&quot;:f0 [
+                id = 13
+                ];
+                &quot;node10&quot;:f1 -&gt; &quot;node11&quot;:f0 [
+                id = 14
+                ];
+                &quot;node10&quot;:f2 -&gt; &quot;node12&quot;:f0 [
+                id = 15
+                ];
+                &quot;node11&quot;:f2 -&gt; &quot;node1&quot;:f0 [
+                id = 16
+                ];
+                }
+                @enduml
+            </code-block>
+        </chapter>
+        <chapter title="Graph Cluster Node Gradient" id="graph-cluster-node-gradient">
+
+            <code-block lang="plantuml">
+                @startuml
+                digraph G {
+                bgcolor=&quot;purple:pink&quot; label=&quot;agraph&quot; fontcolor=&quot;white&quot;
+                subgraph cluster1 {fillcolor=&quot;blue:cyan&quot; label=&quot;acluster&quot; fontcolor=&quot;white&quot;
+                style=&quot;filled&quot; gradientangle=&quot;270&quot;
+                node [shape=box fillcolor=&quot;red:yellow&quot; style=&quot;filled&quot; gradientangle=90]
+                anode;
+                }
+
+                }
+                @enduml
+            </code-block>
+        </chapter>
+    </chapter>
+
+</topic>

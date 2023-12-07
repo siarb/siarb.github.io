@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Shortcuts XML" id="Shortcuts-XML">
+
+    <tip>
+        Id of platform <code>platform id="primary"</code> in <code>cfg/platform.xml</code> is always PC (Windows) based keyboard layout.
+        So it cannot contain non-PC hotkeys (like <code>Meta</code>), they will not be rendered properly by frontend.
+    </tip>
+
+    <note>
+        <p>1. Primary platform shortcuts must be separated by pluses (<code>Ctrl+Shift+H</code>).</p>
+        <p>2. Secondary platform shortcuts must be separated by spaces (<code>⌃ ⇧ H</code>).</p>
+    </note>
+
+    <chapter title="Shortcuts from keymap" id="shortcuts-from-keymap">
+            <p id="paragraph-copy-shortcut"><shortcut key="$Copy" id="copy-shortcut"/></p>
+            <p id="paragraph-long-name-shortcut"><shortcut key="ActivateNuGetToolWindow" id="long-name-shortcut"/></p>
+    </chapter>
+
+    <chapter title="Simple text shortcuts" id="text-shortcuts">
+        <p id="paragraph-copy-shortcut-text"><shortcut id="copy-shortcut-text">Ctrl+C</shortcut></p>
+        <p id="paragraph-complex-shortcut-text"><shortcut id="complex-shortcut-text">Alt+Shift+7</shortcut>
+        </p>
+    </chapter>
+
+</topic>

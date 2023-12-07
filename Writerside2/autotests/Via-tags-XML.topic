@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Via tags XML" id="Via-tags-XML">
+
+    <label>First</label>
+    <label>Second</label>
+    <annotations>β,EAP</annotations>
+
+    <chapter id="expanded-chapter" title="Expanded chapter" collapsible="true" default-state="expanded" label="DS">
+        <p>This is the chapter in expanded state.</p>
+    </chapter>
+
+    <chapter id="collapsed-chapter" title="Collapsed chapter" collapsible="true" default-state="collapsed">
+        <annotations instance="s">EAP,INT</annotations>
+        <annotations instance="s">EAP</annotations>
+        <tldr>
+            <p>Some tldr facts</p>
+        </tldr>
+        <p>This is the chapter in collapsed state.</p>
+    </chapter>
+
+    <chapter id="parent-chapter" title="Parent chapter">
+        <label>WWW</label>
+        <p>This is the parent chapter.</p>
+
+        <chapter id="child-chapter-level-2" title="Child chapter level 2">
+            <tldr>
+                <p>Tldr facts for child chapter level 2</p>
+            </tldr>
+            <p>This is the level-2 chapter.</p>
+
+            <chapter id="chapter-level-3" title="Chapter level 3">
+                <annotations instance="auto">EAP,INT</annotations>
+                <annotations instance="s">EAP</annotations>
+                <p>This is the level-3 chapter.</p>
+
+                <chapter id="chapter-level-4" title="Chapter level 4">
+                    <label>WWW</label>
+                    <p>This is the level-4 chapter.</p>
+                </chapter>
+
+            </chapter>
+        </chapter>
+    </chapter>
+
+</topic>

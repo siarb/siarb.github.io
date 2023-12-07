@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="API Enums XML" id="API-Enums-XML">
+
+    <chapter title="Enum array with no responses, no description" id="enum-array-with-no-responses-no-description">
+        <api-endpoint openapi-path="./api-sources/API_Enums.yaml"
+                      endpoint="/enum-array"
+                      method="get"/>
+    </chapter>
+
+    <chapter title="Enum array list" id="enum-array-list">
+        <api-endpoint openapi-path="./api-sources/API_Enums.yaml"
+                      endpoint="/enum-list"
+                      method="get"/>
+    </chapter>
+
+    <chapter title="Enum array with description" id="enum-array-with-description">
+        <api-endpoint openapi-path="./api-sources/API_Enums.yaml"
+                      endpoint="/enum-with-description"
+                      method="get"/>
+    </chapter>
+
+    <chapter title="Enum nullable" id="enum-nullable">
+        <api-endpoint openapi-path="./api-sources/API_Enums.yaml"
+                      endpoint="/enum-nullable"
+                      method="get"/>
+    </chapter>
+
+    <chapter title="Enum reusable" id="enum-reusable">
+        <api-endpoint openapi-path="./api-sources/API_Enums.yaml"
+                      endpoint="/enum-reusable"
+                      method="get"/>
+    </chapter>
+
+</topic>

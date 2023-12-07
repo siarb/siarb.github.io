@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="Links-summary-XML"
+       title="Links summary XML" help-id="Link-summary-XML">
+
+    <link-summary>This is summary to a topic from a link-summary tag</link-summary>
+
+    <chapter title="Chapter with summary with anchor link summary" id="chapter-anchor-first-summary">
+        <link-summary>This is special summary for the first chapter</link-summary>
+        <anchor name="first-anchor"/>
+        <p>There's an #anchor element in the first chapter</p>
+    </chapter>
+
+    <chapter title="Chapter without summary for default anchor link summary" id="chapter-anchor-without-summary">
+        <anchor name="second-anchor"/>
+        <p>There's an #anchor element in the second chapter</p>
+    </chapter>
+
+    <chapter title="Anchor" id="chapter-anchor-summary">
+        <link-summary>This is summary element for a chapter</link-summary>
+        <anchor name="new-anchor"/>
+        <p>There's an <code>anchor</code> element before this paragraph</p>
+    </chapter>
+
+</topic>

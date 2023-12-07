@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Variables XML" id="Variables-XML">
+
+    <chapter id="implicit-variable" title="Implicit variable `instance`">
+        <p>Variable below should be resolved to 'Autotests'</p>
+        <p id="variable-intro">%instance% instance name is a variable</p>
+    </chapter>
+
+    <chapter id="variables-experiment" title="Referring and declaring code uses variables">
+        <var name="another-var" value="abc"/>
+        <a anchor="%another-var%-para" id="anchor-with-var"/>
+
+        <p id="%another-var%-para">My id contains a variable, the same as a link to me.</p>
+    </chapter>
+
+
+    <chapter id="includes-variable" title="Includes variable in element-id">
+        <var name="elementId" value="inxs-first"/>
+
+        <include from="about-INXS.topic" element-id="%elementId%"/>
+    </chapter>
+
+    <chapter id="include-with-overriding-var" title="Include with a variable">
+        Here is the include as is ('In the Settings/Preferences dialog, please enter...')
+        <p id="p-include-as-is">
+            <include from="Snippets-library-XML.topic" element-id="path_to_settings"/>, please enter all the values.
+        </p>
+        <p/>
+        And here we are going to override the parameter with something else (`Please open the ... dialog and ...`)
+        <p id="p-include-override-var">
+            <include from="Snippets-library-XML.topic" element-id="path_to_settings">
+                <var name="in" value="Please open"/>
+            </include> again and check <control>Version Control | Git</control> there.
+        </p>
+    </chapter>
+
+</topic>

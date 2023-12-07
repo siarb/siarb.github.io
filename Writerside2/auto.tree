@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="auto"
+                  name="Autotests"
+                  start-page="Autotests.topic">
+
+    <toc-element topic="Autotests.topic"/>
+    <toc-element toc-title="Auxiliary topics">
+        <toc-element topic="about-INXS.topic"/>
+    </toc-element>
+    <toc-element toc-title="Links">
+        <toc-element topic="Links-XML.topic"/>
+        <toc-element topic="Links-summary-XML.topic"/>
+    </toc-element>
+    <toc-element toc-title="MD">
+        <toc-element topic="Built-in-variables-MD.md"/>
+        <toc-element topic="Citation-attributes-MD.md"/>
+        <toc-element topic="Code-block-attributes-MD.md"/>
+        <toc-element topic="Code-block-with-Slash-MD.md"/>
+        <toc-element topic="Corner-cases-MD.md"/>
+        <toc-element topic="Definition-list-attributes-MD.md"/>
+        <toc-element topic="Frontmatter-titles.md">
+            <toc-element topic="H1-as-name.md"/>
+            <toc-element topic="H1-as-title.md"/>
+            <toc-element topic="H1-with-equals.md"/>
+            <toc-element topic="H1-and-Frontmatter.md"/>
+        </toc-element>
+        <toc-element topic="Header-attributes-MD.md"/>
+        <toc-element topic="Header-titles-MD.md"/>
+        <toc-element topic="Image-attributes-MD.md"/>
+        <toc-element topic="Image-names-MD.md"/>
+        <toc-element topic="Images-light-dark-MD.md"/>
+        <toc-element topic="LaTeX-MD.md"/>
+        <toc-element topic="Labels-MD.md">
+            <toc-element topic="Via-attributes-MD.md"/>
+            <toc-element topic="Label-tag-for-title-MD.md"/>
+            <!--            WRS-3330-->
+            <!--            <toc-element topic="Via-tags-MD.md"/>-->
+            <!--            <toc-element topic="Two-labels-tag-v6-MD.md"/>-->
+            <toc-element topic="Label-and-supertag-MD.md"/>
+            <toc-element topic="Old-supertag-MD.md"/>
+        </toc-element>
+        <toc-element toc-title="Mermaid MD">
+            <toc-element topic="Mermaid-MD.md"/>
+            <toc-element topic="Mermaid-hard-MD.md"/>
+            <toc-element topic="Mermaid-other-types-MD.md"/>
+        </toc-element>
+        <toc-element topic="Plain-MD.md"/>
+        <toc-element topic="PlantUML-MD.md">
+            <toc-element topic="PlantUML-Sequence-MD.md"/>
+            <toc-element topic="PlantUML-Acvity-MD.md"/>
+            <toc-element topic="PlantUML-Class-MD.md"/>
+            <toc-element topic="PlantUML-Component-MD.md"/>
+            <toc-element topic="PlantUML-Deployment-MD.md"/>
+            <toc-element topic="PlantUML-Design-Patterns-MD.md"/>
+            <toc-element topic="PlantUML-Gantt-MD.md"/>
+            <toc-element topic="PlantUML-GraphViz-MD.md"/>
+            <toc-element topic="PlantUML-Icons-MD.md"/>
+            <toc-element topic="PlantUML-JSON-MD.md"/>
+            <toc-element topic="PlantUML-MindMap-MD.md"/>
+            <toc-element topic="PlantUML-Miscellaneous-MD.md"/>
+            <toc-element topic="PlantUML-Network-MD.md"/>
+            <toc-element topic="PlantUML-Object-MD.md"/>
+            <toc-element topic="PlantUML-Salt-GUI-MD.md"/>
+            <toc-element topic="PlantUML-State-MD.md"/>
+            <toc-element topic="PlantUML-Themes-MD.md"/>
+            <toc-element topic="PlantUML-Timing-MD.md"/>
+            <toc-element topic="PlantUML-Use-Cases-MD.md"/>
+            <toc-element topic="PlantUML-Work-Breakdown-Structure-MD.md"/>
+            <toc-element topic="PlantUML-YAML-MD.md"/>
+        </toc-element>
+        <toc-element topic="Reference-style-links-MD.md"/>
+        <toc-element topic="Shortcuts-MD.md"/>
+        <toc-element topic="Switcher-label-MD.md"/>
+        <toc-element toc-title="TLDR aka microformat XML">
+            <toc-element topic="Nested-TLDR-MD.md"/>
+            <toc-element topic="TLDR-several-instances-MD.md"/>
+            <toc-element topic="TLDR-simple-MD.md"/>
+            <toc-element topic="TLDR-switcher-MD.md"/>
+        </toc-element>
+        <toc-element topic="Video-MD.md"/>
+    </toc-element>
+    <toc-element toc-title="XML">
+        <toc-element topic="Built-in-variables-XML.topic"/>
+        <toc-element topic="Capitalization-XML.topic"/>
+        <toc-element topic="Definition-list-attributes-XML.topic"/>
+        <toc-element topic="Image-attributes-XML.topic"/>
+        <toc-element topic="Image-names-XML.topic"/>
+        <toc-element topic="Images-light-dark-XML.topic"/>
+        <toc-element topic="Inline-formatting-XML.topic"/>
+        <toc-element topic="LaTeX-XML.topic"/>
+        <toc-element topic="Labels-XML.topic">
+            <toc-element topic="Via-attributes-XML.topic"/>
+            <toc-element topic="Via-tags-XML.topic"/>
+            <toc-element topic="Two-labels-attribute-v6-XML.topic"/>
+            <toc-element topic="Two-labels-tag-v6-XML.topic"/>
+            <toc-element topic="Label-and-supertag-XML.topic"/>
+            <toc-element topic="Old-supertag-XML.topic"/>
+        </toc-element>
+        <toc-element toc-title="Mermaid XML">
+            <toc-element topic="Mermaid-XML.topic"/>
+            <toc-element topic="Mermaid-hard-XML.topic"/>
+        </toc-element>
+        <toc-element topic="Plain-XML.topic"/>
+        <toc-element topic="PlantUML-XML.topic">
+            <toc-element topic="PlantUML-GraphViz-XML.topic"/>
+            <toc-element topic="PlantUML-Object-XML.topic"/>
+            <toc-element topic="PlantUML-Sequence-XML.topic"/>
+        </toc-element>
+        <toc-element topic="Shortcuts-XML.topic"/>
+        <toc-element topic="Snippet-includes-XML.topic"/>
+        <toc-element topic="Switcher-label-XML.topic">
+        </toc-element>
+        <toc-element toc-title="TLDR aka microformat XML">
+            <toc-element topic="Nested-TLDR-XML.topic"/>
+            <toc-element topic="Topic-TLDR-rogue-text-XML.topic"/>
+            <toc-element topic="TLDR-several-instances-XML.topic"/>
+            <toc-element topic="TLDR-simple-XML.topic"/>
+            <toc-element topic="TLDR-switcher-XML.topic"/>
+        </toc-element>
+        <toc-element topic="Tabs-XML.topic"/>
+        <toc-element topic="Variables-XML.topic"/>
+    </toc-element>
+    <toc-element toc-title="API docs">
+        <toc-element toc-title="MD">
+            <toc-element topic="API-Endpoint-MD.md"/>
+            <toc-element topic="API-Doc-Components-MD.md"/>
+            <toc-element topic="API-Enums-MD.md"/>
+            <toc-element topic="API-Generated-Examples-MD.md"/>
+            <toc-element topic="API-oneOf-anyOf-allOf-not-MD.md"/>
+            <toc-element topic="API-tags-MD.md"/>
+            <toc-element topic="API-test-compilation-errors-MD.md"/>
+        </toc-element>
+        <toc-element toc-title="XML">
+            <toc-element topic="API-Endpoint-XML.topic"/>
+            <toc-element topic="API-Doc-Components-XML.topic"/>
+            <toc-element topic="API-Enums-XML.topic"/>
+            <toc-element topic="API-Generated-Examples-XML.topic"/>
+            <toc-element topic="API-oneOf-anyOf-allOf-not-XML.topic"/>
+            <toc-element topic="API-tags-XML.topic"/>
+            <toc-element topic="API-test-compilation-errors-XML.topic"/>
+        </toc-element>
+    </toc-element>
+    <toc-element toc-title="Test data">
+
+        <toc-element topic="Cross-module-includes-XML.topic"/>
+    </toc-element>
+</instance-profile>

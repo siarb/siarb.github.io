@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="TLDR simple with Errors XML" id="TLDR-simple-with-Errors-XML">
+
+    <p>
+        Top-level tldr should be one and the first.
+    </p>
+
+    <tldr id="topic-level-tldr-1">
+        <p>
+            Place the essential info on top of a topic.
+        </p>
+    </tldr>
+
+    <tldr id="topic-level-tldr-2">
+        <p>
+            There can only be one tldr block per topic.
+        </p>
+    </tldr>
+
+    <chapter id="tldr-chapter" title="Tldr chapter">
+        <p>
+            And why is ui-path not allowed here? Clearly a bug.
+        </p>
+
+        <tldr id="chapter-tldr">
+            <p>
+                Shortcut:
+                <shortcut>Enter</shortcut>
+            </p>
+            <p>
+                Configure:
+                <ui-path>Preferences | Editor | Code Completion</ui-path>
+            </p>
+        </tldr>
+
+        <p>
+            Text after 'Clearly a bug'.
+        </p>
+
+        <tldr id="chapter-double-tldr">
+            <p>Second tldr for chapter must be invisible.</p>
+        </tldr>
+    </chapter>
+
+    <tldr id="tldr-second">
+        <p>
+            This topic-wide tldr must be invisible.
+        </p>
+        <p>
+            Does not matter where you put it, it should go to the top (and no more than 1 block).
+        </p>
+    </tldr>
+
+</topic>

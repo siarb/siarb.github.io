@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="PlantUML XML" id="PlantUML-XML">
+
+    <p>PlantUML is a versatile component that enables swift and straightforward diagram creation. Users can draft a
+        variety of diagrams using a simple and intuitive language. For a deep dive into the language specifics, refer to
+        the PlantUML Language Reference Guide.
+        If you're new to PlantUML, begin with the quick start page. For any questions, visit our F.A.Q. page. Integrate
+        PlantUML seamlessly within many other tools.</p>
+    <chapter title="Supported UML Diagrams" id="supported-uml-diagrams">
+        <p>Create well-structured UML diagrams including but not limited to:</p>
+        <list>
+            <li>Sequence diagram</li>
+            <li>Usecase diagram</li>
+            <li>Class diagram</li>
+            <li>Object diagram</li>
+            <li>Activity diagram (Beta) (Find the legacy syntax here)</li>
+            <li>Component diagram</li>
+            <li>Deployment diagram</li>
+            <li>State diagram</li>
+            <li>Timing diagram</li>
+        </list>
+    </chapter>
+    <chapter title="Supported Non-UML Diagrams" id="supported-non-uml-diagrams">
+        <p>Beyond UML, PlantUML supports a range of other diagrams such as:</p>
+        <list>
+            <li>JSON data</li>
+            <li>YAML data</li>
+            <li>EBNF diagram</li>
+            <li>Regex diagram</li>
+            <li>Network diagram (nwdiag)</li>
+            <li>UI mockups (salt)</li>
+            <li>Archimate diagram</li>
+            <li>Specification and Description Language (SDL)</li>
+            <li>Ditaa diagram</li>
+            <li>Gantt diagram</li>
+            <li>MindMap diagram</li>
+            <li>WBS diagram</li>
+            <li>Mathematics with AsciiMath or JLaTeXMath notation</li>
+            <li>Entity Relationship diagram (IE/ER)</li>
+        </list>
+    </chapter>
+    <chapter title="Additional Features" id="additional-features">
+        <p>Make your diagrams more dynamic and informative with:</p>
+        <list>
+            <li>Hyperlinks and tooltips</li>
+            <li>Rich text, emoticons, unicode, and icons with Creole</li>
+            <li>OpenIconic icons</li>
+            <li>Sprite icons</li>
+            <li>AsciiMath mathematical expressions</li>
+        </list>
+    </chapter>
+
+</topic>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       id="Two-labels-attribute-v6-XML" title="Label attribute for title XML">
+
+    <title label="First" annotations="β,EAP">
+        Two labels attribute v6 XML
+    </title>
+
+    <chapter title="Chapter with two labels via attribute" label="First,Second" id="chapter_with_two_labels_via_attribute">
+        <p>Visible first label only</p>
+    </chapter>
+
+    <chapter title="Chapter title to replace" id="chapter_with_title_2labels_and_2annotations_via_attribute">
+        <title label="First,Second" annotations="β,EAP">Chapter with title and two labels via attribute</title>
+        <p>Visible first label only.</p>
+    </chapter>
+
+    <chapter label="First" annotations="EAP" title="Chapter title to replace" id="chapter_with_title_label_and_annotation_via_attribute">
+        <title label="Second" annotations="β">Chapter with title and two labels via attribute</title>
+        <p>Visible SECOND label and BETA annotation.</p>
+    </chapter>
+
+    <chapter label="First" annotations="β" title="Chapter title to replace" id="chapter_with_title_and_two_labels_via_attribute">
+        <label>Second</label>
+        <annotations>EAP</annotations>
+        <p>Visible FIRST label and both annotation.</p>
+    </chapter>
+
+</topic>

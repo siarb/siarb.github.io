@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="API Api-doc Components XML" id="API-Doc-Components-XML">
+
+    <chapter title="Inline schema" id="inline-schema">
+        <p>
+            Often, multiple API operations have some common parameters or return the same response structure.
+        </p>
+        <p>
+            Also covered with FE tests: <code>array of objects</code> should be displayed next to the <code>application/json</code>
+            in response.
+        </p>
+
+        <api-doc openapi-path="api-sources/API_User_Inline.yaml"/>
+
+    </chapter>
+
+    <chapter title="Simple components schema" id="simple-components-schema">
+        <p>
+            To avoid code duplication, you can place the common definitions in the global <code>components</code>
+            section and reference them using <code>$ref</code>. In the example below, duplicate definitions of a
+            User object are replaced with a single component and references to that component.
+        </p>
+
+        <api-doc openapi-path="api-sources/API_User_Components.yaml"/>
+    </chapter>
+
+</topic>

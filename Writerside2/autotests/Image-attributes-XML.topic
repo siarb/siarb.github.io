@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+
+<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       title="Image attributes XML"
+       id="Image-attributes-XML">
+
+    <chapter title="Image without attributes" id="image-without-attributes">
+        <img src="editing_layer.png" alt="No attributes image"/>
+    </chapter>
+
+    <chapter title="Border-effect" id="border-effect">
+        <img src="book.jpg" alt="Rounded image attr the same line" border-effect="rounded"/>
+        <img border-effect="rounded" src="book.jpg" alt="Rounded image attr new line"/>
+    </chapter>
+
+    <chapter title="Width" id="width">
+        <p>Image 100px width:</p>
+        <img src="book.jpg" alt="Image width 100 the same line" width="100"/>
+        <img width="100" src="book.jpg" alt="Image width 100 new line"/>
+
+        <p>Image 0px width:</p>
+        <img src="book.jpg" alt="Image width 0" width="0"/>
+    </chapter>
+
+    <chapter title="Height" id="height">
+        <p>Image 200px height:</p>
+        <img src="book.jpg" alt="Image height 200 same line" height="200"/>
+        <img height="200" src="book.jpg" alt="Image height 200 new line"/>
+    </chapter>
+
+    <chapter title="Style" id="style">
+        <p>Inline on the same line: <img src="book.jpg" alt="Inline image same line" style="inline" width="100"/></p>
+
+        <p>Inline in a new line:
+            <img style="inline" width="100" src="book.jpg" alt="Inline image new line"/>
+        </p>
+    </chapter>
+
+    <chapter title="Thumbnail" id="thumbnail">
+        <p>True:</p>
+        <img src="book.jpg" alt="Thumbnail true same line" thumbnail="true"/>
+        <img thumbnail="true" src="book.jpg" alt="Thumbnail true new line"/>
+
+        <p>False:</p>
+        <img src="book.jpg" alt="Thumbnail false image" thumbnail="false"/>
+    </chapter>
+
+    <chapter title="Preview-src" id="preview-src">
+        <img src="book.jpg" alt="Another picture preview same line" preview-src="shiprock.jpeg"/><img
+            preview-src="shiprock.jpeg" src="book.jpg" alt="Another picture preview new line"/>
+    </chapter>
+
+</topic>

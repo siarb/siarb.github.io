@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Snippets library XML" id="Snippets-library-XML" is-library="true">
+
+    <snippet id="note-with-filters">
+        <note filter="a">
+            This displayed for the A.
+        </note>
+        <note filter="b">
+            This displayed for the B.
+        </note>
+        <note filter="c">
+            This displayed or the C.
+        </note>
+        <note filter="!a">
+            This displayed for NOT A.
+        </note>
+        <note>
+            This one is without filters.
+        </note>
+    </snippet>
+
+    <snippet id="list">
+        <list id="mylist">
+            <li filter="1">Element one</li>
+            <li filter="2">Element two</li>
+            <li filter="3">Element three</li>
+            <li filter="4">Element four</li>
+            <li>Element five</li>
+        </list>
+    </snippet>
+
+    <snippet id="step_keep_attachments">
+        <step>
+            Select
+            <control>Keep text attachments after submission</control>
+            if you do not want to discard and lose this information after submitting the report.
+        </step>
+    </snippet>
+
+    <snippet id="step_change_account">
+        <step>
+            <p>
+                By default, the problem is submitted anonymously, but you can click
+                <control>change account</control>
+                if you want to watch the progress of the reported problem or provide your contact details.
+                In the
+                <control>Submit As</control>
+                dialog, you can use the following options:
+            </p>
+            <list>
+                <li>
+                    <control>Browser authentication</control> &mdash;
+                    use this option to log in to your Google account at
+                    <a href="https://youtrack.jetbrains.com">googles.com</a> with
+                    two-step authentication.
+                </li>
+                <li>
+                    <control>Guest</control> &mdash;
+                    use this option and specify your name and email so that we could contact you if needed.
+                </li>
+            </list>
+        </step>
+    </snippet>
+
+    <snippet id="how_to_feedback">
+        <procedure>
+            <step>
+                In the window that opens, switch to the
+                <control>Feedback</control>
+                tab.
+            </step>
+            <step>
+                Use the fields in this tab to separate various aspects of your feedback.
+            </step>
+            <include from="Snippets-library-XML.topic" element-id="step_keep_attachments"/>
+            <include from="Snippets-library-XML.topic" element-id="step_change_account"/>
+            <step>
+                <p>
+                    Click
+                    <control>Submit</control>, if your request is complete and you are ready to send it.
+                </p>
+                <p>
+                    Your feedback report will be sent directly to the support teams.
+                </p>
+            </step>
+        </procedure>
+    </snippet>
+
+    <snippet id="path_to_settings">
+        <var name="in" value="In"/>
+        %in% the <control>Settings/Preferences</control> dialog
+    </snippet>
+</topic>
