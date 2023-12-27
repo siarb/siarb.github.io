@@ -7,7 +7,7 @@
        id="Autotests">
 
     <section-starting-page>
-        <title>Starting page</title>
+        <title>Starting page test</title>
         <description>
             This instance must have NO COMPILATION ERRORS.
             If you need to write test with compilation error use `auto_err` instance instead.
