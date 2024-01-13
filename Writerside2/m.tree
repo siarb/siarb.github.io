@@ -6,7 +6,6 @@
                   name="M Documentation"
                   start-page="Perche-questo-libro.md">
 
-    <toc-element topic="D2.md"/>
     <toc-element topic="這是奧皮克的名字.md">
         <toc-element topic="Empty-MD-Topic.md"/>
     </toc-element>
@@ -16,4 +15,5 @@
     <toc-element topic="Perche-questo-libro-1.topic"/>
     <toc-element topic="Empty-XML-Topic1.topic"/>
     <toc-element topic="Empty-XML-Topic444.topic"/>
+    <toc-element topic="api-docs.md"/>
 </instance-profile>

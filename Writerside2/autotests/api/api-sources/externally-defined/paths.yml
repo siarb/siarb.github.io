@@ -1,7 +1,0 @@
-post:
-  operationId: PostFoo
-  requestBody:
-    content:
-      application/vnd.api+json:
-        schema:
-          $ref: './post/requestBody.yml#/schema' # <-- Target the schema element in the external doc.
