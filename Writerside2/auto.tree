@@ -7,6 +7,7 @@
                  start-page="api-docs.md">
 
     <toc-element topic="api-docs.md"/>
+    <toc-element topic="Empty-XML-Topic.topic"/>
     <toc-element topic="API-quickstart.md"/>
     <toc-element topic="API-reference.md">
         <toc-element topic="Pet.md">

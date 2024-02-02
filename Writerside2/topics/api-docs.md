@@ -1,5 +1,11 @@
 # API Overview
 
+### IntelliJ Platform 2019.3
+
+`com.intellij.codeInsight.TailType.getLocalCodeStyleSettings(Editor, int)` method removed
+: Use `com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor, int)` instead.
+
+
 <!-- This document provides an introduction into your API. -->
 
 ## Introduction

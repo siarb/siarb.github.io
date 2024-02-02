@@ -5,6 +5,12 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Empty XML Topic" id="Empty-XML-Topic">
 
-    Águila_calva
-
+    <deflist>
+        <def>
+            <title><code>com.intellij.codeInsight.TailType.getLocalCodeStyleSettings(Editor, int)</code> method removed
+            </title>
+            <p>Use <code>com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor,
+                int)</code> instead.</p>
+        </def>
+    </deflist>
 </topic>
