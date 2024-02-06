@@ -6,6 +6,15 @@
 : Use `com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor, int)` instead.
 
 
+<deflist>
+    <def>
+        <title><code>com.intellij.codeInsight.TailType.getLocalCodeStyleSettings(Editor, int)</code> method removed
+        </title>
+        <p>Use <code>com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor,
+            int)</code> instead.</p>
+    </def>
+</deflist>
+
 <!-- This document provides an introduction into your API. -->
 
 ## Introduction
