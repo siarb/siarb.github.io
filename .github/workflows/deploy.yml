@@ -99,7 +99,7 @@ jobs:
 
       - name: Unzip artifact
         run: |
-          echo ${{ env.ALGOLIA_PUBLIC_KEY }}
+          echo $ALGOLIA_PUBLIC_KEY
           unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT }} -d algolia-indexes
           env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
           update-index \

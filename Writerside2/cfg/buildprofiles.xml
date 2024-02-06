@@ -12,7 +12,7 @@
             <color-preset>contrast</color-preset>
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index</algolia-index>
-            <algolia-api-key>MY_SECRET</algolia-api-key>
+            <algolia-api-key>$ALGOLIA_PUBLIC_KEY</algolia-api-key>
             <web-root>https://siarb.github.io</web-root>
             <product-web-url>https://siarb.github.io</product-web-url>
         </variables>
