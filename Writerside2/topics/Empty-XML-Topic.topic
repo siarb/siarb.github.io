@@ -9,8 +9,7 @@
         <def>
             <title><code>com.intellij.codeInsight.TailType.getLocalCodeStyleSettings(Editor, int)</code> method removed
             </title>
-            <p>Use <code>com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor,
-                int)</code> instead.</p>
+            <p>Use <code>com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor,int)</code> instead.</p>
         </def>
     </deflist>
 </topic>

@@ -4,8 +4,9 @@
 
     <variables>
     </variables>
-
+    <sitemap/>
     <build-profile instance="auto">
+        <sitemap/>
         <variables>
             <header-logo>open.png</header-logo>
             <primary-color>forest</primary-color>
