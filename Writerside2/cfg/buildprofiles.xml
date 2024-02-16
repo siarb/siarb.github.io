@@ -3,8 +3,14 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <variables>
+        <website-title>
+            ⛑	⛒	⛓	⛔	⛕	⛖	⛗	⛘	⛙	⛚	⛛	⛜	⛝	⛞	⛟
+            26ex	⛠	⛡	⛢	⛣	⛤	⛥	⛦	⛧	⛨	⛩	⛪	⛫	⛬	⛭	⛮	⛯
+            26fx	⛰	⛱	⛲	⛳	⛴	⛵	⛶	⛷	⛸	⛹	⛺	⛻	⛼	⛽	⛾	⛿
+            270x	✀	✁	✂	✃	✄	✅	✆	✇	✈	✉	✊	✋	✌	✍	✎	✏
+
+        </website-title>
     </variables>
-    <sitemap/>
     <build-profile instance="auto">
         <sitemap/>
         <variables>
