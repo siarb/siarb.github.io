@@ -23,7 +23,6 @@
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <web-root>https://siarb.github.io</web-root>
             <product-web-url>https://siarb.github.io</product-web-url>
-            <offline-docs>true</offline-docs>
         </variables>
     </build-profile>
 
