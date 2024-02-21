@@ -15,7 +15,6 @@
     <build-profile instance="auto">
         <sitemap/>
         <variables>
-            <custom-favicons>https://robcubbon.com/wp-content/uploads/2022/09/favicon.png</custom-favicons>
             <header-logo>open.png</header-logo>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
