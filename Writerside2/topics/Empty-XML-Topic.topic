@@ -6,7 +6,5 @@
        title="Empty XML Topic" id="Empty-XML-Topic">
 
     <p>
-        <icon src="app.vcs.vendors.github.png"/>
-        <icon src="python.icons.com.jetbrains.expui.toolWindowDjango.svg"/>
     </p>
 </topic>

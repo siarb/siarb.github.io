@@ -21,7 +21,7 @@
 
 Provide a brief introduction to the API, explaining its purpose and scope.
 
-## What you can do using <API name>
+## What you can do using `<API name>`
 
 Provide some simple usage examples to help users get started quickly.
 
