@@ -2,6 +2,8 @@
 
 <video src="goLand.mp4"/>
 
+<img src="duck.gif" alt="Duck"/>
+
 ### IntelliJ Platform 2019.3
 
 `com.intellij.codeInsight.TailType.getLocalCodeStyleSettings(Editor, int)` method removed
