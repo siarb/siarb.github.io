@@ -27,12 +27,12 @@ env:
   ALGOLIA_INDEX_NAME: index
   ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
   CONFIG_JSON_PRODUCT: auto
-  CONFIG_JSON_VERSION: 1.1
+  CONFIG_JSON_VERSION: 1.2
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:233.14389
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:233.14839
 
     steps:
       - name: Checkout repository
