@@ -8,7 +8,6 @@
             26ex	⛠	⛡	⛢	⛣	⛤	⛥	⛦	⛧	⛨	⛩	⛪	⛫	⛬	⛭	⛮	⛯
             26fx	⛰	⛱	⛲	⛳	⛴	⛵	⛶	⛷	⛸	⛹	⛺	⛻	⛼	⛽	⛾	⛿
             270x	✀	✁	✂	✃	✄	✅	✆	✇	✈	✉	✊	✋	✌	✍	✎	✏
-
         </website-title>
     </variables>
 
@@ -18,12 +17,11 @@
             <header-logo>open.png</header-logo>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
+            <product-web-url>https://siarb.github.io</product-web-url>
+            <web-root>https://siarb.github.io</web-root>
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
-            <web-root>https://siarb.github.io</web-root>
-            <product-web-url>https://siarb.github.io</product-web-url>
-            <search-endpoint>http://127.0.0.1:8080</search-endpoint>
         </variables>
     </build-profile>
 
