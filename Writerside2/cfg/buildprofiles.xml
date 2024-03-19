@@ -3,7 +3,6 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <variables>
-        <search-endpoint>https://my.search/endpoint</search-endpoint>
         <website-title>
             ⛑	⛒	⛓	⛔	⛕	⛖	⛗	⛘	⛙	⛚	⛛	⛜	⛝	⛞	⛟
             26ex	⛠	⛡	⛢	⛣	⛤	⛥	⛦	⛧	⛨	⛩	⛪	⛫	⛬	⛭	⛮	⛯
@@ -24,7 +23,7 @@
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <web-root>https://siarb.github.io</web-root>
             <product-web-url>https://siarb.github.io</product-web-url>
-            <offline-docs>true</offline-docs>
+            <search-endpoint>http://127.0.0.1:8080</search-endpoint>
         </variables>
     </build-profile>
 
