@@ -48,7 +48,7 @@ jobs:
 #          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts/ || true
 #          echo "Test existing artifacts"
 #          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
-        uses: JetBrains/writerside-github-action@v5
+        uses: JetBrains/writerside-github-action@v4
         with:
           instance: ${{ env.INSTANCE }}
           artifact: ${{ env.ARTIFACT }}
