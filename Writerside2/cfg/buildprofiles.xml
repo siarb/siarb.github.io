@@ -17,7 +17,7 @@
             <header-logo>open.png</header-logo>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
-            <product-web-url>https://siarb.github.io</product-web-url>
+            <product-web-url></product-web-url>
             <web-root>https://siarb.github.io/</web-root>
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index</algolia-index>
