@@ -6,6 +6,7 @@
                  name="API Docs"
                  start-page="api-docs.md">
 
+    <toc-element topic="Writerside.topic"/>
     <toc-element topic="Mermaid-PlantUML-D2.md"/>
     <toc-element topic="api-docs.md"/>
     <toc-element topic="Empty-XML-Topic.topic"/>

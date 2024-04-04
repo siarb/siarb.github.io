@@ -1,5 +1,22 @@
 # Mermaid, PlantUML, D2
 
+```
+fn main() {
+    println!("Hello, world!");
+}
+```
+
+```C#
+/// We're using this table as a singleton,
+/// so there should typically only be one element where the version is 0.
+[SomeAttribute("Test")]
+public partial class Config
+{
+   public SomeClassType SomeClass;
+   public string? SomeString;
+}
+```
+
 ```mermaid
 graph TD;
     A[初始化] --> B{是否初始化成功?}
