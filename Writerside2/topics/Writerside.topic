@@ -6,6 +6,8 @@
        title="Writerside" id="Writerside">
 
     <p>
+        <img src="light.png" alt="test" width="296"/>
+
         The %product% builder
 
         Test <format style="superscript">test superscript</format>
