@@ -1,5 +1,7 @@
 # API Overview
 
+![Test](light.png){width="296"}
+
 <video src="goLand.mp4"/>
 
 <img src="duck.gif" alt="Duck"/>
