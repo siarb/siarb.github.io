@@ -1,5 +1,21 @@
 # Mermaid, PlantUML, D2
 
+<video src="goLand.mp4" preview-src="book.jpg"/>
+
+<img src="book.jpg" alt="Book" preview-src="book.jpg"/>
+
+Paragraph 1 with some text and some [%product%].
+
+<var name="product" value="original value"/>
+
+Paragraph 2 with some text and some [%product%].
+
+<-- Some other Markdown contents -->
+
+<var name="product" value="new value"/>
+
+Paragraph 3 with some text and some [%product%].
+
 ```
 fn main() {
     println!("Hello, world!");
