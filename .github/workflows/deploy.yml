@@ -32,7 +32,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1787-p5593
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1793-p5626
 
     steps:
       - name: Checkout repository

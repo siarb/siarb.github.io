@@ -2,8 +2,6 @@
 
 <video src="goLand.mp4" preview-src="book.jpg"/>
 
-<img src="book.jpg" alt="Book" preview-src="book.jpg"/>
-
 Paragraph 1 with some text and some [%product%].
 
 <var name="product" value="original value"/>
