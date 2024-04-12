@@ -15,14 +15,11 @@
         <sitemap/>
         <variables>
             <header-logo>open.png</header-logo>
-            <product-web-url>https://siar.github.io/test/</product-web-url>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
-            <web-root>https://siar.github.io</web-root>
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
-            <offline-docs>true</offline-docs>
             <noindex-content>true</noindex-content>
         </variables>
     </build-profile>
