@@ -15,9 +15,9 @@
         <sitemap/>
         <variables>
             <header-logo>open.png</header-logo>
+            <product-web-url>https://siar.github.io/test/</product-web-url>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
-            <product-web-url>https://siar.github.io</product-web-url>
             <web-root>https://siar.github.io</web-root>
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index</algolia-index>
