@@ -6,5 +6,6 @@
        title="Empty XML Topic 2" id="Empty-XML-Topic">
 
     <p>
+        Test <res resource-id="xls" filter="" id="w"/> 21
     </p>
 </topic>
