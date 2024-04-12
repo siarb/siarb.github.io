@@ -15,6 +15,7 @@
         <sitemap/>
         <variables>
             <header-logo>open.png</header-logo>
+            <product-web-url>https://siarb.github.io/</product-web-url>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
             <algolia-id>ERUSDW4898</algolia-id>
