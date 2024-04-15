@@ -1,5 +1,9 @@
 # API Overview
 
+![Version](https://img.shields.io/badge/jetbrains%20plugin-v1.7-blue)
+
+![love couple dark.gif](love%20couple%20dark.gif)
+
 ![Test](light.png){width="296"}
 
 <video src="goLand.mp4"/>

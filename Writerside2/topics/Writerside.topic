@@ -6,7 +6,14 @@
        title="Writerside" id="Writerside">
 
     <chapter title="Test" id="test">
-    <p>
+
+        <img src="https://img.shields.io/badge/jetbrains%20plugin-v1.7-blue" alt="Version"/>
+
+
+        <img src="love couple dark.gif" alt="love couple dark.gif"/>
+
+
+        <p>
         <a href="https://docs.openrewrite.org/">OpenRewrite</a> is a tool.
     </p>
     </chapter>
