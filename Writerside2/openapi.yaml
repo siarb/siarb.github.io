@@ -33,7 +33,7 @@ tags:
   - name: user
     description: Operations about user
 paths:
-  /pet:
+  /bobik:
     post:
       tags:
         - pet
