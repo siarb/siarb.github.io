@@ -3,10 +3,8 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Empty XML Topic 2" id="Empty-XML-Topic">
+       title="kfkf" id="kfkf">
 
-    <p>
-        Test <res resource-id="xls" filter="" id="w"/> 22
-
-    </p>
+    <p>Start typing here...</p>
+    <api-schema openapi-path="../../openapi.yaml" name="Level7" depth="2"/>
 </topic>

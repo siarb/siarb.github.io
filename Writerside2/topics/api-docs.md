@@ -2,6 +2,8 @@
 
 ![Version](https://img.shields.io/badge/jetbrains%20plugin-v1.7-blue)
 
+![Version](https://i0.wp.com/hechingerreport.org/wp-content/uploads/2018/04/Jennifer-Heller-Buckley-PHOTO1.jpg)
+
 ![love couple dark.gif](love%20couple%20dark.gif)
 
 ![Test](light.png){width="296"}
