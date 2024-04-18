@@ -1,8 +1,9 @@
 # Mermaid, PlantUML, D2
 
-```
+![](book.jpg)
+
 <video src="goLand.mp4" preview-src="book.jpg"/>
-```
+
 
 ```java
 class Hello {
