@@ -11,7 +11,7 @@
     <toc-element topic="api-docs.md"/>
     <toc-element topic="Empty-XML-Topic.topic"/>
     <toc-element topic="API-quickstart.md"/>
-    <toc-element topic="API-reference.md">
+    <toc-element topic="API-reference-MD.md">
         <toc-element topic="Pet.md">
         </toc-element>
         <toc-element toc-title="Store">
