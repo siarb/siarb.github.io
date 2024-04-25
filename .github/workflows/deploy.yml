@@ -19,7 +19,7 @@ env:
   # Replace HI with the ID of the instance in capital letters
   ARTIFACT: webHelpAUTO2-all.zip
   # Writerside docker image version
-  DOCKER_VERSION: '2.1.1784-p5541'
+  DOCKER_VERSION: '241.15989'
   # Add the variable below to upload Algolia indexes
   # Replace HI with the ID of the instance in capital letters
   ALGOLIA_ARTIFACT: 'algolia-indexes-AUTO.zip'
@@ -32,51 +32,51 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:241.15989
+#    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:241.15989
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+#        with:
+#          fetch-depth: 0
 
-      - name: Processing timestamps
-        run: |
-          git config --global --add safe.directory /__w/siarb.github.io/siarb.github.io
-          mkdir -p ./timestamps
-          echo "{" > ./timestamps/timestamps.json
-          git ls-tree -r --name-only HEAD | grep -E '\.(topic|md)$' | xargs -n 1 -P 4 -I{} bash -c 'echo -e "\"$0\": \"$(git log -1 --format="%at" -- "$0")\","' {} >> ./timestamps/timestamps.json
-          sed -i '$ s/.$//' ./timestamps/timestamps.json
-          echo "}" >> ./timestamps/timestamps.json
-          cat ./timestamps/timestamps.json
-
-      - name: Store timestamps file
-        uses: actions/upload-artifact@v4
-        with:
-          name: timestamps.json
-          path: ./timestamps/timestamps.json
-
-      - name: Download timestamps
-        uses: actions/download-artifact@v4
-        with:
-          name: timestamps.json
-          path: timestamps
+#      - name: Processing timestamps
+#        run: |
+#          git config --global --add safe.directory /__w/siarb.github.io/siarb.github.io
+#          mkdir -p ./timestamps
+#          echo "{" > ./timestamps/timestamps.json
+#          git ls-tree -r --name-only HEAD | grep -E '\.(topic|md)$' | xargs -n 1 -P 4 -I{} bash -c 'echo -e "\"$0\": \"$(git log -1 --format="%at" -- "$0")\","' {} >> ./timestamps/timestamps.json
+#          sed -i '$ s/.$//' ./timestamps/timestamps.json
+#          echo "}" >> ./timestamps/timestamps.json
+#          cat ./timestamps/timestamps.json
+#
+#      - name: Store timestamps file
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: timestamps.json
+#          path: ./timestamps/timestamps.json
+#
+#      - name: Download timestamps
+#        uses: actions/download-artifact@v4
+#        with:
+#          name: timestamps.json
+#          path: timestamps
 
       - name: Build Writerside docs using Docker
-        run: |
-          set -x
-          echo "Build documentation script started"
-          export DISPLAY=:99
-          Xvfb :99 &
-          git config --global --add safe.directory .
-          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts/ -time ./timestamps/timestamps.json || true
-          echo "Test existing artifacts"
-          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
-#        uses: JetBrains/writerside-github-action@v4
-#        with:
-#          instance: ${{ env.INSTANCE }}
-#          artifact: ${{ env.ARTIFACT }}
-#          docker-version: ${{ env.DOCKER_VERSION }}
+#        run: |
+#          set -x
+#          echo "Build documentation script started"
+#          export DISPLAY=:99
+#          Xvfb :99 &
+#          git config --global --add safe.directory .
+#          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts/ -time ./timestamps/timestamps.json || true
+#          echo "Test existing artifacts"
+#          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
+        uses: JetBrains/writerside-github-action@v4
+        with:
+          instance: ${{ env.INSTANCE }}
+          artifact: ${{ env.ARTIFACT }}
+          docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: List artifacts directory
         run: |
