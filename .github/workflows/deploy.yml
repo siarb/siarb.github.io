@@ -32,7 +32,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-#    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:241.15989
+#    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:233.14938
 
     steps:
       - name: Checkout repository
@@ -69,7 +69,7 @@ jobs:
 #          export DISPLAY=:99
 #          Xvfb :99 &
 #          git config --global --add safe.directory .
-#          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts/ -time ./timestamps/timestamps.json || true
+#          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts || true
 #          echo "Test existing artifacts"
 #          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
         uses: JetBrains/writerside-github-action@v4
