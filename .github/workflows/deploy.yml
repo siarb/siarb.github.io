@@ -19,10 +19,10 @@ env:
   # Replace HI with the ID of the instance in capital letters
   ARTIFACT: webHelpAUTO2-all.zip
   # Writerside docker image version
-  DOCKER_VERSION: '233.14938'
+  DOCKER_VERSION: '241.15989'
   # Add the variable below to upload Algolia indexes
   # Replace HI with the ID of the instance in capital letters
-  ALGOLIA_ARTIFACT: 'algolia-indexes-AUTO.zip'
+  ALGOLIA_ARTIFACT: 'webHelpAUTO2-all.zip'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index'
   ALGOLIA_KEY: '${{ secrets.ALGOLIA_KEY }}'
