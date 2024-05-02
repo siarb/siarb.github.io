@@ -14,13 +14,13 @@
     <toc-element topic="API-reference-MD.md">
         <toc-element topic="Pet.md">
         </toc-element>
-        <toc-element toc-title="Store long title for the search" topic="Returns-pet-inventories-by-status.md">
+        <toc-element toc-title="Store long title for the search" topic="Returns-pet-inventories-by-status.md" id="xpath_and_xslt_support">
 <!--            <toc-element topic="Returns-pet-inventories-by-status.md"/>-->
             <toc-element topic="Place-an-order-for-a-pet.md"/>
             <toc-element topic="Find-purchase-order-by-ID.md"/>
             <toc-element topic="Delete-purchase-order-by-ID.md"/>
         </toc-element>
-        <toc-element topic="Creates-list-of-users-with-given-input-array.md" >
+        <toc-element topic="Creates-list-of-users-with-given-input-array.md" id="searching_through_code">
             <toc-element topic="Create-user.md"/>
 <!--            <toc-element topic="Creates-list-of-users-with-given-input-array.md"/>-->
             <toc-element topic="Logs-user-into-the-system.md"/>
