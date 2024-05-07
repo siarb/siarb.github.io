@@ -6,6 +6,8 @@
        title="Writerside" id="Writerside">
 
     <chapter title="Test" id="test">
+        <primary-label ref="label"/>
+        <secondary-label ref="annotation"/>
 
         %product%
 

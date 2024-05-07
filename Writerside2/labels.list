@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<labels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/stardust/labels.xsd">
+
+    <primary-label id="label" short-name="Primary label" name="First primary label for topic" href="https://www.w3.org/">
+        First topic label must be visible
+    </primary-label>
+
+    <secondary-label id="annotation" short-name="Annotation" name="Colored annotation" color="strawberry"/>
+
+</labels>

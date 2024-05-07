@@ -25,7 +25,7 @@
             <algolia-index>index</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <noindex-content>true</noindex-content>
-            <offline-docs>true</offline-docs>
+            <offline-docs>false</offline-docs>
         </variables>
     </build-profile>
 
