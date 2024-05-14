@@ -6,6 +6,7 @@
                  name="test"
                  start-page="標題.md">
 
+    <toc-element topic="Test-XML.topic"/>
     <toc-element topic="Starter-test.md"/>
     <toc-element topic="PlantUML-MD.md"/>
     <toc-element topic="欢迎.md"/>
