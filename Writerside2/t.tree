@@ -13,4 +13,5 @@
     <toc-element topic="標題.md"/>
     <toc-element topic="Default-topic.md"/>
     <toc-element topic="Test1.topic"/>
+    <toc-element topic="Common-topic.topic"/>
 </instance-profile>

@@ -1,5 +1,9 @@
 # API Overview
 
+<primary-label ref="label"/>
+
+<secondary-label ref="annotation"/>
+
 ## h2 {collapsible="true"}
 
 some text in h2
