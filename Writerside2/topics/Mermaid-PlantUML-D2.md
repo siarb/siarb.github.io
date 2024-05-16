@@ -1,8 +1,12 @@
 # Mermaid, PlantUML, D2
 
-![Alt](webp-banner.webp)
+test 
 
-![Alt](Avif.avif)
+![Alt](./images/webp-banner.Webp)
+
+Test
+
+![Alt](./images/Avif.avif)
 
 <video src="goLand.mp4" preview-src="book.jpg"/>
 
