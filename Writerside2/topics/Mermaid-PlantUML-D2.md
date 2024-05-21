@@ -6,7 +6,7 @@ test
 
 Test
 
-![Alt](./images/Avif.avif)
+[//]: # (![Alt]&#40;./images/Avif.avif&#41;)
 
 <video src="goLand.mp4" preview-src="book.jpg"/>
 

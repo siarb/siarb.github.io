@@ -17,7 +17,7 @@
             <custom-favicons>dog.png</custom-favicons>
             <web-root>https://www.jetbrains.com/help/</web-root>
             <header-logo>open.png</header-logo>
-            <product-web-url>https://ελ.ελ</product-web-url>
+            <product-web-url>https://siarb.github.io</product-web-url>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
 <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
