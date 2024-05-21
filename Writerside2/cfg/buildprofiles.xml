@@ -17,10 +17,10 @@
             <custom-favicons>dog.png</custom-favicons>
             <web-root>https://www.jetbrains.com/help/</web-root>
             <header-logo>open.png</header-logo>
-            <product-web-url>https://siarb.github.io/</product-web-url>
+            <product-web-url>https://ελ.ελ</product-web-url>
             <primary-color>forest</primary-color>
             <color-preset>contrast</color-preset>
-<!--            <search-endpoint>https://my.search/endpoint</search-endpoint>-->
+<!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
