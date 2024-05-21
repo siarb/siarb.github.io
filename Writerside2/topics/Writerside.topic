@@ -9,6 +9,8 @@
         <primary-label ref="label"/>
         <secondary-label ref="annotation"/>
 
+        帶來了熊
+
         %product%
 
         <code>%product%</code>
