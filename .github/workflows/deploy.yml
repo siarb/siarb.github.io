@@ -24,7 +24,7 @@ env:
   # Replace HI with the ID of the instance in capital letters
   ALGOLIA_ARTIFACT: 'algolia-indexes-AUTO.zip'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
-  ALGOLIA_INDEX_NAME: 'index'
+  ALGOLIA_INDEX_NAME: 'index_test'
   ALGOLIA_KEY: '${{ secrets.ALGOLIA_KEY }}'
   CONFIG_JSON_PRODUCT: 'auto'
   CONFIG_JSON_VERSION: '1.0'

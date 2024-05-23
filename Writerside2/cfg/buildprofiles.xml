@@ -18,11 +18,11 @@
             <web-root>https://www.jetbrains.com/help/</web-root>
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
-            <primary-color>forest</primary-color>
-            <color-preset>contrast</color-preset>
+            <primary-color>deep ocean</primary-color>
+<!--            <color-preset>contrast</color-preset>-->
 <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
             <algolia-id>ERUSDW4898</algolia-id>
-            <algolia-index>index</algolia-index>
+            <algolia-index>index_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <noindex-content>true</noindex-content>
             <offline-docs>false</offline-docs>
