@@ -9,6 +9,8 @@
         <primary-label ref="label"/>
         <secondary-label ref="annotation"/>
 
+        <a href="Text-index.topic">Text index</a>
+
         帶來了熊
 
         %product%
