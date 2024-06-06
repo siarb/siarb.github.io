@@ -5,11 +5,22 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Writerside" id="Writerside">
 
+    <tldr>
+        <p>
+            To use a live template, type the corresponding template abbreviation.
+        </p>
+    </tldr>
+    <p>
+        %product% already has a bunch of built-in live templates for frequently used markup fragments,
+        like tabs, tables, lists, procedures, and more. They made you write some more complex markup fragments quicker.
+        They work in both <path>.md</path> and <path>.topic</path> files.
+    </p>
+
     <chapter title="Test" id="test">
         <primary-label ref="label"/>
         <secondary-label ref="annotation"/>
 
-        <a href="Text-index.topic">Text index</a>
+        <a href="Text-index.topic"/>
 
         帶來了熊
 
