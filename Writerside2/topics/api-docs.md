@@ -1,82 +1,108 @@
-# API Overview
+<!-- Copyright 2000-2024 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-<primary-label ref="label"/>
+# Coroutine Dispatchers
+<primary-label ref="2024.1"/>
 
-<secondary-label ref="annotation"/>
+<link-summary>Explanation of coroutine dispatcher in the IntelliJ Platform.</link-summary>
 
-## h2 {collapsible="true"}
+Coroutines are always executed in a [context](https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html) represented by [`CoroutineContext`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/).
+One of the most important parts of the context is a dispatcher, which determines what thread or thread pool the corresponding coroutine is executed on.
 
-some text in h2
+In the IntelliJ Platform, coroutines are executed on three main dispatchers:
+- [](#default-dispatcher)
+- [](#io-dispatcher)
 
-### h3
+## Default Dispatcher
 
-some text in h3
+The [`Dispatchers.Default`](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-default.html) dispatcher is used for performing CPU-bound tasks.
 
-![non-latin](Águila_calva.png)
+It ensures that the number of tasks running in parallel does not exceed the number of CPU cores.
+A hundred threads performing CPU-bound work on a machine with 10 CPU cores can result in threads competing for CPU time and excessive thread switching.
+This makes the IDE effectively slower, hence the limitation.
+Using the default dispatcher (or its [`limitedParallelism()`](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-dispatcher/limited-parallelism.html) slice) enables a consistent CPU load.
 
-![ru буквы](ЛогоВРС.png)
+## IO Dispatcher
 
-![Version](https://img.shields.io/badge/jetbrains%20plugin-v1.7-blue)
+The [`Dispatchers.IO`](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-i-o.html) dispatcher is used for performing IO operations like reading/writing to files, network, executing external processes, etc.
 
-![Version](https://i0.wp.com/hechingerreport.org/wp-content/uploads/2018/04/Jennifer-Heller-Buckley-PHOTO1.jpg)
+It must be used at the very deep moment in the trace right before the actual IO operation happens and exited as soon as the operation is finished.
+Example:
 
-![love couple dark.gif](love%20couple%20dark.gif)
+<compare first-title="Wrong" second-title="Correct" type="top-bottom">
 
-![Test](light.png){width="296"}
+```kotlin
+suspend fun readDataFromFile(): Data {
+  return withContext(Dispatchers.IO) {
+    val fileName = computeFileName()
+    val bytes = readFile(fileName)
+    Data(parseBytes(bytes))
+  }
+}
+```
 
-<video src="goLand.mp4"/>
+```kotlin
+suspend fun readDataFromFile(): Data {
+  val fileName = computeFileName()
+  val bytes = withContext(Dispatchers.IO) {
+    readFile(fileName)
+  }
+  return Data(parseBytes(bytes))
+}
+```
 
-<img src="duck.gif" alt="Duck"/>
+</compare>
 
-### IntelliJ Platform 2019.3
+### `Dispatchers.Main` vs. `Dispatchers.EDT`
 
-`com.intellij.codeInsight.TailType.getLocalCodeStyleSettings(Editor, int)` method removed
-: Use `com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor, int)` instead.
+In Kotlin, a standard dispatcher for UI-based activities is [`Dispatchers.Main`](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-main.html).
+In the IntelliJ Platform, the EDT dispatcher is also installed as `Dispatchers.Main` so both can be used, however always prefer `Dispatchers.EDT`.
+Use `Dispatchers.Main` only if the coroutine is IntelliJ Platform-context agnostic (e.g., when it can be executed outside the IntelliJ Platform context).
+Use `Dispatchers.EDT` when in doubt.
+
+## Dispatchers vs. Threads
+
+The dispatcher concept is a higher level of abstraction over threads.
+While the code is always executed on threads, do not think about dispatchers as specific thread instances.
+
+A single coroutine is not bound to the same thread during the whole execution time.
+It may happen that a coroutine starts on thread A, is suspended, and finished on thread B, even if the whole is executed with the same dispatcher context.
+
+Consider the following code snippet:
+```kotlin
+suspend fun doSomething() {
+  val fetchedData = suspendingTask()
+  withContext(Dispatchers.EDT) {
+    updateUI(fetchedData)
+  }
+}
+
+suspend fun suspendingTask(): Data {
+  // fetch data from the internet
+}
+```
+
+The following diagram presents one of the potential execution scenarios:
+
+```mermaid
+gantt
+    dateFormat X
+    %% do not remove trailing space in axisFormat
+    axisFormat ‎
+    section Thread 1
+        suspendingTask() : 2, 3
+    section Thread 2
+        suspendingTask() : 0, 1
+    section EDT
+        updateUI() : 3, 4
+```
+
+The code is executed as follows:
+1. `suspendingTask` is started and partially executed on **Thread 2**.
+2. `suspendingTask` is suspended when it waits for data fetched from the internet.
+3. After receiving data, `suspendingTask` is resumed, but now it is executed on **Thread 1**.
+4. Execution explicitly switches to the EDT dispatcher and `updateUI` is executed on EDT.
 
 
-<deflist>
-    <def>
-        <title><code>com.intellij.codeInsight.TailType.getLocalCodeStyleSettings(Editor, int)</code> method removed
-        </title>
-        <p>Use <code>com.intellij.psi.codeStyle.CommonCodeStyleSettings.getLocalCodeStyleSettings(Editor,
-            int)</code> instead.</p>
-    </def>
-</deflist>
-
-<!-- This document provides an introduction into your API. -->
-
-## Introduction
-
-Provide a brief introduction to the API, explaining its purpose and scope.
-
-## What you can do using `<API name>`
-
-Provide some simple usage examples to help users get started quickly.
-
-## Authentication
-
-Explain the authentication methods and requirements for accessing the API.
-
-## Base URL
-
-Specify the base URL for making API requests.
-
-If you have more than one environment (production and sandbox) explain the difference and provide links to both.
-
-## Rate Limiting
-
-Explain any rate limiting policies, if applicable.
-
-## Error Handling
-
-Describe the API's error response format and provide common error codes and their meanings.
-
-## Versioning
-
-Explain how the API versioning works and how to specify the desired API version in requests.
-
-<seealso>
-
-<!--List any additional resources, such as tutorials or guides, that can help users understand and use the API effectively.-->
-
-</seealso>
+> This behavior can result in unexpected consequences for code that relies on thread-specific data and assumes it will execute consistently on the same thread.
+>
+{style="warning"}

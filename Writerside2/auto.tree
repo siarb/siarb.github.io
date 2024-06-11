@@ -7,6 +7,7 @@
                  start-page="Section-Starting-Page.topic">
 
     <toc-element topic="Writerside.topic"/>
+    <toc-element topic="index-index.topic"/>
     <toc-element topic="Section-Starting-Page.topic"/>
     <toc-element topic="Text-index.topic" accepts-web-file-names="Text-index.html"/>
     <toc-element topic="Mermaid-PlantUML-D2.md"/>
