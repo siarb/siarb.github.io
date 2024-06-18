@@ -6,6 +6,7 @@
                  name="API Docs"
                  start-page="Section-Starting-Page.topic">
 
+    <toc-element topic="Test-MD-topic.md"/>
     <toc-element topic="Writerside.topic"/>
     <toc-element topic="index-index.topic"/>
     <toc-element topic="Section-Starting-Page.topic"/>
