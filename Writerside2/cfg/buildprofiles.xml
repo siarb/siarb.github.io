@@ -4,6 +4,7 @@
 
     <variables>
         <primary-color>deep ocean</primary-color>
+        <offline-docs>true</offline-docs>
     </variables>
 
     <footer>
