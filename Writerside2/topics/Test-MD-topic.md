@@ -1,8 +1,11 @@
 # Test-MD-topic
 
+<video src="test.mp4"/>
+
+<video src="goLand.mp4"/>
+
 ## Title
 
-See section for more details.
-```
-
-<include from="snippets.md" element-id="missingContent"/>
+{style="narrow"}
+Vanilla JS
+: See section for more details.
