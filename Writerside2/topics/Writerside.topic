@@ -5,6 +5,74 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Writerside" id="Writerside">
 
+    <p>
+        The name of this <if instance="!db">class</if><if instance="db">file</if> will be a combination of the name that you
+        provide and <if instance="!db">the word</if> <code>%product%</code>,
+        for example: <code>%product%%template%</code>.
+    </p>
+
+    <p>Operands: <code>=</code>, <code>==</code>, <code>&gt;=</code>, <code>&lt;=</code>,
+        <code>&gt;</code>,
+        <code>&lt;</code>,
+        <code>&lt;&gt;</code>, <code>!=</code>, <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>,
+        <code>%</code>, <code>AND</code>, <code>OR</code>, <code>NOT</code>, <code>LIKE</code>, <code>NOT LIKE</code>,
+        <code>IS</code>,<code>IS NOT</code>, <code>IN</code>, <code>NOT IN</code>, <code>BETWEEN</code>, <code>NOT BETWEEN</code>.
+    </p>
+
+    <p>
+        On Windows, it either returns the value of the <code>%\TEMP%</code> environment variable
+        or falls back to <path>AppData\Local\Temp</path> under the user's home
+        directory<if instance="!rm"> (as returned by <code>System.getProperty("user.home")</code>)</if>.
+    </p>
+
+    <p>
+        <var instance="!ws" name="local_path_nested" value="Users/John.Smith/demo-project/nested-folder" />
+        <var instance="ws" name="local_path_nested" value="Users/barbara/WS/deployment_demo/nested_folder" />
+        <var instance="!ws" name="deployment_path_nested" value="/root-path/nested-folder" />
+        <var instance="ws" name="deployment_path_nested" value="/root/work/nested_folder" />
+        <var instance="!ws" name="local_project_folder" value="/demo-project" />
+        <var instance="ws" name="local_project_folder" value="/deployment_demo" />
+        <var instance="!ws" name="deployment_path" value="/root-path/my-site" />
+        <var instance="ws" name="deployment_path" value="/root/work/my_site" />
+        In this case, <code>%local_path_nested%</code> will
+        be uploaded to <code>%deployment_path_nested%</code> on the server, while all other
+        folders and files from <code>%local_project_folder%</code> will still map to
+        <code>%deployment_path%</code>.
+    </p>
+
+    <list>
+        <var instance="!ws" name="local_path" value="Users/John.Smith/demo-project" />
+        <var instance="ws" name="local_path" value="/Users/barbara/WS/deployment_demo" />
+        <var instance="!ws" name="deployment_path" value="/my-project" />
+        <var instance="ws" name="deployment_path" value="my_project" />
+        <var instance="!ws" name="web_path" value="/my-project" />
+        <var instance="ws" name="web_path" value="my_project" />
+        <li><control>Local path</control>:<code>%local_path%</code></li>
+        <li><control>Deployment path</control>: <code>%deployment_path%&gt;</code></li>
+        <li><control>Web path</control>: <code>%web_path%</code></li>
+        <li><code>%M</code> &mdash; message of the initial commit</li>
+        <li><code>%C</code> &mdash; change ID in TeamCity</li>
+        <li><code>%L</code> &mdash; link to the change in TeamCity</li>
+        <li>
+            <p> <code>%\w+</code> -
+                <code>%</code> followed by one or more word characters,
+                for example, <code>%xyz</code>.</p>
+            <p instance="ps">To have %instance% recognize <a href="http://php.net/manual/en/function.sprintf.php">sprintf</a> format references in injected SQL strings:
+            </p>
+            <list type="decimal" instance="ps">
+                <include from="lib_php.topic" element-id="ps_sprintf_pattern" />
+            </list>
+        </li>
+        <li><code>%template%</code></li>
+
+    </list>
+
+    <list>
+        <li><code>%M</code> &mdash; message of the initial commit</li>
+        <li><code>%C</code> &mdash; change ID in TeamCity</li>
+        <li><code>%L</code> &mdash; link to the change in TeamCity</li>
+    </list>
+
     <tldr>
         <p>
             To use a live template, type the corresponding template abbreviation.

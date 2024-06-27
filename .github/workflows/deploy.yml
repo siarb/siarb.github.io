@@ -19,7 +19,7 @@ env:
   # Replace HI with the ID of the instance in capital letters
   ARTIFACT: webHelpAUTO2-all.zip
   # Writerside docker image version
-  DOCKER_VERSION: '241.16003'
+  DOCKER_VERSION: '2.1.1884-p6178'
   # Add the variable below to upload Algolia indexes
   # Replace HI with the ID of the instance in capital letters
   ALGOLIA_ARTIFACT: 'algolia-indexes-AUTO.zip'
@@ -32,7 +32,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-#    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:233.14938
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1884-p6178
 
     steps:
       - name: Checkout repository
@@ -63,20 +63,20 @@ jobs:
 #          path: timestamps
 
       - name: Build Writerside docs using Docker
-#        run: |
-#          set -x
-#          echo "Build documentation script started"
-#          export DISPLAY=:99
-#          Xvfb :99 &
-#          git config --global --add safe.directory .
-#          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts || true
-#          echo "Test existing artifacts"
-#          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
-        uses: JetBrains/writerside-github-action@v4
-        with:
-          instance: ${{ env.INSTANCE }}
-          artifact: ${{ env.ARTIFACT }}
-          docker-version: ${{ env.DOCKER_VERSION }}
+        run: |
+          set -x
+          echo "Build documentation script started"
+          export DISPLAY=:99
+          Xvfb :99 &
+          git config --global --add safe.directory .
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts || true
+          echo "Test existing artifacts"
+          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
+#        uses: JetBrains/writerside-github-action@v4
+#        with:
+#          instance: ${{ env.INSTANCE }}
+#          artifact: ${{ env.ARTIFACT }}
+#          docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: List artifacts directory
         run: |
