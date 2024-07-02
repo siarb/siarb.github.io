@@ -5,7 +5,25 @@
     <variables>
         <header-logo>JB_Writerside_logo.png</header-logo>
         <primary-color>deep ocean</primary-color>
+        <property-cleanup>[:,.;]$|\.{3}$|[^a-zA-Z0-9}')]+$</property-cleanup>
     </variables>
+
+    <build-profile instance="auto">
+        <sitemap/>
+        <variables>
+            <custom-favicons>dog.png</custom-favicons>
+            <web-root>https://www.jetbrains.com/help/</web-root>
+            <header-logo>open.png</header-logo>
+            <product-web-url>https://siarb.github.io</product-web-url>
+<!--            <color-preset>contrast</color-preset>-->
+<!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
+            <algolia-id>ERUSDW4898</algolia-id>
+            <algolia-index>index_test</algolia-index>
+            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
+            <noindex-content>true</noindex-content>
+            <offline-docs>false</offline-docs>
+        </variables>
+    </build-profile>
 
     <footer>
         <social type="rss" href="https://example.com">Product RSS feed</social>
@@ -33,5 +51,9 @@
 
         <icp>Hello, Writersiders!</icp>
     </footer>
+
+    <property-bundles>
+        <property-file>./properties/propmap-dominators.xml</property-file>
+    </property-bundles>
 
 </buildprofiles>

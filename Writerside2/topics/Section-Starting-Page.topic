@@ -18,7 +18,7 @@
     <section-starting-page>
         <title>Section starting page title</title>
         <description>
-            Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
+            Добавьте вводный абзац: объясните, о чем этот раздел в 2-3 коротких предложениях.
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
