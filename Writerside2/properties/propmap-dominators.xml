@@ -1,0 +1,6 @@
+<propmaps>
+    <propmap name="messages.SettingsSyncBundle" instance="*">
+        <prop name="config.button.enable" value="Enable Settings Sync..."/>
+    </propmap>
+</propmaps>
+

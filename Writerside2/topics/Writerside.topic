@@ -6,6 +6,7 @@
        title="Writerside" id="Writerside">
 
     <p>
+        <control><property bundle="messages.SettingsSyncBundle" key="config.button.enable"/></control>.
         The name of this <if instance="!db">class</if><if instance="db">file</if> will be a combination of the name that you
         provide and <if instance="!db">the word</if> <code>%product%</code>,
         for example: <code>%product%%template%</code>.
