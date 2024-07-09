@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("Roboto-Bold.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+*  {
+  font-family: "MyFont" !important;
+}
+
+
+
+/* this sets a blue background for the page */
+:root {
+  --wh-color-bg-main: rgb(20, 200, 200);
+}
+
+.title__content {
+    font-size: 50px;
+}
+
+/* this changes a border radius for article images and removes the grey border for them */
+.article__img {
+    border-radius: 30px !important;
+    border: none;
+}
