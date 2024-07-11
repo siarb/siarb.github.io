@@ -4,10 +4,12 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
 
     <variables>
+        <content-max-width>200</content-max-width>
+        <link-color>#000000</link-color>
         <custom-css>custom_css.css</custom-css>
-        <include-before-body>static/custom_js.js</include-before-body>
+        <include-before-body>custom_js.js</include-before-body>
         <header-logo>JB_Writerside_logo.png</header-logo>
-        <primary-color>deep ocean</primary-color>
+        <primary-color>blueberry</primary-color>
         <property-cleanup>[:,.;]$|\.{3}$|[^a-zA-Z0-9}')]+$</property-cleanup>
     </variables>
 
@@ -19,7 +21,7 @@
             <web-root>https://www.jetbrains.com/help/</web-root>
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
-<!--            <color-preset>contrast</color-preset>-->
+            <color-preset>vivid</color-preset>
 <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index_test</algolia-index>

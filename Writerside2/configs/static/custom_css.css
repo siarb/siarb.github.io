@@ -6,9 +6,11 @@
 }
 
 
-*  {
-  font-family: "MyFont" !important;
-}
+:root {
+        --rs-font-family-ui: "Comic Neue", cursive;
+        --rs-font-family-headers:  "Comic Neue", cursive;
+        --rs-font-family-mono: "Ubuntu Mono", monospace;
+    }
 
 
 

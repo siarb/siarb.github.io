@@ -5,6 +5,12 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Writerside" id="Writerside">
 
+    <img src="love%20couple%20dark.gif" alt="love couple dark.gif" ignore-vars="true"/>
+
+
+
+    <web-file-name>test.html</web-file-name>
+
     <p>
         <control><property bundle="messages.SettingsSyncBundle" key="config.button.enable"/></control>.
         The name of this <if instance="!db">class</if><if instance="db">file</if> will be a combination of the name that you

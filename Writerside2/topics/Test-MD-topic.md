@@ -1,5 +1,9 @@
 # Test-MD-topic
 
+<img src="love%20couple%20dark.gif" alt="love couple dark.gif" ignore-vars="true"/>
+
+
+
 <var name="val_name" value="{name}" instance="!dcv"/>
 
 <code>%val_name%</code>
