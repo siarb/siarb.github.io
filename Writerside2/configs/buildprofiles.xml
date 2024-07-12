@@ -9,7 +9,7 @@
         <custom-css>custom_css.css</custom-css>
         <include-before-body>custom_js.js</include-before-body>
         <header-logo>JB_Writerside_logo.png</header-logo>
-        <primary-color>blueberry</primary-color>
+        <primary-color>deep-ocean</primary-color>
         <property-cleanup>[:,.;]$|\.{3}$|[^a-zA-Z0-9}')]+$</property-cleanup>
     </variables>
 
@@ -27,7 +27,7 @@
             <algolia-index>index_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <noindex-content>true</noindex-content>
-            <offline-docs>true</offline-docs>
+<!--            <offline-docs>false</offline-docs>-->
         </variables>
     </build-profile>
 
