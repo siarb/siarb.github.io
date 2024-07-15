@@ -4,7 +4,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
 
     <variables>
-        <content-max-width>200</content-max-width>
+        <content-max-width>1800</content-max-width>
         <link-color>#000000</link-color>
         <custom-css>custom_css.css</custom-css>
         <include-before-body>custom_js.js</include-before-body>
@@ -26,8 +26,8 @@
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
-            <noindex-content>true</noindex-content>
-            <offline-docs>true</offline-docs>
+            <noindex-content>false</noindex-content>
+<!--            <offline-docs>true</offline-docs>-->
         </variables>
     </build-profile>
 
