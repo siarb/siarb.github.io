@@ -11,6 +11,8 @@
         <header-logo>JB_Writerside_logo.png</header-logo>
         <primary-color>deep-ocean</primary-color>
         <property-cleanup>[:,.;]$|\.{3}$|[^a-zA-Z0-9}')]+$</property-cleanup>
+        <feedback-url>https://siarb.github.io/</feedback-url>
+        <feedback-widget>true</feedback-widget>
     </variables>
 
     <build-profile instance="auto">
