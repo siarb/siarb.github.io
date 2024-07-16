@@ -6,8 +6,8 @@
     <variables>
         <content-max-width>1800</content-max-width>
         <link-color>#000000</link-color>
-        <custom-css>custom_css.css</custom-css>
-        <include-before-body>custom_js.js</include-before-body>
+<!--        <custom-css>custom_css.css</custom-css>-->
+<!--        <include-before-body>custom_js.js</include-before-body>-->
         <header-logo>JB_Writerside_logo.png</header-logo>
         <primary-color>deep-ocean</primary-color>
         <property-cleanup>[:,.;]$|\.{3}$|[^a-zA-Z0-9}')]+$</property-cleanup>
