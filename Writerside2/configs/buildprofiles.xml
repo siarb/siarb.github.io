@@ -29,7 +29,7 @@
             <algolia-index>index_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <noindex-content>false</noindex-content>
-<!--            <offline-docs>true</offline-docs>-->
+            <offline-docs>true</offline-docs>
         </variables>
     </build-profile>
 
