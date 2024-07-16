@@ -19,7 +19,7 @@
 
         <sitemap/>
         <variables>
-            <custom-favicons>dog.png</custom-favicons>
+<!--            <custom-favicons>dog.png</custom-favicons>-->
             <web-root>https://www.jetbrains.com/help/</web-root>
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
