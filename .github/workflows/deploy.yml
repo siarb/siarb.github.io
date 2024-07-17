@@ -69,7 +69,7 @@ jobs:
           export DISPLAY=:99
           Xvfb :99 &
           git config --global --add safe.directory .
-          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts -frontend-url https://resources.jetbrains.com/writerside/apidoc/6.10.0-b412/ || true
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} -fx --runner github -output-dir ./artifacts || true
           echo "Test existing artifacts"
           test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
 #        uses: JetBrains/writerside-github-action@v4
