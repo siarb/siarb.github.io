@@ -19,7 +19,7 @@
 
         <sitemap/>
         <variables>
-            <include-in-head>custom_js.js</include-in-head>
+<!--            <include-in-head>custom_js.js</include-in-head>-->
 <!--            <custom-favicons>dog.png</custom-favicons>-->
             <web-root>https://www.jetbrains.com/help/</web-root>
             <header-logo>open.png</header-logo>
