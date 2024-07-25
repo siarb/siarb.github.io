@@ -1,5 +1,7 @@
 # Test-MD-topic
 
+<secondary-label ref="2023.3"/>
+
 <img src="love%20couple%20dark.gif" alt="love couple dark.gif" ignore-vars="true"/>
 
 

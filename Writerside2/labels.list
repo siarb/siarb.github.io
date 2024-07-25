@@ -8,7 +8,9 @@
 
     <secondary-label id="annotation" short-name="Annotation" name="Colored annotation" color="strawberry"/>
 
-    <primary-label id="2020.3" short-name="2020.3+" name="2020.3+"/>
+    <secondary-label id="2023.3" name="2023.3+">
+        Available in IDE version 2023.3 or later
+    </secondary-label>
     <primary-label id="2021.3" short-name="2021.3+" name="2021.3+"/>
     <primary-label id="2022.1" short-name="2022.1+" name="2022.1+"/>
     <primary-label id="2022.2" short-name="2022.2+" name="2022.2+"/>
