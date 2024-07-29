@@ -1,0 +1,43 @@
+<!--<div id="disqus_thread"></div>-->
+<!--<script>-->
+<!--    var disqus_config = function () {-->
+<!--        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable-->
+<!--        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable-->
+<!--    };-->
+
+<!--    (function() {  // DON'T EDIT BELOW THIS LINE-->
+<!--        var d = document, s = d.createElement('script');-->
+<!--        s.src = 'https://EXAMPLE.disqus.com/embed.js';-->
+<!--        s.setAttribute('data-timestamp', +new Date());-->
+<!--        (d.head || d.body).appendChild(s);-->
+<!--    })();-->
+
+<!--    window.onload = function() {-->
+<!--        var targetNode = document.querySelector('#webhelp-root');-->
+
+<!--        // get the disqus_thread element-->
+<!--        var disqus = document.getElementById("disqus_thread");-->
+
+<!--        var config = { childList: true, subtree: true };-->
+
+<!--        var callback = function(mutationsList, observer) {-->
+<!--            for(var mutation of mutationsList) {-->
+<!--                if (mutation.type === 'childList') {-->
+<!--                    var placeholderDiv = document.querySelector("#webhelp-root div[data-feedback-placeholder='true']");-->
+
+<!--                    if(placeholderDiv !== null) {-->
+<!--                        // if placeholderDiv exists, place the disqus div and stop observing-->
+<!--                        placeholderDiv.parentNode.insertBefore(disqus, placeholderDiv.nextSibling);-->
+<!--                        observer.disconnect();-->
+<!--                        return;-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        };-->
+
+<!--        var observer = new MutationObserver(callback);-->
+<!--        observer.observe(targetNode, config);-->
+
+<!--    }-->
+<!--</script>-->
+<!--<script id="dsq-count-scr" src="//https-siarb-github-io.disqus.com/count.js" async></script>-->

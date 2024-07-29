@@ -5,6 +5,45 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Writerside" id="Writerside">
 
+    <chapter title="Your First Zenoh Appplication" id="first-app">
+    <tabs>
+        <tab title="Python">
+            <code-block lang="python">
+                import zenoh
+                with zenoh::open() as z:
+                z.put("demo/greeting", "Hello from Zenoh!")
+            </code-block>
+        </tab>
+        <tab title="Rust">
+            <code-block lang="rust">
+                use zenoh::prelude::*;
+
+                #[tokio::main]
+                async fn main() {
+                let c = zenoh::config::Config::default();
+                let z = zenoh::open(c).await.unwrap();
+                z.put("demo/greeting", "Hello from Zenoh!");
+                }
+            </code-block>
+        </tab>
+        <tab title="C++">
+            <code-block lang="c++">
+                #include "zenoh.hxx"
+
+                int main() {
+                auto c = zenoh::Config::default();
+                auto z = zenoh::open(std::move(c));
+                z.put("demo/greeting", "Hello, Zenoh");
+                }
+            </code-block>
+        </tab>
+        <tab title="C"></tab>
+
+        <tab title="Kotlin"></tab>
+        <tab title="REST"></tab>
+    </tabs>
+    </chapter>
+
     <img src="love%20couple%20dark.gif" alt="love couple dark.gif" ignore-vars="true"/>
 
     <img src="animated.png" alt="Column selection" thumbnail="true"/>
