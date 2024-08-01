@@ -1,6 +1,6 @@
 # Test-MD-topic
 
-<contribute-url>https://gohome.com</contribute-url>
+<contribute-url>https://github.com/siarb/siarb.github.io/edit/main/Writerside2/articles</contribute-url>
 
 composécomposécompos écomposécomposéc omposécomposé composécomposé compos écomposéco mposécompos
 écomposécomposécomposécom posécomposé composécomposéco mposécomposé composéco

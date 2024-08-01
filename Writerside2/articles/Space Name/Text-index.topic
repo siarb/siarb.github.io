@@ -5,5 +5,8 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="Text index" id="Text-index">
 
+    <contribute-url instance="m">https://subfolder.com/</contribute-url>
+
     <p>Start typing here...</p>
+
 </topic>
