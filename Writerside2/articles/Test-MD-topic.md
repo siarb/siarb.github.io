@@ -1,5 +1,7 @@
 # Test-MD-topic
 
+<contribute-url>https://gohome.com</contribute-url>
+
 composécomposécompos écomposécomposéc omposécomposé composécomposé compos écomposéco mposécompos
 écomposécomposécomposécom posécomposé composécomposéco mposécomposé composéco
 mposécomposécomposé
