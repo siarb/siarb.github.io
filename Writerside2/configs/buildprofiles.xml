@@ -4,10 +4,10 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
 
     <variables>
-<!--        <enable-contribution>true</enable-contribution>-->
-<!--        <contribute-url>https://github.com/</contribute-url>-->
-        <enable-browser-edits>true</enable-browser-edits>
-        <browser-edits-url>https://github.com/</browser-edits-url>
+        <enable-contribution>true</enable-contribution>
+        <contribute-url>https://github.com/</contribute-url>
+<!--        <enable-browser-edits>true</enable-browser-edits>-->
+<!--        <browser-edits-url>https://github.com/</browser-edits-url>-->
 <!--        <enable-contribution>true</enable-contribution>-->
 <!--        <contribute-url></contribute-url>-->
 <!--        <contribution>https://github.com/JetBrains/kotlin-web-site/edit/master/docs/</contribution>-->
