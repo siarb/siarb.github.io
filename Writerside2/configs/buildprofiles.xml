@@ -4,6 +4,11 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
 
     <variables>
+        <enable-browser-edits>true</enable-browser-edits>
+        <browser-edits-url>https://github.com/JetBrains/intellij-sdk-docs/edit/main/</browser-edits-url>
+<!--        <enable-contribution>true</enable-contribution>-->
+<!--        <contribute-url></contribute-url>-->
+<!--        <contribution>https://github.com/JetBrains/kotlin-web-site/edit/master/docs/</contribution>-->
         <content-max-width>1800</content-max-width>
         <link-color>#000000</link-color>
         <custom-css>custom_css.css</custom-css>
@@ -31,7 +36,7 @@
             <algolia-index>index_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <noindex-content>false</noindex-content>
-            <offline-docs>false</offline-docs>
+<!--            <offline-docs>false</offline-docs>-->
         </variables>
     </build-profile>
 
