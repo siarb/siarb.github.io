@@ -5,7 +5,7 @@
 
     <variables>
         <enable-browser-edits>true</enable-browser-edits>
-        <browser-edits-url>https://github.com/JetBrains/intellij-sdk-docs/edit/main/</browser-edits-url>
+<!--        <browser-edits-url>https://github.com/JetBrains/intellij-sdk-docs/edit/main/</browser-edits-url>-->
 <!--        <enable-contribution>true</enable-contribution>-->
 <!--        <contribute-url></contribute-url>-->
 <!--        <contribution>https://github.com/JetBrains/kotlin-web-site/edit/master/docs/</contribution>-->
@@ -22,7 +22,6 @@
     </variables>
 
     <build-profile instance="auto">
-
         <sitemap/>
         <variables>
 <!--            <include-before-body>custom_js.js</include-before-body>-->
