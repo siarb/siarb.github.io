@@ -7,9 +7,11 @@
 
 **Implementation:** [`Notifications`](Empty-XML-Topic.topic)
 
-**Related:** [](Writerside.topic#first-app")
+**Related:** [](Writerside.topic#first-app)
 
 </tldr>
+
+[123](Writerside.topic#first-app)
 
 Balloon notifications inform users of the events or system states related to a project or IDE.
 
