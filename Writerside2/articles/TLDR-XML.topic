@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="TLDR XML" id="TLDR-XML">
+
+    <tldr>
+        <p>This is final part of the <b>Getting started with Kotlin Multiplatform</b> tutorial. Before proceeding, make sure you've completed previous steps.</p>
+        <p><img src="animated.png" width="20" alt="First step"/> <a href="Common-topic.topic">Set up an environment</a><br/>
+            <img src="animated.png" width="20" alt="Second step"/> <a href="Common-topic.topic">Create your first cross-platform app</a><br/>
+            <img src="animated.png" width="20" alt="Third step"/> <a href="Common-topic.topic">Update the user interface</a><br/>
+            <img src="animated.png" width="20" alt="Fourth step"/> <a href="Common-topic.topic">Add dependencies</a><br/>
+            <img src="animated.png" width="20" alt="Fifth step"/> <a href="Common-topic.topic">Share more logic</a><br/>
+            <img src="animated.png" width="20" alt="Sixth step"/> <b>Wrap up your project</b></p>
+    </tldr>
+
+
+    <p>Start typing here...</p>
+</topic>
