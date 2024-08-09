@@ -6,6 +6,8 @@
                  name="API Docs"
                  start-page="Section-Starting-Page.topic">
 
+    <toc-element topic="Dieses-enthält-außerdem-weitere-spannende-Funktionen.topic"/>
+    <toc-element topic="Zustellbarkeit-Häufig-gestellte-Fragen.md"/>
     <toc-element topic="TLDR-MD.md"/>
     <toc-element topic="TLDR-XML.topic"/>
     <toc-element topic="Shortcut.md"/>
