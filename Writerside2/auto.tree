@@ -8,7 +8,7 @@
 
     <toc-element topic="Dieses-enthält-außerdem-weitere-spannende-Funktionen.topic"/>
     <toc-element topic="Zustellbarkeit-Häufig-gestellte-Fragen.md"/>
-    <toc-element topic="TLDR-MD.md"/>
+    <toc-element topic="TLDR-MD.md" toc-title="TEST"/>
     <toc-element topic="TLDR-XML.topic"/>
     <toc-element topic="Shortcut.md"/>
     <toc-element topic="शुभ-प्रभात.md"/>
