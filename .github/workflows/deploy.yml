@@ -65,8 +65,8 @@ jobs:
       - name: Build Writerside docs using Docker
         run: |
           set -x
+          echo $GITHUB_WORKSPACE/Writerside2/images/book.jpg
           pwd
-          ls . -R
           echo "Build documentation script started"
           export DISPLAY=:99
           Xvfb :99 &
