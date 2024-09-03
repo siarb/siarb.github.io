@@ -32,7 +32,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1953-p6699
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.1954-p6706
 
     steps:
       - name: Checkout repository
@@ -65,13 +65,15 @@ jobs:
       - name: Build Writerside docs using Docker
         run: |
           set -x
+          pwd
+          ls . -R
           echo "Build documentation script started"
           export DISPLAY=:99
           Xvfb :99 &
           git config --global --add safe.directory .
-          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts || true
-          echo "Test existing artifacts"
-          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts -pdf PDF.xml || true
+      #          echo "Test existing artifacts"
+      #          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
 #        uses: JetBrains/writerside-github-action@v4
 #        with:
 #          instance: ${{ env.INSTANCE }}
@@ -87,79 +89,7 @@ jobs:
         with:
           name: docs
           path: |
-            artifacts/${{ env.ARTIFACT }}
-            artifacts/report.json
-            artifacts/${{ env.ALGOLIA_ARTIFACT }}
-            artifacts/xliffSrcAUTO.zip
+            artifacts/pdfSourceAUTO.pdf
+            artifacts/cover.pdf
+            artifacts/pdfSourceAUTO.html
           retention-days: 7
-
-  # Add the job below and artifacts/report.json on Upload documentation step above if you want to fail the build when documentation contains errors
-  test:
-    # Requires build job results
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: docs
-          path: artifacts
-
-      - name: Test documentation
-        uses: JetBrains/writerside-checker-action@v1
-        with:
-          instance: ${{ env.INSTANCE }}
-
-  publish-indexes:
-    # Requires the build-job results
-    needs: build
-    runs-on: ubuntu-latest
-    container:
-      image: registry.jetbrains.team/p/writerside/builder/algolia-publisher:2.0.32-3
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: docs
-
-      - name: Unzip artifact
-        run: |
-          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT }} -d algolia-indexes
-          env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
-          update-index \
-          --application-name ${{env.ALGOLIA_APP_NAME}} \
-          --index-name ${{env.ALGOLIA_INDEX_NAME}} \
-          --product ${{env.CONFIG_JSON_PRODUCT}} \
-          --version ${{env.CONFIG_JSON_VERSION}} \
-          --index-directory algolia-indexes
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # Requires the build job results
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: docs
-
-      - name: Unzip artifact
-        run: |
-          unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4.0.0
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3.0.1
-        with:
-          path: dir
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4

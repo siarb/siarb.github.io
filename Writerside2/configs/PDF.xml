@@ -1,3 +1,11 @@
 <pdf>
-
+    <header>header</header>
+    <landscape>true</landscape>
+    <footer>footer</footer>
+    <cover-page>
+        <description>Description</description>
+        <copyright>copyright</copyright>
+        <title>Title</title>
+        <logo>./siarb.github.io/Writerside2/images/book.jpg</logo>
+    </cover-page>
 </pdf>
