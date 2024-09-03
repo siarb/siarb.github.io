@@ -6,6 +6,6 @@
         <description>Description</description>
         <copyright>copyright</copyright>
         <title>Title</title>
-        <logo>./siarb.github.io/Writerside2/images/book.jpg</logo>
+        <!--        <logo>./siarb.github.io/Writerside2/images/book.jpg</logo>-->
     </cover-page>
 </pdf>
