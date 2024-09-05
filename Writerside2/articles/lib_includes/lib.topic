@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/html-entities.dtd">
+
+<topic id="lib"
+       is-library="true"
+       title="lib" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <snippet id="topic-element">
+        <a anchor="topic" href="semantic-markup-reference.topic"><code>&lt;topic&gt;</code></a>
+    </snippet>
+
+    <snippet id="chapter-element">
+        <a anchor="chapter" href="semantic-markup-reference.topic"><code>&lt;chapter&gt;</code></a>
+    </snippet>
+
+    <snippet id="procedure-element">
+        <a anchor="procedure" href="semantic-markup-reference.topic"><code>&lt;procedure&gt;</code></a>
+    </snippet>
+
+    <snippet id="step-element">
+        <a anchor="step" href="semantic-markup-reference.topic"><code>&lt;step&gt;</code></a>
+    </snippet>
+
+    <snippet id="show-structure-element">
+        <a anchor="show-structure" href="semantic-markup-reference.topic"><code>&lt;show-structure&gt;</code></a>
+    </snippet>
+
+    <snippet id="primary-label-element">
+        <a anchor="primary-label" href="semantic-markup-reference.topic"><code>&lt;primary-label&gt;</code></a>
+    </snippet>
+
+    <snippet id="secondary-label-element">
+        <a anchor="secondary-label" href="semantic-markup-reference.topic"><code>&lt;secondary-label&gt;</code></a>
+    </snippet>
+
+    <snippet id="title-element">
+        <a anchor="title" href="semantic-markup-reference.topic"><code>&lt;title&gt;</code></a>
+    </snippet>
+
+    <snippet id="code-block-element">
+        <a anchor="code-block" href="semantic-markup-reference.topic"><code>&lt;code-block&gt;</code></a>
+    </snippet>
+
+    <snippet id="compare-element">
+        <a anchor="compare" href="semantic-markup-reference.topic"><code>&lt;compare&gt;</code></a>
+    </snippet>
+
+    <snippet id="tip-element">
+        <a anchor="tip" href="semantic-markup-reference.topic"><code>&lt;tip&gt;</code></a>
+    </snippet>
+
+    <snippet id="note-element">
+        <a anchor="note" href="semantic-markup-reference.topic"><code>&lt;note&gt;</code></a>
+    </snippet>
+
+    <snippet id="warning-element">
+        <a anchor="warning" href="semantic-markup-reference.topic"><code>&lt;warning&gt;</code></a>
+    </snippet>
+
+    <snippet id="list-element">
+        <a anchor="list" href="semantic-markup-reference.topic"><code>&lt;list&gt;</code></a>
+    </snippet>
+
+    <snippet id="li-element">
+        <a anchor="li" href="semantic-markup-reference.topic"><code>&lt;li&gt;</code></a>
+    </snippet>
+
+    <snippet id="deflist-element">
+        <a anchor="deflist" href="semantic-markup-reference.topic"><code>&lt;deflist&gt;</code></a>
+    </snippet>
+
+    <snippet id="def-element">
+        <a anchor="def" href="semantic-markup-reference.topic"><code>&lt;def&gt;</code></a>
+    </snippet>
+
+    <snippet id="table-element">
+        <a anchor="table" href="semantic-markup-reference.topic"><code>&lt;table&gt;</code></a>
+    </snippet>
+
+    <snippet id="tr-element">
+        <a anchor="tr" href="semantic-markup-reference.topic"><code>&lt;tr&gt;</code></a>
+    </snippet>
+
+    <snippet id="td-element">
+        <a anchor="td" href="semantic-markup-reference.topic"><code>&lt;td&gt;</code></a>
+    </snippet>
+
+    <snippet id="tabs-element">
+        <a anchor="tabs" href="semantic-markup-reference.topic"><code>&lt;tabs&gt;</code></a>
+    </snippet>
+
+    <snippet id="tab-element">
+        <a anchor="tab" href="semantic-markup-reference.topic"><code>&lt;tab&gt;</code></a>
+    </snippet>
+
+    <snippet id="p-element">
+        <a anchor="p" href="semantic-markup-reference.topic"><code>&lt;p&gt;</code></a>
+    </snippet>
+
+    <snippet id="a-element">
+        <a anchor="a" href="semantic-markup-reference.topic"><code>&lt;a&gt;</code></a>
+    </snippet>
+
+    <snippet id="control-element">
+        <a anchor="control" href="semantic-markup-reference.topic"><code>&lt;control&gt;</code></a>
+    </snippet>
+
+    <snippet id="code-element">
+        <a anchor="code" href="semantic-markup-reference.topic"><code>&lt;code&gt;</code></a>
+    </snippet>
+
+    <snippet id="path-element">
+        <a anchor="path" href="semantic-markup-reference.topic"><code>&lt;path&gt;</code></a>
+    </snippet>
+
+    <snippet id="ui-path-element">
+        <a anchor="ui-path" href="semantic-markup-reference.topic"><code>&lt;ui-path&gt;</code></a>
+    </snippet>
+
+    <snippet id="emphasis-element">
+        <a anchor="emphasis" href="semantic-markup-reference.topic"><code>&lt;emphasis&gt;</code></a>
+    </snippet>
+
+    <snippet id="format-element">
+        <a anchor="format" href="semantic-markup-reference.topic"><code>&lt;format&gt;</code></a>
+    </snippet>
+
+    <snippet id="img-element">
+        <a anchor="img" href="semantic-markup-reference.topic"><code>&lt;img&gt;</code></a>
+    </snippet>
+
+    <snippet id="icon-element">
+        <a anchor="icon" href="semantic-markup-reference.topic"><code>&lt;icon&gt;</code></a>
+    </snippet>
+
+    <snippet id="video-element">
+        <a anchor="video" href="semantic-markup-reference.topic"><code>&lt;video&gt;</code></a>
+    </snippet>
+
+    <snippet id="shortcut-element">
+        <a anchor="shortcut" href="semantic-markup-reference.topic"><code>&lt;shortcut&gt;</code></a>
+    </snippet>
+
+    <snippet id="tooltip-element">
+        <a anchor="tooltip" href="semantic-markup-reference.topic"><code>&lt;tooltip&gt;</code></a>
+    </snippet>
+
+    <snippet id="link-summary-element">
+        <a anchor="link-summary" href="semantic-markup-reference.topic"><code>&lt;link-summary&gt;</code></a>
+    </snippet>
+
+    <snippet id="card-summary-element">
+        <a anchor="card-summary" href="semantic-markup-reference.topic"><code>&lt;card-summary&gt;</code></a>
+    </snippet>
+
+    <snippet id="web-summary-element">
+        <a anchor="web-summary" href="semantic-markup-reference.topic"><code>&lt;web-summary&gt;</code></a>
+    </snippet>
+
+    <snippet id="resource-element">
+        <a anchor="resource" href="semantic-markup-reference.topic"><code>&lt;resource&gt;</code></a>
+    </snippet>
+
+    <snippet id="api-doc-element">
+        <a anchor="api-doc" href="semantic-markup-reference.topic"><code>&lt;api-doc&gt;</code></a>
+    </snippet>
+
+    <snippet id="api-endpoint-element">
+        <a anchor="api-endpoint" href="semantic-markup-reference.topic"><code>&lt;api-endpoint&gt;</code></a>
+    </snippet>
+
+    <snippet id="api-schema-element">
+        <a anchor="api-schema" href="semantic-markup-reference.topic"><code>&lt;api-schema&gt;</code></a>
+    </snippet>
+
+    <snippet id="tldr-element">
+        <a anchor="tldr" href="semantic-markup-reference.topic"><code>&lt;tldr&gt;</code></a>
+    </snippet>
+
+    <snippet id="seealso-element">
+        <a anchor="seealso" href="semantic-markup-reference.topic"><code>&lt;seealso&gt;</code></a>
+    </snippet>
+
+    <snippet id="include-element">
+        <a anchor="include" href="semantic-markup-reference.topic"><code>&lt;include&gt;</code></a>
+    </snippet>
+
+    <snippet id="snippet-element">
+        <a anchor="snippet" href="semantic-markup-reference.topic"><code>&lt;snippet&gt;</code></a>
+    </snippet>
+
+    <snippet id="if-element">
+        <a anchor="if" href="semantic-markup-reference.topic"><code>&lt;if&gt;</code></a>
+    </snippet>
+
+    <snippet id="section-starting-page-element">
+        <a anchor="section-starting-page"
+           href="semantic-markup-reference.topic"><code>&lt;section-starting-page&gt;</code></a>
+    </snippet>
+
+    <snippet id="primary-element">
+        <a anchor="primary" href="semantic-markup-reference.topic"><code>&lt;primary&gt;</code></a>
+    </snippet>
+
+    <snippet id="secondary-element">
+        <a anchor="secondary" href="semantic-markup-reference.topic"><code>&lt;secondary&gt;</code></a>
+    </snippet>
+
+    <snippet id="spotlight-element">
+        <a anchor="spotlight" href="semantic-markup-reference.topic"><code>&lt;spotlight&gt;</code></a>
+    </snippet>
+
+    <snippet id="misc-element">
+        <a anchor="misc" href="semantic-markup-reference.topic"><code>&lt;misc&gt;</code></a>
+    </snippet>
+
+    <snippet id="links-element">
+        <a anchor="links" href="semantic-markup-reference.topic"><code>&lt;links&gt;</code></a>
+    </snippet>
+
+    <snippet id="cards-element">
+        <a anchor="cards" href="semantic-markup-reference.topic"><code>&lt;cards&gt;</code></a>
+    </snippet>
+
+    <snippet id="group-element">
+        <a anchor="group" href="semantic-markup-reference.topic"><code>&lt;group&gt;</code></a>
+    </snippet>
+
+    <snippet id="toc-element">
+        <code><a anchor="toc-element" href="instances.topic"/></code>
+    </snippet>
+
+    <snippet id="buildprofiles.xml">
+        <path><a href="buildprofiles-xml.topic">buildprofiles.xml</a></path>
+    </snippet>
+
+    <snippet id="variables-element">
+        <code><a anchor="variables" href="buildprofiles-xml.topic">&lt;variables&gt;</a></code>
+    </snippet>
+
+    <snippet id="shortcuts-element">
+        <code><a anchor="shortcuts" href="buildprofiles-xml.topic">&lt;shortcuts&gt;</a></code>
+    </snippet>
+
+    <snippet id="footer-element">
+        <code><a anchor="footer" href="buildprofiles-xml.topic">&lt;footer&gt;</a></code>
+    </snippet>
+
+    <snippet id="offline-docs-element">
+        <code><a anchor="offline-docs" href="buildprofiles-xml.topic">&lt;offline-docs&gt;</a></code>
+    </snippet>
+
+    <snippet id="primary-color-element">
+        <code><a anchor="primary-color" href="buildprofiles-xml.topic">&lt;primary-color&gt;</a></code>
+    </snippet>
+
+    <snippet id="color-preset-element">
+        <code><a anchor="color-preset" href="buildprofiles-xml.topic">&lt;color-preset&gt;</a></code>
+    </snippet>
+
+    <snippet id="link-color-element">
+        <code><a anchor="link-color" href="buildprofiles-xml.topic">&lt;link-color&gt;</a></code>
+    </snippet>
+
+    <snippet id="content-max-width-element">
+        <code><a anchor="content-max-width" href="buildprofiles-xml.topic">&lt;content-max-width&gt;</a></code>
+    </snippet>
+
+    <snippet id="sidebar-width-element">
+        <code><a anchor="sidebar-width" href="buildprofiles-xml.topic">&lt;sidebar-width&gt;</a></code>
+    </snippet>
+
+    <snippet id="resizable-sidebar-element">
+        <code><a anchor="resizable-sidebar" href="buildprofiles-xml.topic">&lt;resizable-sidebar&gt;</a></code>
+    </snippet>
+
+    <snippet id="custom-css-element">
+        <code><a anchor="custom-css" href="buildprofiles-xml.topic">&lt;custom-css&gt;</a></code>
+    </snippet>
+
+    <snippet id="redirection-rules.xml">
+        <path><a anchor="redirection-rules.xml" href="help-modules.topic">redirection-rules.xml</a></path>
+    </snippet>
+
+    <snippet id="wrs_tool_window">
+        <control>%product%</control>
+        tool window
+    </snippet>
+
+    <snippet id="in_the_wrs_tool_window">
+        In the
+        <include element-id="wrs_tool_window" from="lib.topic"/>
+    </snippet>
+
+    <snippet id="edit_instance">
+        <include element-id="in_the_wrs_tool_window" from="lib.topic"/>
+        ,
+        right-click an instance and select
+        <control>Edit</control>
+        .
+    </snippet>
+
+    <snippet id="wrs_preview_window">
+        <control>%product% Preview</control>
+        tool window
+    </snippet>
+
+    <snippet id="writerside.cfg">
+        <path><a href="writerside-cfg.topic"/></path>
+    </snippet>
+
+    <snippet id="instance-element">
+        <a anchor="instance" href="writerside-cfg.topic">&lt;instance&gt;</a>
+    </snippet>
+
+    <snippet id="snippets-element">
+        <a anchor="snippets" href="writerside-cfg.topic">&lt;snippets&gt;</a>
+    </snippet>
+
+    <snippet id="smart-ignore-vars-element">
+        <a anchor="smart-ignore-vars" href="writerside-cfg.topic">&lt;smart-ignore-vars&gt;</a>
+    </snippet>
+
+    <snippet id="tree-file">
+        <a anchor="tree-file" href="help-modules.topic">tree file</a>
+    </snippet>
+
+    <snippet id="v.list">
+        <a anchor="v.list" href="help-modules.topic">
+            <path>v.list</path>
+            file</a>
+    </snippet>
+
+    <snippet id="c.list">
+        <a anchor="c.list" href="help-modules.topic">
+            <path>c.list</path>
+            file</a>
+    </snippet>
+
+    <snippet id="images-dir">
+        <a anchor="images-dir" href="help-modules.topic">
+            <path>images</path>
+            directory</a>
+    </snippet>
+
+    <snippet id="topics-dir">
+        <a anchor="topics-dir" href="help-modules.topic">
+            <path>topics</path>
+            directory</a>
+    </snippet>
+
+    <snippet id="resources-dir">
+        <a anchor="resources-dir" href="help-modules.topic">
+            <path>resources</path>
+            directory</a>
+    </snippet>
+
+    <snippet id="build-config-dir">
+        <a anchor="build-config-dir" href="help-modules.topic">build configuration directory</a>
+    </snippet>
+
+    <snippet id="cfg">
+        <a anchor="build-config-dir" href="help-modules.topic">
+            <path>cfg</path>
+            directory</a>
+    </snippet>
+
+    <snippet id="wrs_slack">
+        <a href="https://jb.gg/WRS_Slack">JetBrains %product% Slack workspace</a>
+    </snippet>
+
+    <snippet id="wrs_email">
+        <a href="mailto:writerside@jetbrains.com">writerside@jetbrains.com</a>
+    </snippet>
+
+    <snippet id="open_settings">
+        Press
+        <shortcut key="ShowSettings"/>
+        to open the
+        <if instance="!wrsp">%product%</if>
+        <if instance="wrsp">IDE</if>
+        settings
+    </snippet>
+
+    <snippet id="open_settings_page">
+        <include element-id="open_settings" from="lib.topic"/>
+        and select
+        <ui-path>%settings_page_path%</ui-path>
+        .
+    </snippet>
+
+    <snippet id="commit_tool_window">
+        <control>Commit</control>
+        tool window
+    </snippet>
+
+    <snippet id="git_tool_window">
+        <control>Git</control>
+        tool window
+    </snippet>
+
+    <snippet id="if_element_tip">
+        <tip>Use the <code>&lt;if&gt;</code> element to wrap multiple other elements with a condition.</tip>
+    </snippet>
+
+    <snippet id="create-library">
+        <step>In the %product% tool window, right-click the current <a href="instances.topic">instance</a> name.
+            <img alt="Instance toolbar" border-effect="line" filter="mod" src="add-new-library-instance.png"
+                 width="410"/>
+        </step>
+        <step>Select
+            <control>New Library</control>
+            .
+        </step>
+        <step>Specify a library name and ID.
+            <img alt="Create a library" border-effect="rounded" src="create-toc-lib.png" width="410"/>
+        </step>
+        <step>Click OK.</step>
+    </snippet>
+
+    <snippet id="open-preview">
+        From the main menu, select
+        <ui-path>View | Tool Windows | Writerside Preview</ui-path>
+    </snippet>
+
+    <snippet id="select-title">
+        <p>
+            In the
+            <control>New Topic</control>
+            dialog,
+            specify the topic title and the filename.
+        </p>
+        <p>
+            %product% uses the filename to automatically generate a
+            <emphasis>topic ID</emphasis>
+            ,
+            which must be unique within your project.
+            Also, make sure that the filename is meaningful and properly reflects the content.
+        </p>
+    </snippet>
+
+    <snippet id="specify-the-params-for-search">
+        <p>Specify the following parameters in the
+            <path>cfg/buildprofiles.xml</path>
+            file in your project:
+        </p>
+    </snippet>
+
+    <snippet id="env-variables-ci-cd">
+        <p filter="GitLab,GitHub,TeamCity">If necessary, set the correct values for environment variables:</p>
+
+        <deflist>
+            <def id="env.INSTANCE">
+                <title filter="GitHub,TeamCity">env.INSTANCE</title>
+                <title filter="GitLab">INSTANCE</title>
+                <p>
+                    The name of the <a anchor="help_module" href="projects.topic">module</a>
+                    and <a href="instances.topic">instance</a> ID separated by a slash.
+                    The module name is the directory with
+                    <include element-id="writerside.cfg" from="lib.topic"/>
+                    .
+                    It is designated by the icon <img alt="module icon" src="module.svg"/>
+                    in the
+                    <control>Project</control>
+                    tool window.
+                </p>
+                <p>
+                    For example, the default module name in a starter project is <code>Writerside</code>
+                    and the instance ID is <code>hi</code>.
+                    So in this case, set the variable to <code>Writerside/hi</code>.</p>
+            </def>
+            <def id="env.ARTIFACT">
+                <title filter="GitHub,TeamCity">env.ARTIFACT</title>
+                <title filter="GitLab">ARTIFACT</title>
+                <p>
+                    The name of the archive produced by the %product% builder is
+                    <path>webHelpXX2-all.zip</path>
+                    ,
+                    where XX is the ID of the <a href="instances.topic">instance</a> in capital letters.
+                </p>
+                <p>
+                    For example, if the instance name is
+                    <emphasis>Help Instance</emphasis>
+                    and its ID is <code>hi</code>,
+                    then set this variable to <code>webHelpHI2-all.zip</code>.
+                </p>
+            </def>
+            <def id="env.DOCKER_VERSION">
+                <title filter="GitHub,TeamCity">env.DOCKER_VERSION</title>
+                <title filter="GitLab">DOCKER_VERSION</title>
+                <p>
+                    The version of the %product% Docker builder to use for generating the documentation artifacts.
+                    The current latest version is %current-docker-version%.</p>
+                <p>
+                    When you update to a newer version of %product%,
+                    set the new Docker builder version
+                    to ensure results similar to what you see in the local preview and local builds.</p>
+            </def>
+        </deflist>
+    </snippet>
+
+    <snippet id="algolia_env_vars">
+        <deflist type="wide">
+            <def filter="github,gitlab" id="env.ALGOLIA_ARTIFACT">
+                <title filter="github">env.ALGOLIA_ARTIFACT</title>
+                <title filter="gitlab">ALGOLIA_ARTIFACT</title>
+                The name of the ZIP archive with Algolia indexes from the build
+            </def>
+            <def id="env.ALGOLIA_APP_NAME">
+                <title filter="github,teamcity">env.ALGOLIA_APP_NAME</title>
+                <title filter="gitlab">ALGOLIA_APP_NAME</title>
+                Algolia application ID
+            </def>
+            <def id="env.ALGOLIA_INDEX_NAME">
+                <title filter="github,teamcity">env.ALGOLIA_INDEX_NAME</title>
+                <title filter="gitlab">ALGOLIA_INDEX_NAME</title>
+                Name of Algolia index
+            </def>
+            <def id="env.ALGOLIA_KEY">
+                <title filter="github,teamcity">env.ALGOLIA_KEY</title>
+                <title filter="gitlab">ALGOLIA_KEY</title>
+                <p>
+                    Algolia Admin API Key.</p>
+                <p filter="teamcity">
+                    This is a private key.
+                    Set the type of this parameter to <code>Password</code>,
+                    so that users without proper permissions will not see its value.</p>
+                <p filter="github">
+                    This is a private key.
+                    Store it as a secret and reference via <code>${{ secrets.ALGOLIA_KEY }}</code>.</p>
+                <p filter="gitlab">
+                    This is a private key.
+                    Store it as a CI/CD variable and reference via <code>$ALGOLIA_KEY</code>.</p></def>
+            <def id="env.CONFIG_JSON_PRODUCT">
+                <title filter="github,teamcity">env.CONFIG_JSON_PRODUCT</title>
+                <title filter="gitlab">CONFIG_JSON_PRODUCT</title>
+                Help instance ID from the
+                <include element-id="tree-file" from="lib.topic"/>
+                or the value of the <code>web-path</code> attribute
+                specified in
+                <include element-id="writerside.cfg" from="lib.topic"/>
+                if it is different from the ID
+            </def>
+            <def id="env.CONFIG_JSON_VERSION">
+                <title filter="github,teamcity">env.CONFIG_JSON_VERSION</title>
+                <title filter="gitlab">CONFIG_JSON_VERSION</title>
+                Help instance version (usually the same as the branch name)
+                specified in
+                <include element-id="writerside.cfg" from="lib.topic"/>
+            </def>
+        </deflist>
+
+        <include element-id="algolia_api_keys" from="lib.topic"/>
+
+        <if filter="github">
+            <p>For example:</p>
+
+            <code-block include-lines="16-21" lang="yaml" src="github-build.yml">
+                env:
+                    ALGOLIA_APP_NAME: TGW4GIW73X
+                    ALGOLIA_INDEX_NAME: index_name
+                    ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
+                    ALGOLIA_ARTIFACT: algolia-indexes-HI.zip
+                    CONFIG_JSON_PRODUCT: HI
+                    CONFIG_JSON_VERSION: 1.0
+            </code-block>
+        </if>
+    </snippet>
+
+    <snippet id="algolia_api_keys">
+        <note>
+            You can find the application ID and API keys in your Algolia account settings
+            under <a href="https://dashboard.algolia.com/account/api-keys">API Keys</a>.
+        </note>
+    </snippet>
+
+    <snippet id="md_file_location">
+        <p>
+            Select the location of your Markdown sources.</p>
+        <p>
+            The wizard will show you a list of Markdown files in the selected location.
+            You can choose which files you want to import.</p>
+        <p>
+            If you do not want to import images and videos,
+            clear the
+            <control>Copy all media files used in selected Markdown files</control>
+            checkbox.
+        </p>
+    </snippet>
+
+    <snippet id="add-topic-two-steps">
+        <step>
+            <p>
+                Right-click an existing topic in the <a href="table-of-contents.topic">TOC</a>
+                and select
+                <control>New Topic</control>
+                to add a sibling
+                or
+                <control>New Child Topic</control>
+                to add a child topic.
+            </p>
+            <p>
+                Alternatively, to add a sibling of the selected topic,
+                click <img alt="Add" src="icon_add.png" width="14"/>
+                <control>New Topic</control>
+                on the toolbar or press
+                <shortcut key="NewElement"/>
+                .
+            </p>
+        </step>
+    </snippet>
+    <snippet id="backward-compatible-project.ihp">
+        <note>
+            In older versions of %product%, the name of this file was
+            <path>project.ihp</path>
+            .
+            If you have the old name in your project, there is no need to rename it,
+            because they are equivalent.
+        </note>
+    </snippet>
+
+    <snippet id="export-to">
+        <include element-id="in_the_wrs_tool_window" from="lib.topic"/>
+        ,
+        click
+        <control>Export To</control>
+    </snippet>
+
+    <snippet id="save-as-zip-archive">
+        <include element-id="export-to" from="lib.topic"/>
+        and then select
+        <control>Web Archive</control>
+        .
+    </snippet>
+
+    <snippet id="generate-pdf">
+        <include element-id="export-to" from="lib.topic"/>
+        and then select
+        <control>PDF</control>
+        .
+    </snippet>
+
+    <snippet id="add-wrs-run-config-procedure">
+        <procedure id="add_more_run_configurations" title="Add more run configurations">
+            <step>
+                Click
+                <control>Edit Configurations</control>
+                in the main toolbar widget
+                or select
+                <ui-path>Run | Edit Configurations</ui-path>
+                from the main menu.
+            </step>
+            <step>
+                In the
+                <control>Run/Debug Configurations</control>
+                dialog,
+                click <img alt="Add New Configuration" src="icon_add.png"/>
+                <control>Add New Configuration</control>
+                and add a new
+                <control>Writerside</control>
+                configuration.
+            </step>
+        </procedure>
+    </snippet>
+
+    <snippet id="languages-supported">
+        <note>It works only for the <a
+                href="https://www.jetbrains.com/help/idea/discover-intellij-idea.html#IntelliJ-IDEA-supported-languages">
+            IntelliJ IDEA Community Edition supported languages</a>.
+            For languages not mentioned there and supported by third-party plugins this setting won't work.
+        </note>
+    </snippet>
+
+    <snippet id="reused-attributes-between-code-block-and-sample">
+        <var name="postfix"/>
+        <def title="src">
+            <p>Name of the file with the code snippet.</p>
+            <p>The source file must be located under the directory you've specified in the <code>snippets</code>
+                attribute of the
+                <include element-id="writerside.cfg" from="lib.topic"/>
+                file.
+            </p>
+        </def>
+        <def id="include-lines%postfix%" title="include-lines">
+            <p>Range or comma-separated list of lines that you want to include.</p>
+        </def>
+    </snippet>
+
+    <snippet id="add-redirect">
+        <a href="redirects.topic">Add a redirect</a> from the previous topic URL
+        to this topic to prevent 404 errors in links that point to the old URL.
+    </snippet>
+
+    <snippet id="standalone-vs-plugin">
+        <note>
+            Both %product% as a plugin and as a standalone application share the same features,
+            but the following information should help you make the right choice.
+        </note>
+        <p>
+            Standalone %product% is a JetBrains IDE without most of the programming-specific features and functionality.
+            There are no integrations with tools and assistance for technologies that are mostly useful to developers.
+            Having only the features that are useful for you as a technical writer
+            means better performance and less UI clutter.</p>
+        <p>
+            If your documentation has code examples in Java, Kotlin, Python, or another programming language,
+            standalone %product% will not provide injections with coding assistance for it
+            unless you install and configure the corresponding language plugin.
+            Or you may consider using %product% as a plugin for the IDE that has support for the language.</p>
+    </snippet>
+
+    <snippet id="preview_tool_window">
+        Use the
+        <include element-id="wrs_preview_window" from="lib.topic"/>
+        to preview the topic you are working on exactly the way it will be published.
+
+        <procedure title="Open the Writerside Preview tool window" type="choices">
+            <p>
+                %product% opens the
+                <include element-id="wrs_preview_window" from="lib.topic"/>
+                the first time you open any topic in the editor.
+                If you close the preview and want to open it again, do one of the following:
+            </p>
+            <step>
+                Click the
+                <include element-id="wrs_preview_window" from="lib.topic"/>
+                button
+                .
+            </step>
+
+            <step>
+                <include element-id="open-preview" from="lib.topic"/>
+                .
+            </step>
+
+            <step>
+                Right-click any topic in the
+                <control>Table of Contents</control>
+                and select
+                <control>Preview Topic</control>
+                .
+            </step>
+        </procedure>
+
+        <img alt="Writerside Preview" border-effect="rounded" src="single-instance-view-topic-preview.png" thumbnail="true"
+             width="706"/>
+    </snippet>
+
+    <snippet id="create-new-config-file">
+        <tip>
+            To create the
+            <path>%file_name%</path>
+            file,
+            you can right-click the
+            <include element-id="build-config-dir" from="lib.topic"/>
+            (
+            <path>cfg</path>
+            by default)
+            in the
+            <control>Project</control>
+            tool window,
+            select
+            <control>New</control>
+            ,
+            and then click
+            <control>%file_name%</control>
+            .
+        </tip>
+    </snippet>
+</topic>

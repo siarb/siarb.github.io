@@ -3,7 +3,315 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Dieses enthält außerdem weitere spannende Funktionen" id="Dieses-enthält-außerdem-weitere-spannende-Funktionen">
+       id="Dieses-enthält-außerdem-weitere-spannende-Funktionen"
+       title="Dieses enthält außerdem weitere spannende Funktionen">
 
-    <p>Start typing here...</p>
+    <show-structure depth="1" for="procedure,chapter"/>
+
+    <img alt="add_new_instance" border-effect="line" src="add-a-first-instance.png" width="1000"/>
+
+    <img alt="add_new_instance" border-effect="line" src="add-a-first-instance.png" width="700"/>
+
+    <img alt="add_new_instance" border-effect="line" src="add-a-first-instance.png" width="300"/>
+
+    <p>
+        %product% is a JetBrains IDE based on the
+        <a href="https://www.jetbrains.com/opensource/idea/">IntelliJ platform</a>.
+        Use it to author, build, test, and publish technical documentation.</p>
+    <note>
+        If you want to use %product% as a plugin for another JetBrains IDE,
+        see.
+    </note>
+    <procedure title="Install %product%">
+        <step>
+            <a href="https://www.jetbrains.com/writerside/download">Download</a> the %product% installer.
+        </step>
+        <step>
+            Run the installer.
+        </step>
+    </procedure>
+
+    <p>
+        %product% is a plugin for <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>
+        and other JetBrains IDEs based on the IntelliJ platform.
+        Use it to author, build, test, and publish technical documentation.</p>
+    <note>
+        If you want to use %product% as a standalone product,
+        see.
+    </note>
+    <procedure id="install" title="Install %product%">
+        <step>
+            If you do not have a JetBrains IDE,
+            <a href="https://www.jetbrains.com/idea/download/#section=mac">download</a>
+            and install IntelliJ IDEA
+            (the free Community Edition is enough).
+        </step>
+        <step>
+            Open the IDE settings and select
+            <control>Plugins</control>
+            .
+        </step>
+        <step>
+            Switch to the
+            <control>Marketplace</control>
+            tab,
+            search for <code>Writerside</code>,
+            select the plugin, and click
+            <control>Install</control>
+            .
+
+        </step>
+    </procedure>
+
+    Watch this short video for an overview of the %product% UI and main features:
+
+    <video src="https://www.youtube.com/watch?v=wjGPVFF1oHw" width="704"/>
+
+    <!-- old video about plugin   <video instance="wrsp" src="https://www.youtube.com/watch?v=DGCCrWHW3oI/" width="704"/>-->
+
+    <procedure id="create_new_project_standalone" title="Create new documentation project">
+        <step>
+            <p>
+                In the
+                <control>Welcome to Writerside</control>
+                dialog,
+                click
+                <control>New Project</control>
+                .
+            </p>
+            <p>
+                If you already have a project open,
+                select
+                <ui-path>File | New Project</ui-path>
+                from the menu bar.
+            </p>
+        </step>
+        <step>
+            In the
+            <control>New Project</control>
+            wizard,
+            select
+            <control>New Project</control>
+            .
+        </step>
+        <step>
+            <p>
+                Specify the name and location for your new project.</p>
+            <p>
+                If you do not want to start with an empty project,
+                select the options to create the first instance
+                and topic in your new project.</p>
+        </step>
+        <step>
+            Click
+            <control>Create</control>
+            .
+
+            <img alt="New Project wizard" border-effect="rounded" src="standalone_new_project_starter.png" width="700"/>
+        </step>
+    </procedure>
+
+    %product% allows you to create a dedicated documentation project
+    or add your documentation sources
+    to your development project.
+
+    <procedure id="create_new_project_procedure" title="Create new documentation project">
+        <step>
+            From the main menu,
+            select
+            <ui-path>File | New | Project</ui-path>
+            .
+        </step>
+        <step>
+            In the
+            <control>New Project</control>
+            wizard,
+            select
+            <control>Writerside</control>
+            on the left,
+            then select
+            <control>Starter Project</control>
+            ,
+            and then click
+            <control>Next</control>
+            .
+        </step>
+        <step>
+            Specify the name and location for your new project and click
+            <control>Create</control>
+            .
+        </step>
+    </procedure>
+
+    <procedure id="add_module_to_project_procedure" title="Add documentation to existing project">
+        <step>
+            Open your existing development project.
+        </step>
+        <step>
+            <include element-id="in_the_wrs_tool_window" from="lib.topic"/>
+            ,
+            click
+            <control>Add documentation</control>
+            ,
+            select
+            <control>To Current Project</control>
+            ,
+            and then click
+            <control>New</control>
+            .
+
+            <img alt="add_new_instance" border-effect="line" src="add-a-first-instance.png" width="700"/></step>
+        <step>
+            Specify a name for the first help instance
+            and click
+            <control>OK</control>
+            .
+        </step>
+    </procedure>
+
+    <tip id="import_tip">
+        If you want to import a project from existing Markdown sources, see.
+    </tip>
+    <p>
+        Once you have a documentation project
+        with a help instance,
+        you can add topics to it and start writing content.
+        Click in the left-side tool window bar
+        to open the
+        <include element-id="wrs_tool_window" from="lib.topic"/>
+        and start adding content.
+    </p>
+
+    <chapter id="create_topics" title="Create topics">
+        <procedure id="topic_from_scratch" title="Create a topic from scratch">
+            <step>
+                <p>
+                    In the
+                    <control>Table of Contents</control>
+                    section
+                    of the
+                    <include element-id="wrs_tool_window" from="lib.topic"/>
+                    ,
+                    click
+                    and select
+                    <control>Empty MD Topic</control>
+                    to add a Markdown topic
+                    or
+                    <control>Empty XML Topic</control>
+                    to add a semantic markup topic.
+                </p>
+                <p>
+                    For more information about topics, see.</p>
+            </step>
+
+            <step>Specify a title and filename for the topic.</step>
+        </procedure>
+
+        <procedure id="topic_from_template" title="Create a topic from template">
+            <p>
+                %product% includes built-in templates for different types of content
+                that contain some boilerplate structure to give you something to get started with.</p>
+
+            <step>
+                <p>
+                    In the
+                    <control>Table of Contents</control>
+                    section
+                    of the
+                    <include element-id="wrs_tool_window" from="lib.topic"/>
+                    ,
+                    click
+                    and select a template under
+                    <control>Topic from Template</control>
+                    .
+                </p>
+            </step>
+
+            <step>Specify a title and filename for the topic.</step>
+        </procedure>
+    </chapter>
+
+    <chapter id="preview_topics" title="Preview topics">
+        <include element-id="preview_tool_window" from="lib.topic"/>
+
+        <p>For more information, see.</p>
+    </chapter>
+
+    <chapter id="table_of_contents" title="Change the table of contents">
+        <procedure>
+            <step>
+                In the
+                <control>Table of Contents</control>
+                section
+                of the
+                <include element-id="wrs_tool_window" from="lib.topic"/>
+                ,
+                drag topics around to change their order and hierarchy.
+            </step>
+        </procedure>
+        <p>
+            You can also edit the
+            <path>.tree</path>
+            file to change the TOC.
+            For this, right-click the help instance and select
+            <control>Open TOC File</control>
+            .
+        </p>
+
+        <p>For more information, see.</p>
+    </chapter>
+
+
+    <chapter id="build" title="Build your help instance">
+        <procedure>
+            <step>
+                <include element-id="save-as-zip-archive" from="lib.topic"/>
+
+                <p>For more information, see.</p>
+            </step>
+        </procedure>
+        <p>
+            If you want to build and publish documentation using CI/CD,
+            we have instructions for GitHub,
+            GitLab,
+            and TeamCity Cloud.</p>
+        <p>
+            If you want to use another CI/CD to build documentation,
+            drop us a message at
+            <include element-id="wrs_email" from="lib.topic"/>
+            ,
+            and we will provide you with a Docker image.
+        </p>
+    </chapter>
+
+    <chapter id="feedback_support" title="Feedback and support">
+        <procedure id="report_issues" title="Report an issue">
+            <step>
+                Report any issues, usability improvements, or feature requests to our
+                <a href="https://youtrack.jetbrains.com/newIssue?project=WRS">YouTrack project</a>
+                (you will need to register).
+            </step>
+        </procedure>
+        <procedure id="support_feedback" title="Get support and share feedback">
+            <step instance="wrsp,auto">
+                <p>
+                    Join the
+                    <include element-id="wrs_slack" from="lib.topic"/>
+                    .
+                </p>
+
+            </step>
+
+            <step>
+                Join the <code>#writerside-support</code> channel in JetBrains corporate Slack
+                or contact anyone from the
+                <a href="https://jetbrains.team/team/members?team=Writerside-4FdmdC37iMig">Writerside team</a>.
+            </step>
+
+            <p>You can also email us at
+                <include element-id="wrs_email" from="lib.topic"/>
+                .
+            </p>
+        </procedure>
+    </chapter>
 </topic>
