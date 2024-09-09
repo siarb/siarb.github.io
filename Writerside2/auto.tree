@@ -6,6 +6,7 @@
                  name="API Docs"
                  start-page="Section-Starting-Page.topic">
 
+    <toc-element topic="CTT002.md"/>
     <toc-element topic="TEX-test.md"/>
     <toc-element topic="Dieses-enthält-außerdem-weitere-spannende-Funktionen.topic"/>
     <toc-element topic="Zustellbarkeit-Häufig-gestellte-Fragen.md"/>
