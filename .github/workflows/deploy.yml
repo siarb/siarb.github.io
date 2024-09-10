@@ -70,10 +70,10 @@ jobs:
           export DISPLAY=:99
           Xvfb :99 &
           git config --global --add safe.directory .
-               /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product "${INSTANCE}" --runner github -output-dir ./artifacts -pdf PDF.xml
-          #          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product "${INSTANCE}" --runner github -output-dir ./artifacts
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product "${INSTANCE}" --runner github -output-dir ./artifacts -pdf PDF.xml && \
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product "${INSTANCE}" --runner github -output-dir ./artifacts
           echo "Test existing artifacts"
-          #          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
+          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
           test -e ./artifacts/pdfSourceAUTO.pdf && echo pdfSourceAUTO.pdf exists
 #        uses: JetBrains/writerside-github-action@v4
 #        with:
