@@ -78,4 +78,8 @@
         <property-file>./properties/propmap-dominators.xml</property-file>
     </property-bundles>
 
+    <icons>
+        <shared-src>icons</shared-src>
+    </icons>
+
 </buildprofiles>
