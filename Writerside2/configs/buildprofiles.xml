@@ -82,4 +82,10 @@
         <shared-src>icons</shared-src>
     </icons>
 
+    <shortcuts>
+        <src>keymap-f.xml</src>
+        <layout name="Windows" display-name="Windows"/>
+        <layout name="macOS" display-name="macOS"/>
+    </shortcuts>
+
 </buildprofiles>

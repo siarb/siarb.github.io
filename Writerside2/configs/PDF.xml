@@ -1,4 +1,5 @@
-<pdf>
+<pdf landscape="true">
+    <layout>macOS</layout>
     <header>header</header>
     <landscape>true</landscape>
     <footer>footer</footer>
