@@ -90,6 +90,7 @@ jobs:
           path: |
             artifacts/${{ env.ARTIFACT }}
             artifacts/report.json
+            artifacts/report.html
             artifacts/${{ env.ALGOLIA_ARTIFACT }}
             artifacts/xliffSrcAUTO.zip
             artifacts/pdfSourceAUTO.pdf
