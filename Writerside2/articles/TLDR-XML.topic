@@ -5,6 +5,8 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="TLDR XML" id="TLDR-XML">
 
+    <img alt src="dog.png"/>
+
     <tldr>
         <p>This is final part of the <b>Getting started with Kotlin Multiplatform</b> tutorial. Before proceeding, make sure you've completed previous steps.</p>
         <p><img src="animated.png" width="20" alt="First step"/> <a href="Common-topic.topic">Set up an environment</a><br/>
@@ -16,5 +18,4 @@
     </tldr>
 
 
-    <p>Start typing here...</p>
 </topic>

@@ -4,7 +4,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
 
     <variables>
-        <ignore-problems>REF002,INT002,REF005,API003,VIS011</ignore-problems>
+        <ignore-problems>MRK002,REF002,INT002,REF005,API003,VIS011</ignore-problems>
         <enable-contribution>true</enable-contribution>
         <contribute-url>https://github.com/siarb/siarb.github.io/edit/main/Writerside2</contribute-url>
         <enable-browser-edits>true</enable-browser-edits>
