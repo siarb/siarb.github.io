@@ -1,5 +1,7 @@
 # TEX test :smile: :fire: :smile:
 
+[](TEX.md)
+
 ## TEX test :smile: :fire: :smile:
 
 TEX test :smile: :fire: :smile:
