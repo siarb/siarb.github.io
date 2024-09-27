@@ -5,6 +5,8 @@
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
        title="TLDR XML" id="TLDR-XML">
 
+       <shortcut id="copy-shortcut-text">Ctrl+C</shortcut>
+
     <img alt src="dog.png"/>
 
     <tldr>
