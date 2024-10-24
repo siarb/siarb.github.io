@@ -258,20 +258,6 @@ Bob --> Alice: Response
 @enduml
 ```
 
-You can also use the value of autonumber with the %autonumber% variable:
-
-```plantuml
-@startuml
-autonumber 10
-Alice -> Bob
-note right
-  the <U+0025>autonumber<U+0025> works everywhere.
-  Here, its value is ** %autonumber% **
-end note
-Bob --> Alice: //This is the response %autonumber%//
-@enduml
-```
-
 ## Page Title, Header and Footer
 
 The title keyword is used to add a title to the page.

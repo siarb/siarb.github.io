@@ -69,10 +69,10 @@ jobs:
           export DISPLAY=:99
           Xvfb :99 &
           git config --global --add safe.directory .
-                 /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts -pdf PDF.xml
+                 /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts
           echo "Test existing artifacts"
-          #                    test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
-               test -e ./artifacts/pdfSourceAUTO.pdf && echo pdfSourceAUTO.pdf exists
+          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
+      #               test -e ./artifacts/pdfSourceAUTO.pdf && echo pdfSourceAUTO.pdf exists
 #        uses: JetBrains/writerside-github-action@v4
 #        with:
 #          instance: ${{ env.INSTANCE }}
@@ -98,6 +98,30 @@ jobs:
             artifacts/pdfSourceAUTO.html
           retention-days: 7
 
+  build-site2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository for site2
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build Not-Yet using Writerside Docker builder
+        uses: JetBrains/writerside-github-action@v4
+        with:
+          instance: 'Writerside2/t'
+          artifact: 'webHelpT2-all.zip'
+          docker-version: ${{ env.DOCKER_VERSION }}
+
+      - name: Save Not-Yet artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-site2
+          path: |
+            artifacts/webHelpT2-all.zip
+            artifacts/report.json
+          retention-days: 7
+
   # Add the job below and artifacts/report.json on Upload documentation step above if you want to fail the build when documentation contains errors
   test:
     # Requires build job results
@@ -115,6 +139,21 @@ jobs:
         uses: JetBrains/writerside-checker-action@v1
         with:
           instance: ${{ env.INSTANCE }}
+
+  test-site2:
+    needs: build-site2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Not-Yet artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-site2
+          path: artifacts
+
+      - name: Test Not-Yet documentation
+        uses: JetBrains/writerside-checker-action@v1
+        with:
+          instance: 'Writerside2/t'
 
   publish-indexes:
     # Requires the build-job results
@@ -153,9 +192,20 @@ jobs:
         with:
           name: docs
 
+      - name: Download Not-Yet artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-site2
+
       - name: Unzip artifact
         run: |
-          unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
+          mkdir -p dir/site1
+          unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir/site1
+
+      - name: Unzip Not-Yet artifact
+        run: |
+          mkdir -p dir/site2
+          unzip -O UTF-8 -qq 'webHelpT2-all.zip' -d dir/site2
 
       - name: Setup Pages
         uses: actions/configure-pages@v4.0.0
