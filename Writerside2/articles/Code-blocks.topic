@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Code-blocks"
+       title="Code blocks"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <code-block lang="dart">
+    int fibonacci(int n) {
+    if (n == 0 || n == 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    var result = fibonacci(20);
+</code-block>
+
+    <code-block lang="http request">
+        POST https://ijhttp-examples.jetbrains.com/post
+        Content-Type: application/x-www-form-urlencoded
+</code-block>
+
+
+</topic>
