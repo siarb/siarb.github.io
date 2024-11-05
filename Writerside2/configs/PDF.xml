@@ -3,6 +3,7 @@
     <header>header</header>
     <landscape>true</landscape>
     <footer>footer</footer>
+    <toc-title>Use tag toc-title</toc-title>
     <cover-page>
         <description>Description</description>
         <copyright>copyright</copyright>

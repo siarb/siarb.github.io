@@ -6,6 +6,43 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
+<code-block lang="kotlin">
+class Car(var brand: String, var model: String, var year: Int) {
+    // Class function
+    fun drive() {
+        println("Wrooom!")
+    }
+}
+
+fun main() {
+    val c1 = Car("Ford", "Mustang", 1969)
+
+    // Print property values
+    println(c1.brand + " " + c1.model + " " + c1.year)
+
+    // Call the function
+    c1.drive()
+}
+    </code-block>
+
+    <code-block lang="kotlin">
+        fun main() {
+            val day = 4
+
+            val result = when (day) {
+                1 -> "Monday"
+                2 -> "Tuesday"
+                3 -> "Wednesday"
+                4 -> "Thursday"
+                5 -> "Friday"
+                6 -> "Saturday"
+                7 -> "Sunday"
+                else -> "Invalid day."
+            }
+            println(result)
+        }
+    </code-block>
+
     <code-block lang="pascal">
         program HelloWorld;
         uses crt;
