@@ -3,7 +3,42 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic id="Code-blocks"
        title="Code blocks"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <code-block lang="pascal">
+        program HelloWorld;
+        uses crt;
+
+        (* Here the main program block starts *)
+        begin
+           writeln('Hello, World!');
+           readkey;
+        end.
+    </code-block>
+
+
+    <code-block lang="yaml">
+        services:
+            web:
+                image: nginx:latest
+                ports:
+                    - "8080:80"
+                volumes:
+                    - ./html:/usr/share/nginx/html
+                restart: always
+    </code-block>
+
+    <code-block lang="yaml" noinject="true">
+        services:
+            web:
+                image: nginx:latest
+                ports:
+                    - "8080:80"
+                volumes:
+                    - ./html:/usr/share/nginx/html
+                restart: always
+    </code-block>
 
     <code-block lang="dart">
     int fibonacci(int n) {
