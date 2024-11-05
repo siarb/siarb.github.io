@@ -6,7 +6,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
-<code-block lang="kotlin">
+
+    <code-block lang="mermaid" src="../../seq.mermaid"/>
+
+    <code-block lang="plantuml" src="../../seq.puml"/>
+
+
+    <code-block lang="kotlin">
 class Car(var brand: String, var model: String, var year: Int) {
     // Class function
     fun drive() {
