@@ -6,6 +6,7 @@
                  name="РуИнстанс"
                  start-page="Starter.md">
 
+    <toc-element topic="Code-blocks.topic" origin="Writerside2"/>
     <toc-element topic="這是奧皮克的名字.md"/>
     <toc-element topic="這是奧皮克的名字-2.topic"/>
     <toc-element topic="Starter.md"/>
