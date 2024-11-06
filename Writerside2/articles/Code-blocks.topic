@@ -12,8 +12,6 @@
 
     <a href="शुभ-प्रभात.md#शुभ-परभात-2">test</a>
 
-    <code-block lang="mermaid" src="../../pdfSourceAUTO.html"/>
-
     <code-block lang="plantuml" src="../../seq.puml"/>
 
     <code-block lang="c++"><![CDATA[
