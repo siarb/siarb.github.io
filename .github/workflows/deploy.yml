@@ -65,6 +65,7 @@ jobs:
       - name: Build Writerside docs using Docker
         run: |
           set -x
+          git config --global --add safe.directory /github/workspace
           echo "Build documentation script started"
           export DISPLAY=:99
           Xvfb :99 &
