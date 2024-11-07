@@ -3,6 +3,9 @@
     <header>header</header>
     <landscape>true</landscape>
     <footer>footer</footer>
+    <toc-title>$GITHUB_WORKSPACE $GITHUB_WORKSPACE $GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE
+        $GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE$GITHUB_WORKSPACE
+    </toc-title>
     <cover-page>
         <description>Description</description>
         <copyright>copyright</copyright>
