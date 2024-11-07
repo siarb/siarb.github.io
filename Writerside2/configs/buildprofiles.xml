@@ -27,11 +27,12 @@
     <build-profile instance="auto">
         <sitemap/>
         <variables>
+            <generate-canonicals>true</generate-canonicals>
             <enable-browser-edits>true</enable-browser-edits>
             <browser-edits-url>https://github.com/BBB</browser-edits-url>
 <!--            <include-before-body>custom_js.js</include-before-body>-->
 <!--            <custom-favicons>dog.png</custom-favicons>-->
-            <web-root>https://siarb.github.io/</web-root>
+            <web-root>https://siarb.github.io/site1/</web-root>
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
             <color-preset>vivid</color-preset>
