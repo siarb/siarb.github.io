@@ -10,7 +10,6 @@
         <img alt="image from first module" origin="Writerside" src="apple-touch-icon.png"/>
     </if>
 
-
     <code-block lang="plantuml" src="$WRS_MODULE$/../seq.puml"/>
 
     <a href="शुभ-प्रभात.md#शुभ-परभात-2">test</a>
