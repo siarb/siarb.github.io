@@ -89,5 +89,13 @@
         <layout name="Windows" display-name="Windows"/>
         <layout name="macOS" display-name="macOS"/>
     </shortcuts>
+    <build-profile instance="hi">
+        <variables>
+            <algolia-id>ERUSDW4898</algolia-id>
+            <algolia-index>index_GH_test</algolia-index>
+            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
+            <noindex-content>true</noindex-content>
+        </variables>
+    </build-profile>
 
 </buildprofiles>
