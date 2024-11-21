@@ -1,0 +1,114 @@
+flowchart LR
+    subgraph AdapterGroupA["AdapterGroupA"]
+        direction LR
+        AlphaAdapter["Alpha Adapter"]
+        BetaAPI["Beta API"]
+        GammaLoader["Gamma Loader"]
+    end
+
+    subgraph AdapterGroupB["AdapterGroupB"]
+        direction LR
+        OmegaAdapter["Omega Adapter"]
+        DeltaAdapter["Delta Adapter"]
+    end
+
+    subgraph RealmGroup["RealmGroup"]
+        direction LR
+        BackendService["Backend Service"]
+        CompanyDataEvents(["Company Data Events"])
+
+        subgraph Submissions
+            direction LR
+            SpainSubmission["Spain Submission"]
+            UKSubmission["UK Submission"]
+            GermanySubmission["Germany Submission"]
+            SubmissionEvents(["Submission Events"])
+            SubmissionEvents <-.-> SpainSubmission & UKSubmission & GermanySubmission
+        end
+
+        subgraph CoreModules
+            direction LR
+            SimpleReportService["Simple Report Service"]
+            AdvancedReportService["Advanced Report Service"]
+            NotifyService["Notify Service"]
+            FileService["File Service"]
+            Scheduler["Scheduler"]
+            BackendFF["Backend For Frontend"]
+            EmailEvent(["Email Event"])
+            SchedulerEvents(["Scheduler Events"])
+        end
+
+        BackendService <--> SimpleReportService & AdvancedReportService & FileService
+        FileService <--> AdvancedReportService
+        BackendService -.-> EmailEvent
+        AdvancedReportService -.-> EmailEvent
+        EmailEvent -.-> NotifyService
+        BackendService -.-> CompanyDataEvents
+        BackendService <-.-> SubmissionEvents
+        BackendService <--> GermanySubmission
+    end
+
+    subgraph IntegrationGroup["IntegrationGroup"]
+        direction LR
+        ConnectorA["Connector A"]
+        ConnectorB["Connector B"]
+        ConnectorC["Connector C"]
+        ConnectorD["Connector D"]
+        ConnectorE["Connector E"]
+    end
+
+    subgraph CandyProcessing["CandyProcessing"]
+        direction LR
+        AdapterGroupA
+        AdapterGroupB
+        IntegrationGroup
+        CandyEngine["Candy Engine"]
+        EmailProcessor["Email Processor"]
+        CandyUpdateEvents(["Candy Update Events"])
+        CandyReceiptEvents(["Candy Receipt Events"])
+        PerCountryCreateEvents(["Per-Country Create Events"])
+        CandyCreationEvent(["Candy Creation Event"])
+        CandyDocEvent(["Candy Document Event"])
+        CandyUpdateEvents -.-> CandyEngine
+        PerCountryCreateEvents -.-> IntegrationGroup
+        IntegrationGroup -.-> CandyUpdateEvents & CandyReceiptEvents
+        CandyEngine -.-> CandyDocEvent & PerCountryCreateEvents
+        AdapterGroupA -.-> CandyCreationEvent
+        AdapterGroupB -.-> CandyCreationEvent
+        CandyCreationEvent -.-> CandyEngine
+        CandyReceiptEvents -.-> CandyEngine
+        EmailProcessor -.-> CandyReceiptEvents
+    end
+
+    subgraph MiscServices
+        BotRobot["Bot Robot"]
+        WorkflowTool["Workflow Tool"]
+        DataMappingService["Data Mapping Service"]
+    end
+
+    subgraph CloudCluster["CloudCluster"]
+        APIManager["API Manager"]
+        AuthService["Auth Service"]
+        CandyProcessing
+        RealmGroup
+        MiscServices
+        APIManager --> AdapterGroupA & AdapterGroupB
+        FileService <-- Almost all services have connections with File Service --> CandyProcessing
+        CandyDocEvent -.-> AdvancedReportService
+        CandyReceiptEvents -.-> BackendService
+        CandyUpdateEvents -.-> BackendService
+        PerCountryCreateEvents -.-> BackendService
+        CompanyDataEvents -. Information for several Services .-> CandyProcessing
+    end
+
+    UserFrontend["User Frontend"] --> APIManager
+    SecureVault["Secure Vault"]
+    MappingUtility --> APIManager
+    APIManager --> MiscServices & RealmGroup
+    APIRequests(("API Requests")) -- API Requests --> APIManager
+    APIManager <--> AuthService
+    MappingUtility["Mapping Utility"]
+    IntegrationGroup --> TaxConnections["Tax Connections"]
+    NotifyService --> ExternalServices["External Services"]
+    SpainSubmission & UKSubmission & GermanySubmission --> TaxConnections
+    click BackendService "https://example.com/backend-service"
