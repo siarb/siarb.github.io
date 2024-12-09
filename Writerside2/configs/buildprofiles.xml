@@ -13,12 +13,12 @@
 <!--        <contribute-url></contribute-url>-->
 <!--        <contribution>https://github.com/JetBrains/kotlin-web-site/edit/master/docs/</contribution>-->
         <content-max-width>1800</content-max-width>
-        <link-color>#000000</link-color>
-        <custom-css>custom_css.css</custom-css>
+        <!--        <link-color>#000000</link-color>-->
+        <!--        <custom-css>custom_css.css</custom-css>-->
 <!--        <include-before-body>custom_js.js</include-before-body>-->
         <include-after-body>disqus.html</include-after-body>
         <header-logo>JB_Writerside_logo.png</header-logo>
-        <primary-color>deep-ocean</primary-color>
+        <!--        <primary-color>deep-ocean</primary-color>-->
         <property-cleanup>[:,.;]$|\.{3}$|[^a-zA-Z0-9}')]+$</property-cleanup>
         <feedback-url>https://siarb.github.io/</feedback-url>
         <feedback-widget>true</feedback-widget>
@@ -35,18 +35,15 @@
             <web-root>https://siarb.github.io/site1/</web-root>
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
-            <color-preset>vivid</color-preset>
+            <!--            <color-preset>vivid</color-preset>-->
 <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
+            <algolia-show-logo>true</algolia-show-logo>
             <noindex-content>true</noindex-content>
-            <!--            <offline-docs>true</offline-docs>-->
+            <offline-docs>true</offline-docs>
         </variables>
-
-        <footer>
-            <copyright>Writerside 2024</copyright>
-        </footer>
     </build-profile>
 
     <footer>
@@ -58,10 +55,19 @@
             Product on Facebook
         </social>
         <social type="linkedin" href="https://example.com">Product on Linkedin</social>
+        <social type="slack" href="https://example.com">Product on Slack</social>
+        <social type="discord" href="https://example.com">Product on Discord</social>
+        <social type="stackoverflow" href="https://example.com">Product on StackOverflow</social>
         <social type="instagram" href="https://example.com">Product on Instagram</social>
+        <social type="telegram" href="https://example.com">Product on Telegram</social>
+        <social type="reddit" href="https://example.com">Product on Reddit</social>
+        <social type="mastodon" href="https://example.com">Product on Mastodon</social>
+        <social type="github" href="https://example.com">Product on GitHub</social>
+        <social type="gitlab" href="https://example.com">Product on GitLab</social>
         <social type="weibo" href="https://example.com">Product on Weibo</social>
         <social type="bilibili" href="https://example.com">Product on Bilibili</social>
         <social type="email" href="siarhei@test.com"/>
+        <social type="bugtracker" href="https://example.com">Bugtracker of Product</social>
 
         <link href="https://test.com" title="Title" summary="Test" caps="upper">link</link>
         <link href="https://test.com">

@@ -10,11 +10,11 @@ permissions:
   pages: write
 
 env:
-  INSTANCE: 'Writerside2/hi'
-  DOCKER_VERSION: '243.21565'
+  INSTANCE: 'Writerside2/auto'
+  DOCKER_VERSION: '243.22562'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
-  CONFIG_JSON_PRODUCT: 'HI'
+  CONFIG_JSON_PRODUCT: 'AUTO'
   CONFIG_JSON_VERSION: '1.0'
 
 jobs:
