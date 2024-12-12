@@ -65,6 +65,7 @@
         <social type="gitlab" href="https://example.com">Product on GitLab</social>
         <social type="weibo" href="https://example.com">Product on Weibo</social>
         <social type="bilibili" href="https://example.com">Product on Bilibili</social>
+        <social type="bluesky" href="https://bluesky.com"/>
         <social type="email" href="siarhei@test.com"/>
         <social type="bugtracker" href="https://example.com">Bugtracker of Product</social>
 
