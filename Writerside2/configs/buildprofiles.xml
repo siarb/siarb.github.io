@@ -42,7 +42,6 @@
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <algolia-show-logo>true</algolia-show-logo>
             <noindex-content>true</noindex-content>
-            <offline-docs>true</offline-docs>
         </variables>
     </build-profile>
 
