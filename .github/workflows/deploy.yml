@@ -65,6 +65,8 @@ jobs:
             artifacts/report.json
             artifacts/${{ env.ALGOLIA_ARTIFACT }}
           retention-days: 7
+
+
   test:
     needs: build
     runs-on: ubuntu-latest
@@ -79,6 +81,132 @@ jobs:
         uses: JetBrains/writerside-checker-action@v1
         with:
           instance: ${{ env.INSTANCE }}
+
+
+  #  build-search-index:
+  #    needs: build
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Setup Node.js
+  #        uses: actions/setup-node@v4
+  #        with:
+  #          node-version: '18'
+  #
+  #      - name: Download artifacts
+  #        uses: actions/download-artifact@v4
+  #        with:
+  #          name: docs
+  #          path: artifacts
+  #
+  #      - name: Unzip documentation
+  #        run: unzip -O UTF-8 -qq "artifacts/${{ needs.build.outputs.artifact }}" -d dir
+  #
+  #      - name: Create temp directory for index building
+  #        run: |
+  #          mkdir -p temp
+  #          echo '{
+  #            "dependencies": {
+  #              "lunr": "^2.3.9",
+  #              "cheerio": "^1.0.0-rc.12"
+  #            }
+  #          }' > temp/package.json
+  #
+  #      - name: Install dependencies
+  #        working-directory: temp
+  #        run: npm install
+  #
+  #      - name: Create index builder script
+  #        run: |
+  #          cat > temp/build-index.js << 'EOL'
+  #          const fs = require("fs");
+  #          const lunr = require("lunr");
+  #          const cheerio = require("cheerio");
+  #          const path = require("path");
+  #
+  #          const jsDir = "../dir";
+  #          if (!fs.existsSync(jsDir)) {
+  #            fs.mkdirSync(jsDir, { recursive: true });
+  #          }
+  #
+  #          const store = {};
+  #          const idx = lunr(function() {
+  #            this.ref("id");
+  #            this.field("title");
+  #            this.field("content");
+  #
+  #            const htmlFiles = fs.readdirSync("../dir")
+  #              .filter(file => file.endsWith(".html"));
+  #
+  #            htmlFiles.forEach(file => {
+  #              const content = fs.readFileSync(path.join("../dir", file), "utf8");
+  #              const $ = cheerio.load(content);
+  #
+  #              const id = file;
+  #              const title = $("title").text() || $("h1").first().text() || file;
+  #              const text = $("body").text();
+  #
+  #              this.add({
+  #                id: id,
+  #                title: title,
+  #                content: text
+  #              });
+  #
+  #              store[id] = {
+  #                title: title,
+  #                url: "/" + file,
+  #                preview: text.slice(0, 200) + "..."
+  #              };
+  #            });
+  #          });
+  #
+  #          const output = `const searchIndex = {
+  #            "index": ${JSON.stringify(idx)},
+  #            "store": ${JSON.stringify(store)}
+  #          };`;
+  #
+  #          fs.writeFileSync(path.join(jsDir, "search-index.js"), output);
+  #          EOL
+  #
+  #      - name: Build search index
+  #        working-directory: temp
+  #        run: node build-index.js
+  #
+  #      - name: Inject search-index.js reference
+  #        run: |
+  #          find ./dir -name "*.html" -type f -exec sed -i 's/<\/head>/<script src="\/search-index.js" defer><\/script><\/head>/' {} \;
+  #
+  #      - name: Upload directory with search index
+  #        uses: actions/upload-artifact@v4
+  #        with:
+  #          name: docs-with-search
+  #          path: dir
+  #          retention-days: 1
+  #
+  #  deploy:
+  #    environment:
+  #      name: github-pages
+  #      url: ${{ steps.deployment.outputs.page_url }}
+  #    needs: [ build, build-search-index ]
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Download docs with search
+  #        uses: actions/download-artifact@v4
+  #        with:
+  #          name: docs-with-search
+  #          path: dir
+  #
+  #      - name: Setup Pages
+  #        uses: actions/configure-pages@v4
+  #
+  #      - name: Package and upload Pages artifact
+  #        uses: actions/upload-pages-artifact@v3
+  #        with:
+  #          path: dir
+  #
+  #      - name: Deploy to GitHub Pages
+  #        id: deployment
+  #        uses: actions/deploy-pages@v4
+
   deploy:
     environment:
       name: github-pages
