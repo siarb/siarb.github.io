@@ -6,7 +6,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
-    <inline-frame height="500px" src="https://siarb.github.io/section-starting-page.html" width="100%"></inline-frame>
+
+<inline-frame height="500px" src="https://siarb.github.io/section-starting-page.html" width="100%"></inline-frame>
 
     <if instance="РуИ">
         <img alt="image from first module" origin="Writerside" src="apple-touch-icon.png"/>
