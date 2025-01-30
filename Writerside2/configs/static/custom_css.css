@@ -28,3 +28,13 @@
     border-radius: 30px !important;
     border: none;
 }
+
+
+/*!* Custom rule for the specific page *!*/
+/*body[data-id="शुभ-प्रभात"] {*/
+/*    --wh-max-width-content: 600px; !* Wider width for this page *!*/
+/*}*/
+
+/*body[data-id="शुभ-प्रभात"] .layout--container-content {*/
+/*    max-width: 200px;*/
+/*}*/

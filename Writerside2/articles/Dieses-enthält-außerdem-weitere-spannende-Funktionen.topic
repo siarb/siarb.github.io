@@ -6,7 +6,8 @@
        id="Dieses-enthält-außerdem-weitere-spannende-Funktionen"
        title="Dieses enthält außerdem weitere spannende Funktionen">
 
-    <shortcut id="copy-shortcut-nan" key="$NaN"/>
+
+<shortcut id="copy-shortcut-nan" key="$NaN"/>
 
     <show-structure depth="1" for="procedure,chapter"/>
 

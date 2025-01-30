@@ -1,5 +1,7 @@
 # TLDR MD
 
+<resource src="../auto.tree"/>
+
 1112233
 
 ```
