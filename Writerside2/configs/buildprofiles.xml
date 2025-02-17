@@ -50,9 +50,7 @@
         <social type="twitter" href="https://twitter.com/onwriterside"/>
         <social type="blog" href="https://blog.jetbrains.com/smth"/>
         <social type="youtube" href="https://www.youtube.com/@JetBrainsTV"/>
-        <social type="facebook" href="https://example.com">
-            Product on Facebook
-        </social>
+        <social type="facebook" href="https://example.com">Product on Facebook</social>
         <social type="linkedin" href="https://example.com">Product on Linkedin</social>
         <social type="slack" href="https://example.com">Product on Slack</social>
         <social type="discord" href="https://example.com">Product on Discord</social>
@@ -69,7 +67,7 @@
         <social type="email" href="siarhei@test.com"/>
         <social type="bugtracker" href="https://example.com">Bugtracker of Product</social>
 
-        <link href="https://test.com" title="Title" summary="Test" caps="upper">link</link>
+        <!--        <link href="https://test.com" title="Title" summary="Test" caps="upper">link</link>-->
         <link href="https://test.com">
             One more link
         </link>
@@ -80,7 +78,7 @@
         <copyright>Writerside 2023</copyright>
 
         <icp>Hello, Writersiders!</icp>
-        <powered-by>false</powered-by>
+        <!--        <powered-by>false</powered-by>-->
     </footer>
 
     <property-bundles>
