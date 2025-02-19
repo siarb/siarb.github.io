@@ -10,12 +10,12 @@
         <contribute-url>https://github.com/siarb/siarb.github.io/edit/main/Writerside2</contribute-url>
         <enable-browser-edits>true</enable-browser-edits>
         <browser-edits-url>https://github.com/AAA</browser-edits-url>
-<!--        <enable-contribution>true</enable-contribution>-->
-<!--        <contribute-url></contribute-url>-->
-<!--        <contribution>https://github.com/JetBrains/kotlin-web-site/edit/master/docs/</contribution>-->
+        <!--        <enable-contribution>true</enable-contribution>-->
+        <!--        <contribute-url></contribute-url>-->
+        <!--        <contribution>https://github.com/JetBrains/kotlin-web-site/edit/master/docs/</contribution>-->
         <!--        <link-color>#000000</link-color>-->
         <custom-css>custom_css.css</custom-css>
-<!--        <include-before-body>custom_js.js</include-before-body>-->
+        <!--        <include-before-body>custom_js.js</include-before-body>-->
         <include-after-body>disqus.html</include-after-body>
         <header-logo>JB_Writerside_logo.png</header-logo>
         <!--        <primary-color>deep-ocean</primary-color>-->
@@ -30,13 +30,13 @@
             <generate-canonicals>true</generate-canonicals>
             <enable-browser-edits>true</enable-browser-edits>
             <browser-edits-url>https://github.com/BBB</browser-edits-url>
-<!--            <include-before-body>custom_js.js</include-before-body>-->
-<!--            <custom-favicons>dog.png</custom-favicons>-->
+            <!--            <include-before-body>custom_js.js</include-before-body>-->
+            <!--            <custom-favicons>dog.png</custom-favicons>-->
             <web-root>https://siarb.github.io/site1/</web-root>
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
             <!--            <color-preset>vivid</color-preset>-->
-<!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
+            <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
             <algolia-id>ERUSDW4898</algolia-id>
             <algolia-index>index_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
@@ -78,7 +78,7 @@
         <copyright>Writerside 2023</copyright>
 
         <icp>Hello, Writersiders!</icp>
-        <!--        <powered-by>false</powered-by>-->
+        <powered-by>false</powered-by>
     </footer>
 
     <property-bundles>
