@@ -7,11 +7,12 @@ on:
 
 permissions:
   id-token: write
+  contents: read
   pages: write
 
 env:
-  INSTANCE: 'Writerside2/test'
-  DOCKER_VERSION: '2.1.2114-p8208'
+  INSTANCE: 'Writerside2/auto'
+  DOCKER_VERSION: '2.1.2115-p8208'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
   CONFIG_JSON_PRODUCT: 'AUTO'
@@ -21,7 +22,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.2114-p8208
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.TEST-MULTI-INSTANCES
 #    runs-on: ubuntu-latest
     outputs:
       algolia_artifact: ${{ steps.define-ids.outputs.algolia_artifact }}
@@ -58,7 +59,7 @@ jobs:
           git config --global --add safe.directory .
           export DISPLAY=:99
           Xvfb :99 &
-          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -group $INSTANCE --runner github -output-dir artifacts
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -p $INSTANCE --runner github -output-dir artifacts
           echo "Testing existence of $ARTIFACT..."
           ls -la artifacts
           test -e ./artifacts/$ARTIFACT && echo $ARTIFACT exists
