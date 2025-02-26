@@ -3,6 +3,7 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
 
+    <llms-txt single-file="true"/>
     <variables>
         <offline-docs>false</offline-docs>
         <ignore-problems>MRK002,REF002,CTT004,SCT005</ignore-problems>
@@ -38,7 +39,7 @@
             <!--            <color-preset>vivid</color-preset>-->
             <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
             <algolia-id>ERUSDW4898</algolia-id>
-            <algolia-index>index_test</algolia-index>
+            <algolia-index>index_GH_test</algolia-index>
             <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
             <algolia-show-logo>true</algolia-show-logo>
             <noindex-content>true</noindex-content>
