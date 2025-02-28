@@ -22,8 +22,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.2119-p8234
-#    runs-on: ubuntu-latest
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:243.22562
+    #    runs-on: ubuntu-latest
     outputs:
       algolia_artifact: ${{ steps.define-ids.outputs.algolia_artifact }}
       artifact: ${{ steps.define-ids.outputs.artifact }}
