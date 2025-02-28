@@ -44,6 +44,10 @@
             <algolia-show-logo>true</algolia-show-logo>
             <noindex-content>true</noindex-content>
         </variables>
+        <footer>
+            <link href="https://test.com" icon="animated.png">link-and-icon</link>
+            <notice href="https://ttt.aaa" icon="animated.png">NOTICE</notice>
+        </footer>
     </build-profile>
 
     <footer>
