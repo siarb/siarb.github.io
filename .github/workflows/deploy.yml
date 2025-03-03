@@ -112,41 +112,41 @@ jobs:
             artifacts/pdfSource${{ env.INSTANCE_ID_UPPER }}.html
           retention-days: 7
 
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    container:
-      image: openjdk:18-jdk-alpine
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: docs
-          path: artifacts
-      - name: Add curl
-        run: apk add curl
-      - name: Run Writerside checker
-        working-directory: artifacts
-        run: |
-          curl -o wrs-checker.jar -L https://packages.jetbrains.team/maven/p/writerside/maven/com/jetbrains/writerside/writerside-ci-checker/1.3/writerside-ci-checker-1.3.jar
-          java -jar wrs-checker.jar report.json ${{ env.INSTANCE }}
-  
-  
-
-  #  test:
+#  test:
 #    needs: build
 #    runs-on: ubuntu-latest
+#    container:
+#      image: openjdk:18-jdk-alpine
 #    steps:
 #      - name: Download artifacts
 #        uses: actions/download-artifact@v4
 #        with:
 #          name: docs
 #          path: artifacts
-#
-#      - name: Test documentation
-#        uses: JetBrains/writerside-checker-action@v1
-#        with:
-#          instance: ${{ env.INSTANCE }}
+#      - name: Add curl
+#        run: apk add curl
+#      - name: Run Writerside checker
+#        working-directory: artifacts
+#        run: |
+#          curl -o wrs-checker.jar -L https://packages.jetbrains.team/maven/p/writerside/maven/com/jetbrains/writerside/writerside-ci-checker/1.3/writerside-ci-checker-1.3.jar
+#          java -jar wrs-checker.jar report.json ${{ env.INSTANCE }}
+  
+  
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: docs
+          path: artifacts
+
+      - name: Test documentation
+        uses: JetBrains/writerside-checker-action@v1
+        with:
+          instance: ${{ env.INSTANCE }}
 
 
   #  build-search-index:
