@@ -11,7 +11,6 @@ permissions:
   pages: write
 
 env:
-  IS_GROUP: false
   INSTANCE: 'Writerside2/auto'
   DOCKER_VERSION: '2.1.2115-p8208'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
@@ -23,7 +22,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2.1.2122-p8252
+    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:243.22562
 #    runs-on: ubuntu-latest
     outputs:
       algolia_artifact: ${{ steps.define-ids.outputs.algolia_artifact }}
@@ -145,7 +144,7 @@ jobs:
           path: artifacts
 
       - name: Test documentation
-        uses: siarb/siar-checker@v1
+        uses: JetBrains/writerside-checker-action@v1
         with:
           instance: ${{ env.INSTANCE }}
 
