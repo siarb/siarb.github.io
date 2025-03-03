@@ -18,7 +18,7 @@
         <custom-css>custom_css.css</custom-css>
         <!--        <include-before-body>custom_js.js</include-before-body>-->
         <include-after-body>disqus.html</include-after-body>
-        <header-logo>NO_IMAGE.png</header-logo>
+        <header-logo>JB_Writerside_logo.png</header-logo>
         <!--        <primary-color>deep-ocean</primary-color>-->
         <property-cleanup>[:,.;]$|\.{3}$|[^a-zA-Z0-9}')]+$</property-cleanup>
         <feedback-url>https://siarb.github.io/</feedback-url>

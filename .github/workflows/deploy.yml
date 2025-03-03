@@ -11,6 +11,7 @@ permissions:
   pages: write
 
 env:
+  IS_GROUP: false
   INSTANCE: 'Writerside2/auto'
   DOCKER_VERSION: '2.1.2115-p8208'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
