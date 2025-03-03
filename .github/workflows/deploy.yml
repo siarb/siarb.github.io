@@ -12,7 +12,7 @@ permissions:
 
 env:
   INSTANCE: 'Writerside2/auto'
-  DOCKER_VERSION: '2.1.2115-p8208'
+  DOCKER_VERSION: '243.22562'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
   CONFIG_JSON_PRODUCT: 'AUTO'
@@ -22,7 +22,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:243.22562
+#    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:243.22562
 #    runs-on: ubuntu-latest
     outputs:
       algolia_artifact: ${{ steps.define-ids.outputs.algolia_artifact }}
@@ -55,21 +55,21 @@ jobs:
           echo "ALGOLIA_ARTIFACT=$ALGOLIA_ARTIFACT" >> $GITHUB_ENV
           echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT
           echo "algolia_artifact=$ALGOLIA_ARTIFACT" >> $GITHUB_OUTPUT
-          
-          set -e
-          git config --global --add safe.directory .
-          export DISPLAY=:99
-          Xvfb :99 &
-          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -p $INSTANCE --runner github -output-dir artifacts
-          echo "Testing existence of $ARTIFACT..."
-          ls -la artifacts
-          test -e ./artifacts/$ARTIFACT && echo $ARTIFACT exists
+#
+#          set -e
+#          git config --global --add safe.directory .
+#          export DISPLAY=:99
+#          Xvfb :99 &
+#          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -p $INSTANCE --runner github -output-dir artifacts
+#          echo "Testing existence of $ARTIFACT..."
+#          ls -la artifacts
+#          test -e ./artifacts/$ARTIFACT && echo $ARTIFACT exists
 
-#      - name: Build docs using Writerside Docker builder
-#        uses: JetBrains/writerside-github-action@v4
-#        with:
-#          instance: ${{ env.INSTANCE }}
-#          docker-version: ${{ env.DOCKER_VERSION }}
+      - name: Build docs using Writerside Docker builder
+        uses: JetBrains/writerside-github-action@v4
+        with:
+          instance: ${{ env.INSTANCE }}
+          docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Save artifact with build results
         uses: actions/upload-artifact@v4
