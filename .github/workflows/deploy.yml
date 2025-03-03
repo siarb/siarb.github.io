@@ -144,7 +144,7 @@ jobs:
           path: artifacts
 
       - name: Test documentation
-        uses: JetBrains/writerside-checker-action@v1
+        uses: siarb/siar-checker@v1
         with:
           instance: ${{ env.INSTANCE }}
 
