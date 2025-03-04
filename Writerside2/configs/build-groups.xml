@@ -4,7 +4,7 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <build-group name="test">
-        <instance instance-id="auto" alias="autoautoautoautoautoautoauto" path="/auto"/>
         <instance instance-id="hi" alias="Hihihihihihihi" path="/hi"/>
+        <instance instance-id="auto" alias="autoautoautoautoautoautoauto" path="/auto"/>
     </build-group>
 </build-groups>

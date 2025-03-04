@@ -5,6 +5,12 @@
 
     <llms-txt single-file="true"/>
     <variables>
+        <web-root>https://siarb.github.io/</web-root>
+        <algolia-id>ERUSDW4898</algolia-id>
+        <algolia-index>index_GH_test</algolia-index>
+        <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
+        <algolia-show-logo>true</algolia-show-logo>
+        <noindex-content>true</noindex-content>
         <offline-docs>false</offline-docs>
         <ignore-problems>MRK002,REF002,CTT004,SCT005</ignore-problems>
         <enable-contribution>true</enable-contribution>
@@ -33,16 +39,11 @@
             <browser-edits-url>https://github.com/BBB</browser-edits-url>
             <!--            <include-before-body>custom_js.js</include-before-body>-->
             <!--            <custom-favicons>dog.png</custom-favicons>-->
-            <web-root>https://siarb.github.io/</web-root>
+<!--            <web-root>https://siarb.github.io/</web-root>-->
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
             <!--            <color-preset>vivid</color-preset>-->
             <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
-            <algolia-id>ERUSDW4898</algolia-id>
-            <algolia-index>index_GH_test</algolia-index>
-            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
-            <algolia-show-logo>true</algolia-show-logo>
-            <noindex-content>true</noindex-content>
         </variables>
         <footer>
             <link href="https://test.com" icon="animated.png">link-and-icon</link>
@@ -99,13 +100,4 @@
         <layout name="Windows" display-name="Windows"/>
         <layout name="macOS" display-name="macOS"/>
     </shortcuts>
-    <build-profile instance="hi">
-        <variables>
-            <algolia-id>ERUSDW4898</algolia-id>
-            <algolia-index>index_GH_test</algolia-index>
-            <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
-            <noindex-content>true</noindex-content>
-        </variables>
-    </build-profile>
-
 </buildprofiles>
