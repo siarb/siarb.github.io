@@ -11,8 +11,7 @@ permissions:
   pages: write
 
 env:
-  INSTANCE: 'Writerside2/hi'
-  IS_GROUP: 'false'
+  INSTANCE: 'Writerside2/auto'
   DOCKER_VERSION: '2.1.2122-p8252'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
@@ -71,7 +70,6 @@ jobs:
         with:
           instance: ${{ env.INSTANCE }}
           docker-version: ${{ env.DOCKER_VERSION }}
-          is-group: ${{ env.IS_GROUP }}
 
       - name: Save artifact with build results
         uses: actions/upload-artifact@v4
@@ -149,7 +147,6 @@ jobs:
         uses: JetBrains/writerside-checker-action@v1
         with:
           instance: ${{ env.INSTANCE }}
-          is-group: ${{ env.IS_GROUP }}
 
 
   #  build-search-index:
