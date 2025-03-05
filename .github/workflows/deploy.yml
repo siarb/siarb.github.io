@@ -11,8 +11,8 @@ permissions:
   pages: write
 
 env:
-  INSTANCE: 'Writerside2/test'
-  IS_GROUP: 'true'
+  INSTANCE: 'Writerside2/auto'
+  IS_GROUP: 'false'
   DOCKER_VERSION: '2025.03'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
@@ -78,11 +78,7 @@ jobs:
         with:
           name: docs
           path: |
-            artifacts/${{ steps.define-ids.outputs.artifact }}
-            artifacts/report.json
-            artifacts/${{ steps.define-ids.outputs.algolia_artifact }}
-            artifacts/algolia-indexes-AUTO.zip
-            artifacts/algolia-indexes-HI.zip
+            artifacts/*
           retention-days: 7
 
   build-pdf:
