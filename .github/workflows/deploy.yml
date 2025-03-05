@@ -13,7 +13,7 @@ permissions:
 env:
   INSTANCE: 'Writerside2/auto'
   IS_GROUP: 'false'
-  DOCKER_VERSION: '2025.03'
+  DOCKER_VERSION: '243.22562'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
   CONFIG_JSON_PRODUCT: 'AUTO'
