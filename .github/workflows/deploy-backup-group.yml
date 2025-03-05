@@ -1,8 +1,6 @@
 name: Build documentation
 
 on:
-  push:
-    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -301,37 +299,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-
-#  publish-indexes:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    container:
-#      image: registry.jetbrains.team/p/writerside/builder/algolia-publisher:2.0.32-3
-#    steps:
-#      - name: Download artifact
-#        uses: actions/download-artifact@v4
-#        with:
-#          name: docs
-#          path: artifacts
-#      - name: Unzip Algolia artifact
-#        run: unzip -O UTF-8 -qq "artifacts/${{ needs.build.outputs.algolia_artifact }}" -d algolia-indexes
-#      - name: Update Algolia Index
-#        run: |
-#          if [ -z "${{ secrets.ALGOLIA_KEY }}" ]; then
-#            echo "ALGOLIA_KEY secret is not set in GitHub Secrets"
-#            exit 1
-#          else
-#            env "algolia-key=${{ secrets.ALGOLIA_KEY }}" java -jar /opt/builder/help-publication-agent.jar \
-#            update-index \
-#            --application-name ${{ env.ALGOLIA_APP_NAME }} \
-#            --index-name ${{ env.ALGOLIA_INDEX_NAME }} \
-#            --product ${{ env.CONFIG_JSON_PRODUCT }} \
-#            --version ${{ env.CONFIG_JSON_VERSION }} \
-#            --index-directory algolia-indexes/ \
-#            2>&1 | tee algolia-update-index-log.txt
-#          fi
-
   publish-indexes:
     needs: build
     runs-on: ubuntu-latest
@@ -343,73 +310,20 @@ jobs:
         with:
           name: docs
           path: artifacts
-
-      - name: Process Algolia indexes
+      - name: Unzip Algolia artifact
+        run: unzip -O UTF-8 -qq "artifacts/${{ needs.build.outputs.algolia_artifact }}" -d algolia-indexes
+      - name: Update Algolia Index
         run: |
-          # Check if IS_GROUP is true
-          if [ "${{ env.IS_GROUP }}" = "true" ]; then
-            echo "Processing as a group instance - handling multiple index files"
-          
-            # Check if search directory exists
-            if [ -d "artifacts/search" ]; then
-              # Create directory for extracted indexes
-              mkdir -p algolia-indexes
-          
-              # Find all zip files in the search directory and process them
-              find artifacts/search -name "algolia-indexes-*.zip" -type f | while read -r index_file; do
-                echo "Processing index file: $index_file"
-          
-                # Extract the product ID from the filename
-                # Pattern: algolia-indexes-PRODUCTID.zip
-                filename=$(basename "$index_file")
-                product_id=${filename#algolia-indexes-}
-                product_id=${product_id%.zip}
-          
-                echo "Extracted product ID: $product_id"
-          
-                # Create a unique directory for this product
-                extract_dir="algolia-indexes/$product_id"
-                mkdir -p "$extract_dir"
-          
-                # Unzip the index file
-                unzip -O UTF-8 -qq "$index_file" -d "$extract_dir"
-          
-                # Update Algolia index for this file with the extracted product ID
-                if [ -z "${{ secrets.ALGOLIA_KEY }}" ]; then
-                  echo "ALGOLIA_KEY secret is not set in GitHub Secrets"
-                  exit 1
-                else
-                  echo "Updating Algolia index for product: $product_id"
-                  env "algolia-key=${{ secrets.ALGOLIA_KEY }}" java -jar /opt/builder/help-publication-agent.jar \
-                  update-index \
-                  --application-name ${{ env.ALGOLIA_APP_NAME }} \
-                  --index-name ${{ env.ALGOLIA_INDEX_NAME }} \
-                  --product "$product_id" \
-                  --version ${{ env.CONFIG_JSON_VERSION }} \
-                  --index-directory "$extract_dir" \
-                  2>&1 | tee "algolia-update-index-log-$product_id.txt"
-                fi
-              done
-            else
-              echo "Warning: artifacts/search directory not found"
-              exit 1
-            fi
+          if [ -z "${{ secrets.ALGOLIA_KEY }}" ]; then
+            echo "ALGOLIA_KEY secret is not set in GitHub Secrets"
+            exit 1
           else
-            echo "Processing as a single instance"
-            # Original logic for single instance
-            unzip -O UTF-8 -qq "artifacts/${{ needs.build.outputs.algolia_artifact }}" -d algolia-indexes
-          
-            if [ -z "${{ secrets.ALGOLIA_KEY }}" ]; then
-              echo "ALGOLIA_KEY secret is not set in GitHub Secrets"
-              exit 1
-            else
-              env "algolia-key=${{ secrets.ALGOLIA_KEY }}" java -jar /opt/builder/help-publication-agent.jar \
-              update-index \
-              --application-name ${{ env.ALGOLIA_APP_NAME }} \
-              --index-name ${{ env.ALGOLIA_INDEX_NAME }} \
-              --product ${{ env.CONFIG_JSON_PRODUCT }} \
-              --version ${{ env.CONFIG_JSON_VERSION }} \
-              --index-directory algolia-indexes/ \
-              2>&1 | tee algolia-update-index-log.txt
-            fi
+            env "algolia-key=${{ secrets.ALGOLIA_KEY }}" java -jar /opt/builder/help-publication-agent.jar \
+            update-index \
+            --application-name ${{ env.ALGOLIA_APP_NAME }} \
+            --index-name ${{ env.ALGOLIA_INDEX_NAME }} \
+            --product ${{ env.CONFIG_JSON_PRODUCT }} \
+            --version ${{ env.CONFIG_JSON_VERSION }} \
+            --index-directory algolia-indexes/ \
+            2>&1 | tee algolia-update-index-log.txt
           fi
