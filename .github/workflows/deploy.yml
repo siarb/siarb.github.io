@@ -54,13 +54,22 @@ jobs:
           echo "ALGOLIA_ARTIFACT=$ALGOLIA_ARTIFACT" >> $GITHUB_ENV
           echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT
           echo "algolia_artifact=$ALGOLIA_ARTIFACT" >> $GITHUB_OUTPUT
+          set -e
+          git config --global --add safe.directory /__w/siarb.github.io/siarb.github.io
+          git config --global --add safe.directory .
+          export DISPLAY=:99
+          Xvfb :99 &
+          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -p $INSTANCE --runner github -output-dir artifacts
+          echo "Testing existence of $ARTIFACT..."
+          ls -la artifacts
+          test -e ./artifacts/$ARTIFACT && echo $ARTIFACT exists
 
-      - name: Build docs using Writerside Docker builder
-        uses: JetBrains/writerside-github-action@v4
-        with:
-          instance: ${{ env.INSTANCE }}
-          docker-version: ${{ env.DOCKER_VERSION }}
-          is-group: ${{ env.IS_GROUP }}
+#      - name: Build docs using Writerside Docker builder
+#        uses: JetBrains/writerside-github-action@v4
+#        with:
+#          instance: ${{ env.INSTANCE }}
+#          docker-version: ${{ env.DOCKER_VERSION }}
+#          is-group: ${{ env.IS_GROUP }}
 
       - name: Save artifact with build results
         uses: actions/upload-artifact@v4
