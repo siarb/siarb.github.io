@@ -11,9 +11,9 @@ permissions:
   pages: write
 
 env:
-  INSTANCE: 'Writerside2/test'
+  INSTANCE: 'Writerside2/auto'
   IS_GROUP: 'true'
-  DOCKER_VERSION: '243.22562'
+  DOCKER_VERSION: '2025.03'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
   CONFIG_JSON_PRODUCT: 'AUTO'
@@ -61,7 +61,7 @@ jobs:
           export DISPLAY=:99
           Xvfb :99 &
           git config --global --add safe.directory .
-                           /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts -pdf PDF.xml
+                           /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -g ${{ env.INSTANCE }} -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts -pdf PDF.xml
           echo "Test existing artifacts"
                           test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
                test -e ./artifacts/pdfSourceAUTO.pdf && echo pdfSourceAUTO.pdf exists
