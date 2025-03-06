@@ -11,7 +11,7 @@ permissions:
   pages: write
 
 env:
-  INSTANCE: 'Writerside2/auto'
+  INSTANCE: 'Writerside2/test'
   IS_GROUP: 'true'
   DOCKER_VERSION: '2025.03'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
@@ -23,6 +23,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+#    container: registry.jetbrains.team/p/writerside/builder/writerside-builder:2025.03
     outputs:
       algolia_artifact: ${{ steps.define-ids.outputs.algolia_artifact }}
       artifact: ${{ steps.define-ids.outputs.artifact }}
@@ -54,24 +55,13 @@ jobs:
           echo "ALGOLIA_ARTIFACT=$ALGOLIA_ARTIFACT" >> $GITHUB_ENV
           echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT
           echo "algolia_artifact=$ALGOLIA_ARTIFACT" >> $GITHUB_OUTPUT
-      - name: Build Writerside docs using Docker
-        run: |
-          set -x
-          echo "Build documentation script started"
-          export DISPLAY=:99
-          Xvfb :99 &
-          git config --global --add safe.directory .
-                           /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -g ${{ env.INSTANCE }} -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts -pdf PDF.xml
-          echo "Test existing artifacts"
-                          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
-               test -e ./artifacts/pdfSourceAUTO.pdf && echo pdfSourceAUTO.pdf exists
 
-#      - name: Build docs using Writerside Docker builder
-#        uses: JetBrains/writerside-github-action@v4
-#        with:
-#          instance: ${{ env.INSTANCE }}
-#          docker-version: ${{ env.DOCKER_VERSION }}
-#          is-group: ${{ env.IS_GROUP }}
+      - name: Build docs using Writerside Docker builder
+        uses: JetBrains/writerside-github-action@v4
+        with:
+          instance: ${{ env.INSTANCE }}
+          docker-version: ${{ env.DOCKER_VERSION }}
+          is-group: ${{ env.IS_GROUP }}
 
       - name: Save artifact with build results
         uses: actions/upload-artifact@v4
@@ -102,6 +92,7 @@ jobs:
           instance: ${{ env.INSTANCE }}
           docker-version: ${{ env.DOCKER_VERSION }}
           pdf: ${{ env.PDF }}
+          is-group: ${{ env.IS_GROUP }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
