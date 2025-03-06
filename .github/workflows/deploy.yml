@@ -13,7 +13,7 @@ permissions:
 env:
   INSTANCE: 'Writerside2/test'
   IS_GROUP: 'true'
-  DOCKER_VERSION: '2025.03'
+  DOCKER_VERSION: '243.22562'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
   CONFIG_JSON_PRODUCT: 'AUTO'
@@ -54,15 +54,17 @@ jobs:
           echo "ALGOLIA_ARTIFACT=$ALGOLIA_ARTIFACT" >> $GITHUB_ENV
           echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT
           echo "algolia_artifact=$ALGOLIA_ARTIFACT" >> $GITHUB_OUTPUT
-          set -e
-          git config --global --add safe.directory /__w/siarb.github.io/siarb.github.io
-          git config --global --add safe.directory .
+      - name: Build Writerside docs using Docker
+        run: |
+          set -x
+          echo "Build documentation script started"
           export DISPLAY=:99
           Xvfb :99 &
-          /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -p $INSTANCE --runner github -output-dir artifacts
-          echo "Testing existence of $ARTIFACT..."
-          ls -la artifacts
-          test -e ./artifacts/$ARTIFACT && echo $ARTIFACT exists
+          git config --global --add safe.directory .
+                           /opt/builder/bin/idea.sh helpbuilderinspect -source-dir . -product ${{ env.INSTANCE }} --runner github -output-dir ./artifacts -pdf PDF.xml
+          echo "Test existing artifacts"
+                          test -e ./artifacts/${{ env.ARTIFACT }} && echo ${{ env.ARTIFACT }} exists
+               test -e ./artifacts/pdfSourceAUTO.pdf && echo pdfSourceAUTO.pdf exists
 
 #      - name: Build docs using Writerside Docker builder
 #        uses: JetBrains/writerside-github-action@v4
