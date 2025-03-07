@@ -13,7 +13,7 @@ permissions:
 env:
   INSTANCE: 'Writerside2/test'
   IS_GROUP: 'true'
-  DOCKER_VERSION: '2025.03'
+  DOCKER_VERSION: '2.1.2134-p8302'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
   CONFIG_JSON_PRODUCT: 'AUTO'
@@ -62,13 +62,13 @@ jobs:
           instance: ${{ env.INSTANCE }}
           docker-version: ${{ env.DOCKER_VERSION }}
           is-group: ${{ env.IS_GROUP }}
+          artifact: ${{ steps.define-ids.outputs.artifact }}
 
       - name: Save artifact with build results
         uses: actions/upload-artifact@v4
         with:
           name: docs
-          path: |
-            artifacts/*
+          path: artifacts/*
           retention-days: 7
 
   build-pdf:
@@ -92,7 +92,7 @@ jobs:
           instance: ${{ env.INSTANCE }}
           docker-version: ${{ env.DOCKER_VERSION }}
           pdf: ${{ env.PDF }}
-          is-group: ${{ env.IS_GROUP }}
+          artifact: pdfSource${{ env.INSTANCE_ID_UPPER }}.pdf
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
