@@ -12,7 +12,6 @@
         <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
         <algolia-show-logo>true</algolia-show-logo>
         <noindex-content>true</noindex-content>
-        <offline-docs>false</offline-docs>
         <ignore-problems>MRK002,REF002,CTT004,SCT005</ignore-problems>
         <enable-contribution>true</enable-contribution>
         <contribute-url>https://github.com/siarb/siarb.github.io/edit/main/Writerside2</contribute-url>
@@ -43,36 +42,17 @@
 <!--            <web-root>https://siarb.github.io/</web-root>-->
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
+            <noindex-content>false</noindex-content>
+            <offline-docs>true</offline-docs>
             <!--            <color-preset>vivid</color-preset>-->
             <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
         </variables>
-        <footer>
-            <link href="https://test.com" icon="animated.png">link-and-icon</link>
-            <notice href="https://ttt.aaa" icon="animated.png">NOTICE</notice>
-        </footer>
     </build-profile>
 
     <footer>
-        <social type="rss" href="https://example.com">Product RSS feed</social>
-        <social type="twitter" href="https://twitter.com/onwriterside"/>
         <social type="blog" href="https://blog.jetbrains.com/smth"/>
         <social type="youtube" href="https://www.youtube.com/@JetBrainsTV"/>
-        <social type="facebook" href="https://example.com">Product on Facebook</social>
-        <social type="linkedin" href="https://example.com">Product on Linkedin</social>
-        <social type="slack" href="https://example.com">Product on Slack</social>
-        <social type="discord" href="https://example.com">Product on Discord</social>
-        <social type="stackoverflow" href="https://example.com">Product on StackOverflow</social>
-        <social type="instagram" href="https://example.com">Product on Instagram</social>
-        <social type="telegram" href="https://example.com">Product on Telegram</social>
-        <social type="reddit" href="https://example.com">Product on Reddit</social>
-        <social type="mastodon" href="https://example.com">Product on Mastodon</social>
-        <social type="github" href="https://example.com">Product on GitHub</social>
-        <social type="gitlab" href="https://example.com">Product on GitLab</social>
-        <social type="weibo" href="https://example.com">Product on Weibo</social>
-        <social type="bilibili" href="https://example.com">Product on Bilibili</social>
-        <social type="bluesky" href="https://bluesky.com"/>
-        <social type="email" href="siarhei@test.com"/>
-        <social type="bugtracker" href="https://example.com">Bugtracker of Product</social>
+        <social type="twitter" href="https://example.com">X</social>
 
         <!--        <link href="https://test.com" title="Title" summary="Test" caps="upper">link</link>-->
         <link href="https://test.com">
@@ -80,12 +60,16 @@
         </link>
         <link href="https://test.com">Nice link</link>
         <link href="URL">Landing page</link>
+        <link href="URL">Landing page</link>
+        <link href="URL">Landing page</link>
+        <link href="URL">Landing page</link>
+        <link href="URL">Landing page</link>
         <link href="URL">Slack community</link>
 
         <copyright>Writerside 2023</copyright>
 
-        <icp>Hello, Writersiders!</icp>
-        <powered-by>false</powered-by>
+        <icp>Hello, Writersidians!</icp>
+        <powered-by>true</powered-by>
     </footer>
 
     <property-bundles>
@@ -101,4 +85,15 @@
         <layout name="Windows" display-name="Windows"/>
         <layout name="macOS" display-name="macOS"/>
     </shortcuts>
+    <build-profile instance="test">
+        <variables>
+            <noindex-content>false</noindex-content>
+        </variables>
+    </build-profile>
+    <build-profile instance="hi">
+        <variables>
+            <offline-docs>false</offline-docs>
+            <noindex-content>true</noindex-content>
+        </variables>
+    </build-profile>
 </buildprofiles>
