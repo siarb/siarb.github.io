@@ -34,6 +34,7 @@
     <build-profile instance="auto">
         <sitemap/>
         <variables>
+            <code-soft-wrap>true</code-soft-wrap>
             <generate-canonicals>true</generate-canonicals>
             <enable-browser-edits>true</enable-browser-edits>
             <browser-edits-url>https://github.com/BBB</browser-edits-url>

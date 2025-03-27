@@ -7,6 +7,7 @@
                  start-page="Section-Starting-Page.topic">
 
     <toc-element topic="शुभ-प्रभात.md"/>
+    <toc-element topic="Starter_2.md"/>
     <toc-element topic="Importar-catálogos.md"/>
     <toc-element topic="Code-blocks.topic"/>
     <toc-element topic="TEX-test.md"/>

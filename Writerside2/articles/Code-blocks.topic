@@ -11,7 +11,7 @@
     <p><a href="mailto:sample-email@sampledomain.com">email</a></p>
 
 
-    <inline-frame height="500px" src="https://siarb.github.io/section-starting-page.html" width="100%"></inline-frame>
+<!--    <inline-frame height="500px" src="https://siarb.github.io/section-starting-page.html" width="100%"></inline-frame>-->
 
     <if instance="РуИ">
         <img alt="image from first module" origin="Writerside" src="apple-touch-icon.png"/>
@@ -91,7 +91,7 @@ fun main() {
                 ports:
                     - "8080:80"
                 volumes:
-                    - ./html:/usr/share/nginx/html
+                    - ./html:/usr/share/nginx/html/html/usr/share/nginx/html/html/usr/share/nginx/html/html/usr/share/nginx/html
                 restart: always
     </code-block>
 

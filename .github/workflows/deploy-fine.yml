@@ -1,8 +1,6 @@
 name: Build documentation
 
 on:
-  push:
-    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -13,7 +11,7 @@ permissions:
 env:
   INSTANCE: 'Writerside2/test'
   IS_GROUP: 'true'
-  DOCKER_VERSION: '2.1.2148-p8381'
+  DOCKER_VERSION: '2025.03.8340'
   ALGOLIA_APP_NAME: 'ERUSDW4898'
   ALGOLIA_INDEX_NAME: 'index_GH_test'
   CONFIG_JSON_PRODUCT: 'AUTO'
