@@ -67,7 +67,7 @@ We assume that you’ve read and acknowledged it before joining.
 
 You can also always email us at [writerside@jetbrains.com](mailto:writerside@jetbrains.com).
 
-<seealso>
+<seealso title="Test my name">
     <category ref="home">
         <a href="https://www.jetbrains.com/help/writerside/markup-reference.html">Markup reference</a>
         <a href="https://www.jetbrains.com/help/writerside/manage-table-of-contents.html">Reorder topics in the TOC</a>
