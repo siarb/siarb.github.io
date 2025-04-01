@@ -54,6 +54,7 @@
         <social type="blog" href="https://blog.jetbrains.com/smth"/>
         <social type="youtube" href="https://www.youtube.com/@JetBrainsTV"/>
         <social type="twitter" href="https://example.com">X</social>
+        <social type="github" href="https://example.com">GH</social>
 
         <!--        <link href="https://test.com" title="Title" summary="Test" caps="upper">link</link>-->
         <link href="https://test.com">
