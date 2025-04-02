@@ -6,6 +6,10 @@
     <llms-txt single-file="true"/>
     <sitemap/>
     <variables>
+<!--        <feedback-support>https://support.com</feedback-support>-->
+        <feedback-url>https://url.com</feedback-url>
+        <feedback-widget>true</feedback-widget>
+        <feedbackRequireEmail>false</feedbackRequireEmail>
         <web-root>https://siarb.github.io/</web-root>
         <algolia-id>ERUSDW4898</algolia-id>
         <algolia-index>index_GH_test</algolia-index>
