@@ -6,15 +6,15 @@
        title="Writerside" id="Writerside">
 
     <chapter title="Your First Zenoh Appplication" id="first-app">
-    <tabs>
-        <tab title="Python">
+        <tabs>
+            <tab title="Python">
             <code-block lang="python">
                 import zenoh
                 with zenoh::open() as z:
                 z.put("demo/greeting", "Hello from Zenoh!")
             </code-block>
-        </tab>
-        <tab title="Rust">
+            </tab>
+            <tab title="Rust">
             <code-block lang="rust">
                 use zenoh::prelude::*;
 
@@ -25,8 +25,8 @@
                 z.put("demo/greeting", "Hello from Zenoh!");
                 }
             </code-block>
-        </tab>
-        <tab title="C++">
+            </tab>
+            <tab title="C++">
             <code-block lang="c++">
                 #include "zenoh.hxx"
 
@@ -36,12 +36,12 @@
                 z.put("demo/greeting", "Hello, Zenoh");
                 }
             </code-block>
-        </tab>
-        <tab title="C"></tab>
+            </tab>
+            <tab title="C"></tab>
 
-        <tab title="Kotlin"></tab>
-        <tab title="REST"></tab>
-    </tabs>
+            <tab title="Kotlin"></tab>
+            <tab title="REST"></tab>
+        </tabs>
     </chapter>
 
     <img src="love%20couple%20dark.gif" alt="love couple dark.gif" ignore-vars="true"/>
@@ -163,7 +163,7 @@
 
 
         <p>
-        <a href="https://docs.openrewrite.org/">OpenRewrite</a> is a tool.
-    </p>
+            <a href="https://docs.openrewrite.org/">OpenRewrite</a> is a tool.
+        </p>
     </chapter>
 </topic>

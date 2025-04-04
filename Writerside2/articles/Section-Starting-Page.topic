@@ -15,6 +15,10 @@
             Only the spotlight section is limited to two topics.
             For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
 
+    <web-summary>It is used only in the link popup.</web-summary>
+    <link-summary>link summary</link-summary>
+    <card-summary>card summary</card-summary>
+
     <section-starting-page>
         <title>Section starting page title</title>
         <description>
@@ -23,8 +27,8 @@
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="" type="account" summary="This overrides the card summary of the topic">Custom card title</a>
-            <a href="" type="search" summary="This overrides the card summary of the topic">Another custom title</a>
+            <a href="Section-Starting-Page.topic" type="account">Custom card title</a>
+            <a href="" type="search">Another custom title</a>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
