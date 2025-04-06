@@ -48,7 +48,7 @@
             <header-logo>open.png</header-logo>
             <product-web-url>https://siarb.github.io</product-web-url>
             <noindex-content>false</noindex-content>
-            <offline-docs>true</offline-docs>
+            <offline-docs>false</offline-docs>
             <!--            <color-preset>vivid</color-preset>-->
             <!--            <search-endpoint>https://127.0.0.1:8080</search-endpoint>-->
         </variables>

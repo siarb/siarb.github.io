@@ -4,8 +4,8 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <build-group name="test">
-        <instance instance-id="hi" alias="Hihihihihihihi" path="/hihihi"/>
-        <instance instance-id="auto" alias="autoautoautoautoautoautoauto" path="/auto1232112"/>
+        <instance instance-id="hi" alias="Hihihihihihihi" path="/hi"/>
+        <instance instance-id="auto" alias="autoautoautoautoautoautoauto" path="/auto"/>
         <instance instance-id="test" alias="TTTest" path="/test"/>
     </build-group>
 </build-groups>
