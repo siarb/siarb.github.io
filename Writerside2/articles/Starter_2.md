@@ -1,5 +1,19 @@
 # Starter
 
+## Tip
+
+> Expected: tip icon
+
+## Info
+
+> Expected: information icon
+{style="note"}
+
+## Warning
+
+> Expected: warning icon
+{style="warning"}
+
 [test](https://test.com)
 
 ```curl

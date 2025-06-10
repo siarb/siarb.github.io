@@ -3,11 +3,11 @@
 <labels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/labels.xsd">
 
-    <primary-label id="label" short-name="Primary label" name="First primary label for topic" href="https://www.w3.org/">
+    <primary-label id="label" short-name="Primary label" color="black" name="First primary label for topic" href="https://www.w3.org/">
         First topic label must be visible
     </primary-label>
 
-    <secondary-label id="annotation" short-name="Annotation" name="Colored annotation" color="strawberry"/>
+    <secondary-label id="annotation" short-name="Annotation" name="Colored annotation" color="black"/>
 
     <secondary-label id="2023.3" name="2023.3+">
         Available in IDE version 2023.3 or later

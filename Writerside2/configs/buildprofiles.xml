@@ -12,6 +12,7 @@
         <feedbackRequireEmail>false</feedbackRequireEmail>
         <web-root>https://siarb.github.io/</web-root>
         <algolia-id>ERUSDW4898</algolia-id>
+        <link-color>strawberry</link-color>
         <algolia-index>index_GH_test</algolia-index>
         <algolia-api-key>c8a4c35ccfcebbaa929dc7e6dba71a93</algolia-api-key>
         <algolia-show-logo>true</algolia-show-logo>
@@ -25,7 +26,7 @@
         <!--        <contribute-url></contribute-url>-->
         <!--        <contribution>https://github.com/JetBrains/kotlin-web-site/edit/master/docs/</contribution>-->
         <!--        <link-color>#000000</link-color>-->
-        <custom-css>custom_css.css</custom-css>
+<!--        <custom-css>custom_css.css</custom-css>-->
         <!--        <include-before-body>custom_js.js</include-before-body>-->
         <include-after-body>disqus.html</include-after-body>
 <!--        <header-logo>JB_Writerside_logo.png</header-logo>-->
@@ -38,6 +39,9 @@
     <build-profile instance="auto">
         <sitemap/>
         <variables>
+            <color-preset>contrast</color-preset>
+<!--            <primary-color>blueberry</primary-color>-->
+            <external-links-in-new-tab>false</external-links-in-new-tab>
             <code-soft-wrap>true</code-soft-wrap>
             <generate-canonicals>true</generate-canonicals>
             <enable-browser-edits>true</enable-browser-edits>
